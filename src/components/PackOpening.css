@@ -1,0 +1,219 @@
+.pack-opening-container {
+    background: radial-gradient(circle at center, #1a2133 0%, #000 100%);
+    perspective: 1200px;
+    overflow: hidden;
+}
+
+.pack-progress {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+}
+
+.pack-wrapper {
+    width: 240px;
+    height: 340px;
+    background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
+    border-radius: 16px;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.5s var(--ease-out);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transform-style: preserve-3d;
+}
+
+.pack-wrapper.initial:hover {
+    transform: scale(1.05) rotateY(10deg);
+}
+
+.pack-wrapper.active {
+    transform: translate(300px, 50px) scale(0.8) rotateZ(5deg);
+    opacity: 0.8;
+    cursor: pointer;
+    z-index: 30;
+}
+
+.pack-visual {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    text-align: center;
+}
+
+.pack-label {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pack-sub {
+    font-family: var(--font-main);
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+}
+
+.pack-hint {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.6);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.revealed-card-stage {
+    z-index: 20;
+    animation: cardReveal 0.6s var(--ease-elastic);
+}
+
+@keyframes cardReveal {
+    0% {
+        transform: translateY(100px) scale(0.5) rotateY(90deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0) scale(1) rotateY(0);
+        opacity: 1;
+    }
+}
+
+.hero-card {
+    transform: scale(1.5);
+    /* Make it big */
+}
+
+.next-card-btn {
+    position: absolute;
+    bottom: 10%;
+    padding: 1rem 3rem;
+    background: var(--color-primary);
+    color: #000;
+    font-weight: 900;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 0 20px var(--color-primary-glow);
+    z-index: 100;
+}
+
+.next-card-btn:hover {
+    transform: scale(1.1);
+    background: #fff;
+}
+
+/* God Rays */
+.god-rays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vw;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    z-index: -1;
+    animation: rotateRays 10s linear infinite;
+    pointer-events: none;
+}
+
+.god-rays.legend {
+    background: conic-gradient(from 0deg, transparent 0deg, rgba(255, 215, 0, 0.2) 20deg, transparent 40deg, rgba(255, 215, 0, 0.2) 60deg, transparent 80deg);
+}
+
+@keyframes rotateRays {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Finish Stage */
+.finish-stage {
+    text-align: center;
+    z-index: 40;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.cards-grid-preview {
+    display: flex;
+    gap: 5px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.mini-card-preview {
+    width: 20px;
+    height: 30px;
+    background: #333;
+    border-radius: 2px;
+    animation: popIn 0.3s backwards;
+}
+
+.rarity-indicator {
+    width: 100%;
+    height: 100%;
+}
+
+.rarity-indicator.common {
+    background: #94a3b8;
+}
+
+.rarity-indicator.rare {
+    background: #00d2ff;
+}
+
+.rarity-indicator.elite {
+    background: #a855f7;
+}
+
+.rarity-indicator.legend {
+    background: #ffd700;
+    box-shadow: 0 0 10px #ffd700;
+}
+
+.finish-btn {
+    margin-top: 20px;
+    padding: 1rem 2rem;
+    background: var(--color-accent);
+    color: #000;
+    font-weight: 800;
+    border-radius: 8px;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

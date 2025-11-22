@@ -1,0 +1,362 @@
+.match-engine {
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    position: relative;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 900;
+    z-index: 10;
+}
+
+.player-score {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.match-info {
+    text-align: center;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    color: var(--color-text-muted);
+}
+
+.opponent-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 0;
+    flex-shrink: 1;
+}
+
+.opponent-hand {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-back-mini {
+    width: clamp(45px, 8vw, 60px);
+    height: clamp(65px, 12vw, 90px);
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+.center-stage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 0;
+}
+
+.roll-btn {
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    background: var(--color-primary);
+    color: #000;
+    border-radius: 50px;
+    box-shadow: 0 0 30px var(--color-primary-glow);
+    animation: pulse 1.5s infinite;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.roll-btn:hover {
+    transform: scale(1.05);
+}
+
+.duo-indicator {
+    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    padding: clamp(15px, 3vw, 20px) clamp(25px, 5vw, 40px);
+    border-radius: 12px;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255, 0, 204, 0.5);
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.duo-indicator span {
+    display: block;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+.round-result {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.95);
+    padding: clamp(25px, 5vw, 40px);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    min-width: 280px;
+    max-width: 90%;
+    animation: resultSlideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.win-text {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--color-primary);
+    text-shadow: 0 0 30px var(--color-primary);
+    animation: textPulse 0.6s ease-out;
+    margin-bottom: 15px;
+}
+
+.lose-text {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--color-danger);
+    text-shadow: 0 0 30px var(--color-danger);
+    animation: textPulse 0.6s ease-out;
+    margin-bottom: 15px;
+}
+
+.draw-text {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: #fff;
+    animation: textPulse 0.6s ease-out;
+    margin-bottom: 15px;
+}
+
+.next-round-btn {
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: #fff;
+    color: #000;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.next-round-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.player-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 0;
+    flex-shrink: 1;
+}
+
+.player-hand {
+    display: flex;
+    gap: clamp(5px, 1.5vw, 10px);
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.hand-card-wrapper {
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.hand-card-wrapper:hover {
+    transform: translateY(-15px);
+}
+
+.hand-card-wrapper.selected {
+    transform: translateY(-30px) scale(1.1);
+    z-index: 10;
+}
+
+.confirm-btn {
+    position: absolute;
+    bottom: clamp(120px, 20vh, 150px);
+    padding: 10px 30px;
+    background: var(--color-accent);
+    color: #000;
+    border-radius: 8px;
+    font-weight: 800;
+    z-index: 100;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+}
+
+.confirm-btn:hover {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.overlay h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 20px;
+    animation: slideDown 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.duo-display {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.final-score {
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 900;
+    margin: 30px 0;
+    font-family: var(--font-display);
+    background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: scoreReveal 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s backwards;
+}
+
+.overlay h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 30px;
+    animation: slideUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s backwards;
+}
+
+.overlay button {
+    padding: 15px 40px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    background: var(--color-primary);
+    color: #000;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.2s;
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.7s backwards;
+}
+
+.overlay button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px var(--color-primary-glow);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes resultSlideIn {
+    from {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scoreReveal {
+    from {
+        transform: scale(0.5) rotateY(90deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes textPulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.played-card-spot {
+    margin: 10px 0;
+}
+
+.played-card-spot.empty {
+    height: 80px;
+}

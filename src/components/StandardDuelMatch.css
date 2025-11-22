@@ -1,0 +1,305 @@
+.standard-duel-match {
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    position: relative;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.preview-container {
+    text-align: center;
+    max-width: 100%;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.preview-container h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 10px;
+}
+
+.preview-container p {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    margin-bottom: 8px;
+}
+
+.hint-text {
+    color: var(--color-text-muted);
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem) !important;
+    margin-bottom: 20px !important;
+}
+
+.preview-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 0 10px;
+}
+
+.preview-cards>* {
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) backwards;
+}
+
+.preview-cards>*:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.preview-cards>*:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.preview-cards>*:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.preview-cards>*:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.preview-cards>*:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.deck-info {
+    display: flex;
+    gap: 15px;
+    font-family: var(--font-display);
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+    color: var(--color-text-muted);
+    margin: 8px 0;
+    justify-content: center;
+}
+
+/* Match screen optimizations */
+.match-header {
+    padding: 10px 15px;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.opponent-area,
+.player-area {
+    min-height: 0;
+    flex-shrink: 1;
+}
+
+.opponent-hand,
+.player-hand {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.played-card-spot {
+    transform: scale(0.8);
+}
+
+/* Improved round result screen */
+.round-result {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    min-width: 300px;
+    animation: resultSlideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+}
+
+.win-text,
+.lose-text,
+.draw-text {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 20px;
+    animation: textPulse 0.6s ease-out;
+}
+
+.win-text {
+    color: var(--color-primary);
+    text-shadow: 0 0 30px var(--color-primary);
+}
+
+
+.next-round-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Improved victory/defeat screen */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.overlay h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 20px;
+    animation: slideDown 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.final-score {
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 900;
+    margin: 30px 0;
+    font-family: var(--font-display);
+    background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: scoreReveal 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s backwards;
+}
+
+.overlay h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 30px;
+    animation: slideUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s backwards;
+}
+
+.overlay button {
+    padding: 15px 40px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    background: var(--color-primary);
+    color: #000;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.2s;
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.7s backwards;
+}
+
+.overlay button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px var(--color-primary-glow);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes resultSlideIn {
+    from {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scoreReveal {
+    from {
+        transform: scale(0.5) rotateY(90deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes textPulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .preview-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .round-result {
+        padding: 30px;
+        min-width: 250px;
+    }
+}
+
+@media (max-height: 700px) {
+    .preview-cards {
+        gap: 10px;
+        margin: 15px auto;
+    }
+
+    .preview-container {
+        padding: 10px;
+    }
+}
