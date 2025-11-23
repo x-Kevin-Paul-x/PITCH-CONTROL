@@ -233,7 +233,7 @@ const MatchEngine = () => {
                                 <span style={{ fontSize: '0.8rem' }}>Pick 2 Cards!</span>
                             </div>
                         ) : (
-                            <MatchDie rolling={isRolling} />
+                            <MatchDie rolling={isRolling} face={dieResult} />
                         )}
                     </div>
                 )}

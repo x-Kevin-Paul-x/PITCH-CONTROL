@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({ data, isFlipped = false, onClick, size = 'normal', className = '' }) => {
+const Card = ({ data, isFlipped = false, onClick, size = 'normal', className = '', highlightAttribute }) => {
     const { name, position, rating, stats, rarity, image } = data;
 
     // Calculate stat polygon points (normalized 0-100 to polygon coordinates)
@@ -36,7 +36,9 @@ const Card = ({ data, isFlipped = false, onClick, size = 'normal', className = '
                 {/* Card Front */}
                 <div className={`card-front rarity-${rarity.toLowerCase()}`}>
                     <div className="card-header">
-                        <div className="card-rating">{rating}</div>
+                        <div className="card-rating">
+                            {highlightAttribute && stats[highlightAttribute] !== undefined ? stats[highlightAttribute] : rating}
+                        </div>
                         <div className="card-position">{position}</div>
                     </div>
 
@@ -66,12 +68,12 @@ const Card = ({ data, isFlipped = false, onClick, size = 'normal', className = '
 
                     <div className="card-stats-text">
                         <div className="stat-row">
-                            <span>ATT {stats.ATT}</span>
-                            <span>MID {stats.MID}</span>
+                            <span className={highlightAttribute === 'ATT' ? 'highlighted-stat' : ''}>ATT {stats.ATT}</span>
+                            <span className={highlightAttribute === 'MID' ? 'highlighted-stat' : ''}>MID {stats.MID}</span>
                         </div>
                         <div className="stat-row">
-                            <span>DEF {stats.DEF}</span>
-                            <span>GK {stats.GK}</span>
+                            <span className={highlightAttribute === 'DEF' ? 'highlighted-stat' : ''}>DEF {stats.DEF}</span>
+                            <span className={highlightAttribute === 'GK' ? 'highlighted-stat' : ''}>GK {stats.GK}</span>
                         </div>
                     </div>
                 </div>

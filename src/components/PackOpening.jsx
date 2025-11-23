@@ -9,18 +9,26 @@ const PackOpening = () => {
     const [revealedCards, setRevealedCards] = useState([]);
     const [isAnimating, setIsAnimating] = useState(false);
 
+    const [isShaking, setIsShaking] = useState(false);
+
     const totalCards = collection.length;
 
     const handlePackClick = () => {
-        if (isAnimating) return;
+        if (isAnimating || isShaking) return;
         if (currentIndex >= totalCards - 1) return;
 
-        setIsAnimating(true);
+        // Start Shake
+        setIsShaking(true);
 
-        // Move current to revealed pile
-        setRevealedCards([...revealedCards, collection[currentIndex]]);
-        setCurrentIndex(prev => prev + 1);
-        setTimeout(() => setIsAnimating(false), 600);
+        setTimeout(() => {
+            setIsShaking(false);
+            setIsAnimating(true);
+
+            // Move current to revealed pile
+            setRevealedCards([...revealedCards, collection[currentIndex]]);
+            setCurrentIndex(prev => prev + 1);
+            setTimeout(() => setIsAnimating(false), 800); // Match CSS animation duration
+        }, 500); // Shake duration
     };
 
     const handleFinish = () => {
@@ -51,7 +59,7 @@ const PackOpening = () => {
             {/* The Pack (Clickable - Skip All) */}
             {currentIndex < totalCards - 1 && (
                 <div
-                    className={`pack-wrapper ${currentIndex === -1 ? 'initial' : 'active'}`}
+                    className={`pack-wrapper ${currentIndex === -1 ? 'initial' : 'active'} ${isShaking ? 'shaking' : ''}`}
                     onClick={handleRevealAll}
                     title="Click to Reveal All"
                 >

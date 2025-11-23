@@ -1,6 +1,6 @@
 .card-container {
-    width: 220px;
-    height: 320px;
+    width: var(--card-width-desktop);
+    height: var(--card-height-desktop);
     perspective: 1000px;
     cursor: pointer;
     transition: transform 0.2s var(--ease-out);
@@ -12,8 +12,32 @@
 }
 
 .card-container.small {
-    width: 140px;
-    height: 200px;
+    width: calc(var(--card-width-desktop) * 0.7);
+    height: calc(var(--card-height-desktop) * 0.7);
+}
+
+@media (max-width: 1024px) {
+    .card-container {
+        width: var(--card-width-tablet);
+        height: var(--card-height-tablet);
+    }
+
+    .card-container.small {
+        width: calc(var(--card-width-tablet) * 0.8);
+        height: calc(var(--card-height-tablet) * 0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        width: var(--card-width-mobile);
+        height: var(--card-height-mobile);
+    }
+
+    .card-container.small {
+        width: calc(var(--card-width-mobile) * 0.85);
+        height: calc(var(--card-height-mobile) * 0.85);
+    }
 }
 
 .card-inner {
@@ -49,24 +73,7 @@
     align-items: center;
     justify-content: center;
     transform: rotateY(180deg);
-    /* Wait, standard flip logic usually has back at 180 or 0 depending on start state. Let's assume Face Down = Back Visible initially? No, usually Face Up = Front. If isFlipped=true, we see back? Or isFlipped=true means we revealed it? */
-    /* Let's assume: Default is Front Visible. isFlipped=true means turned over to back? 
-     Actually, for a card game, usually "Flipped" means "Revealed". 
-     So Default (isFlipped=false) = Back Visible. 
-     isFlipped=true = Front Visible.
-     Let's adjust the CSS logic below.
-  */
 }
-
-/* REVISED FLIP LOGIC */
-/* Default state (no class) -> Front is at 0, Back is at 180. 
-   If we want "Face Down" by default, we should rotate the container or inner.
-   Let's stick to: 
-   .card-inner starts at 0deg.
-   Front is at 180deg (hidden).
-   Back is at 0deg (visible).
-   .flipped -> rotateY(180deg) -> Front becomes 0deg (visible).
-*/
 
 .card-front {
     transform: rotateY(180deg);
@@ -75,16 +82,6 @@
     display: flex;
     flex-direction: column;
     padding: 12px;
-}
-
-.card-back {
-    transform: rotateY(0deg);
-    background-image:
-        repeating-linear-gradient(45deg,
-            rgba(255, 255, 255, 0.03) 0px,
-            rgba(255, 255, 255, 0.03) 10px,
-            transparent 10px,
-            transparent 20px);
 }
 
 .card-logo {
@@ -150,7 +147,6 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
-    /* Add a simple SVG silhouette via background-image if possible, or just gradient */
 }
 
 .card-name {
@@ -248,4 +244,12 @@
     display: flex;
     justify-content: space-between;
     padding: 0 4px;
+}
+
+.stat-row span.highlighted-stat {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px var(--color-primary);
+    font-weight: 900;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }

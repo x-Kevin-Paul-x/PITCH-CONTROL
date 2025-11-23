@@ -1,21 +1,35 @@
 .standard-duel-match {
     background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
     position: relative;
     flex: 1;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
+.match-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+    min-height: 100%;
+    flex: 1;
+}
+
+/* Preview Section */
 .preview-container {
     text-align: center;
     max-width: 100%;
     padding: 20px;
     animation: fadeIn 0.5s ease-out;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .preview-container h2 {
@@ -36,16 +50,17 @@
 
 .preview-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-width-tablet), 1fr));
     gap: 15px;
     justify-content: center;
+    justify-items: center;
     margin: 20px auto;
-    max-width: 900px;
+    max-width: 1200px;
     padding: 0 10px;
 }
 
 .preview-cards>* {
-    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) backwards;
+    animation: popIn 0.4s var(--ease-elastic) backwards;
 }
 
 .preview-cards>*:nth-child(1) {
@@ -78,66 +93,46 @@
     justify-content: center;
 }
 
-/* Match screen optimizations */
+/* Match Screen Layout */
 .match-header {
     padding: 10px 15px;
     font-size: clamp(1rem, 2vw, 1.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin-bottom: 10px;
 }
 
 .opponent-area,
 .player-area {
     min-height: 0;
     flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
 }
 
 .opponent-hand,
 .player-hand {
+    display: flex;
     gap: 8px;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
 .played-card-spot {
-    transform: scale(0.8);
+    transform: scale(0.9);
+    margin: 10px 0;
+    z-index: 5;
 }
 
-/* Improved round result screen */
-.round-result {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.95);
-    padding: 40px;
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    min-width: 300px;
-    animation: resultSlideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 1000;
-}
-
-.win-text,
-.lose-text,
-.draw-text {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    margin-bottom: 20px;
-    animation: textPulse 0.6s ease-out;
-}
-
-.win-text {
-    color: var(--color-primary);
-    text-shadow: 0 0 30px var(--color-primary);
-}
-
-
-.next-round-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-}
-
-/* Improved victory/defeat screen */
+/* Overlay Styles */
 .overlay {
     position: fixed;
     top: 0;
@@ -156,7 +151,7 @@
 .overlay h1 {
     font-size: clamp(2rem, 6vw, 4rem);
     margin-bottom: 20px;
-    animation: slideDown 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: slideDown 0.6s var(--ease-elastic);
 }
 
 .final-score {
@@ -168,13 +163,13 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: scoreReveal 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s backwards;
+    animation: scoreReveal 0.8s var(--ease-elastic) 0.3s backwards;
 }
 
 .overlay h2 {
     font-size: clamp(1.5rem, 4vw, 3rem);
     margin-bottom: 30px;
-    animation: slideUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s backwards;
+    animation: slideUp 0.6s var(--ease-elastic) 0.5s backwards;
 }
 
 .overlay button {
@@ -185,7 +180,7 @@
     border-radius: 50px;
     font-weight: 700;
     transition: all 0.2s;
-    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.7s backwards;
+    animation: popIn 0.4s var(--ease-elastic) 0.7s backwards;
 }
 
 .overlay button:hover {
@@ -240,18 +235,6 @@
     }
 }
 
-@keyframes resultSlideIn {
-    from {
-        transform: translate(-50%, -50%) scale(0.5);
-        opacity: 0;
-    }
-
-    to {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-}
-
 @keyframes scoreReveal {
     from {
         transform: scale(0.5) rotateY(90deg);
@@ -264,42 +247,79 @@
     }
 }
 
-@keyframes textPulse {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .preview-cards {
+        grid-template-columns: repeat(auto-fit, minmax(var(--card-width-tablet), 1fr));
     }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
+    .match-content {
+        padding: 10px;
+    }
+
     .preview-cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
-    .round-result {
-        padding: 30px;
-        min-width: 250px;
+    /* Mobile Hand - Horizontal Scroll */
+    .player-hand {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 10px 20px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        /* Hide scrollbar */
+        scrollbar-width: none;
+    }
+
+    .player-hand::-webkit-scrollbar {
+        display: none;
+    }
+
+    .player-hand>* {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        margin-right: 10px;
+    }
+
+    .opponent-hand {
+        transform: scale(0.8);
+        margin-bottom: -20px;
+    }
+
+    .played-card-spot {
+        transform: scale(0.8);
+    }
+
+    .duo-indicator {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    .roll-btn {
+        padding: 0.8rem 2rem;
+        width: 100%;
+        margin-top: 10px;
     }
 }
 
-@media (max-height: 700px) {
+@media (max-width: 480px) {
     .preview-cards {
-        gap: 10px;
-        margin: 15px auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
-    .preview-container {
-        padding: 10px;
+    .match-header {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .played-card-spot {
+        transform: scale(0.7);
     }
 }

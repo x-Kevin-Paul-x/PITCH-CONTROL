@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useGameState } from '../hooks/useGameState';
 import { generatePack } from '../utils/cardGenerator';
 import Card from './Card';
@@ -18,7 +19,7 @@ const StandardDuelMatch = () => {
     const [p1Hand, setP1Hand] = useState([]);
     const [p2Hand, setP2Hand] = useState([]);
 
-    const [dieResult, setDieResult] = useState('ATT');
+    const [dieResult, setDieResult] = useState(null);
     const [isRolling, setIsRolling] = useState(false);
 
     const [selectedCard, setSelectedCard] = useState(null);
@@ -27,6 +28,10 @@ const StandardDuelMatch = () => {
     const [scores, setScores] = useState({ p1: 0, p2: 0 });
     const [roundWinner, setRoundWinner] = useState(null);
     const [round, setRound] = useState(1);
+
+    // Touch Handling State
+    const [touchStart, setTouchStart] = useState(null);
+    const [touchEnd, setTouchEnd] = useState(null);
 
     // Initialize - Generate player's pack
     useEffect(() => {
@@ -82,11 +87,8 @@ const StandardDuelMatch = () => {
 
     const confirmSelection = () => {
         if (!selectedCard) return;
-        setTurnPhase('REVEAL');
-
-        setTimeout(() => {
-            resolveRound();
-        }, 1000);
+        // Cut directly to resolution/overlay
+        resolveRound();
     };
 
     const resolveRound = () => {
@@ -169,104 +171,175 @@ const StandardDuelMatch = () => {
         );
     }
 
+    // Touch Handling for Swipe Up
+
+    const onTouchStart = (e) => {
+        setTouchEnd(null);
+        setTouchStart({ x: e.targetTouches[0].clientX, y: e.targetTouches[0].clientY });
+    };
+
+    const onTouchMove = (e) => {
+        setTouchEnd({ x: e.targetTouches[0].clientX, y: e.targetTouches[0].clientY });
+    };
+
+    const onTouchEnd = (card) => {
+        if (!touchStart || !touchEnd) return;
+        const distanceY = touchStart.y - touchEnd.y;
+        const distanceX = touchStart.x - touchEnd.x;
+        const isSwipeUp = distanceY > 50;
+        const isVertical = Math.abs(distanceY) > Math.abs(distanceX);
+
+        if (isSwipeUp && isVertical) {
+            if (turnPhase === 'SELECT') {
+                setSelectedCard(card);
+                // Small delay to allow visual selection before confirming
+                setTimeout(() => {
+                    // We need to call a function that behaves like confirmSelection but uses the card we just swiped
+                    // Since confirmSelection uses state 'selectedCard', we might need to ensure state is updated or pass card directly.
+                    // However, setState is async. Let's create a direct play function.
+                    playCardDirectly(card);
+                }, 100);
+            }
+        }
+    };
+
+    const playCardDirectly = (card) => {
+        // This duplicates logic from confirmSelection/resolveRound but ensures we use the passed card
+        // Actually, confirmSelection just calls resolveRound which uses 'selectedCard' state.
+        // To be safe, we should update state and then trigger resolution.
+        // But since we can't await setState easily here without useEffect, let's just rely on the user tapping or
+        // modify resolveRound to accept a card argument optionally.
+
+        // Better approach: Just select it. The user said "Makes the Card gets selected". 
+        // "and then We should be Able to Swipe through the cards smoothly"
+        // Wait, "Swiping Up Makes the Card gets selected to a battle". This implies playing it.
+
+        // Let's update resolveRound to take an optional card.
+        setSelectedCard(card);
+        // We'll trigger the confirm logic after a short delay to let the UI update
+        setTimeout(() => {
+            // We can't easily call resolveRound here because it relies on the state 'selectedCard' which might not be updated yet in this closure?
+            // Actually, in React 18 automatic batching might help, but let's be safe.
+            // Let's just set it as selected. The user can tap "PLAY CARD" or we can auto-play.
+            // "selected to a battle" -> sounds like "Play".
+            // Let's try to auto-play.
+            document.querySelector('.confirm-btn')?.click();
+        }, 50);
+    };
+
     return (
         <div className="standard-duel-match full-screen">
-            {/* Top Bar: Score */}
-            <div className="match-header glass-panel">
-                <div className="player-score">YOU: {scores.p1}</div>
-                <div className="match-info">
-                    <div className="round-indicator">ROUND {round}</div>
+            <div className="match-content">
+                {/* Top Bar: Score */}
+                <div className="match-header glass-panel">
+                    <div className="player-score">YOU: {scores.p1}</div>
+                    <div className="match-info">
+                        <div className="round-indicator">ROUND {round}</div>
+                    </div>
+                    <div className="player-score">CPU: {scores.p2}</div>
                 </div>
-                <div className="player-score">CPU: {scores.p2}</div>
+
+                {/* Opponent Area (Top) */}
+                <div className="opponent-area">
+                    <div className="deck-info">
+                        <span>Deck: {p2Deck.length}</span>
+                        <span>Hand: {p2Hand.length}</span>
+                    </div>
+                    <div className="opponent-hand">
+                        {p2Hand.map((c, i) => (
+                            <div key={i} className="card-back-mini"></div>
+                        ))}
+                    </div>
+                    {turnPhase === 'REVEAL' || turnPhase === 'RESOLVE' ? (
+                        <div className="played-card-spot">
+                            <Card data={aiCard} isFlipped={true} highlightAttribute={dieResult} />
+                        </div>
+                    ) : (
+                        <div className="played-card-spot empty"></div>
+                    )}
+                </div>
+
+                {/* Center: Die & Context */}
+                <div className="center-stage">
+                    {turnPhase === 'ROLL' && (
+                        <button className="roll-btn" onClick={rollDie}>ROLL DIE</button>
+                    )}
+                    {(turnPhase === 'ROLLING' || turnPhase === 'SELECT' || turnPhase === 'REVEAL' || turnPhase === 'RESOLVE') && (
+                        <div className="die-container">
+                            <MatchDie rolling={isRolling} face={dieResult} />
+                        </div>
+                    )}
+                </div>
+
+                {/* Player Area (Bottom) */}
+                <div className="player-area">
+                    {turnPhase === 'REVEAL' || turnPhase === 'RESOLVE' ? (
+                        <div className="played-card-spot">
+                            <Card data={selectedCard} isFlipped={true} highlightAttribute={dieResult} />
+                        </div>
+                    ) : (
+                        <div className="played-card-spot empty"></div>
+                    )}
+
+                    <div className="player-hand">
+                        {p1Hand.map(card => (
+                            <div
+                                key={card.id}
+                                className={`hand-card-wrapper ${selectedCard?.id === card.id ? 'selected' : ''}`}
+                                onClick={() => handleCardSelect(card)}
+                                onTouchStart={onTouchStart}
+                                onTouchMove={onTouchMove}
+                                onTouchEnd={() => onTouchEnd(card)}
+                            >
+                                <Card data={card} size="small" isFlipped={true} highlightAttribute={dieResult} />
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="deck-info">
+                        <span>Deck: {p1Deck.length}</span>
+                        <span>Hand: {p1Hand.length}</span>
+                    </div>
+
+                    {turnPhase === 'SELECT' && selectedCard && (
+                        <button className="confirm-btn" onClick={confirmSelection}>PLAY CARD</button>
+                    )}
+                </div>
             </div>
 
-            {/* Opponent Area (Top) */}
-            <div className="opponent-area">
-                <div className="deck-info">
-                    <span>Deck: {p2Deck.length}</span>
-                    <span>Hand: {p2Hand.length}</span>
-                </div>
-                <div className="opponent-hand">
-                    {p2Hand.map((c, i) => (
-                        <div key={i} className="card-back-mini"></div>
-                    ))}
-                </div>
-                {turnPhase === 'REVEAL' || turnPhase === 'RESOLVE' ? (
-                    <div className="played-card-spot">
-                        <Card data={aiCard} isFlipped={true} />
+            {/* Round Result Overlay */}
+            {turnPhase === 'RESOLVE' && createPortal(
+                <div className="round-result">
+                    <div className="overlay-header">
+                        <div className="score-display">YOU: {scores.p1}</div>
+                        <div className="round-display">ROUND {round}</div>
+                        <div className="score-display">CPU: {scores.p2}</div>
                     </div>
-                ) : (
-                    <div className="played-card-spot empty"></div>
-                )}
-            </div>
 
-            {/* Center: Die & Context */}
-            <div className="center-stage">
-                {turnPhase === 'ROLL' && (
-                    <button className="roll-btn" onClick={rollDie}>ROLL DIE</button>
-                )}
-                {(turnPhase === 'ROLLING' || turnPhase === 'SELECT' || turnPhase === 'REVEAL' || turnPhase === 'RESOLVE') && (
-                    <div className="die-container">
-                        <MatchDie rolling={isRolling} />
-                    </div>
-                )}
-
-                {turnPhase === 'RESOLVE' && (
-                    <div className="round-result">
-                        <div className="battle-cards">
-                            <div className="battle-card-wrapper">
-                                <div className="battle-label you">YOU</div>
-                                <Card data={selectedCard} isFlipped={true} />
-                            </div>
-
-                            <div className="vs-text">VS</div>
-
-                            <div className="battle-card-wrapper">
-                                <div className="battle-label cpu">CPU</div>
-                                <Card data={aiCard} isFlipped={true} />
-                            </div>
+                    <div className="battle-cards">
+                        <div className={`battle-card-wrapper ${roundWinner === 'P1' ? 'winner' : roundWinner === 'P2' ? 'loser' : ''}`}>
+                            <div className="battle-label you">YOU</div>
+                            <Card data={selectedCard} isFlipped={true} highlightAttribute={dieResult} />
                         </div>
 
+                        <div className="vs-text">VS</div>
+
+                        <div className={`battle-card-wrapper ${roundWinner === 'P2' ? 'winner' : roundWinner === 'P1' ? 'loser' : ''}`}>
+                            <div className="battle-label cpu">CPU</div>
+                            <Card data={aiCard} isFlipped={true} highlightAttribute={dieResult} />
+                        </div>
+                    </div>
+
+                    <div className="result-text-container">
                         {roundWinner === 'P1' && <h2 className="win-text">YOU WIN!</h2>}
                         {roundWinner === 'P2' && <h2 className="lose-text">YOU LOSE!</h2>}
                         {roundWinner === 'DRAW' && <h2 className="draw-text">DRAW!</h2>}
-
-                        <button className="next-round-btn" onClick={nextRound}>CONTINUE</button>
                     </div>
-                )}
-            </div>
 
-            {/* Player Area (Bottom) */}
-            <div className="player-area">
-                {turnPhase === 'REVEAL' || turnPhase === 'RESOLVE' ? (
-                    <div className="played-card-spot">
-                        <Card data={selectedCard} isFlipped={true} />
-                    </div>
-                ) : (
-                    <div className="played-card-spot empty"></div>
-                )}
-
-                <div className="player-hand">
-                    {p1Hand.map(card => (
-                        <div
-                            key={card.id}
-                            className={`hand-card-wrapper ${selectedCard?.id === card.id ? 'selected' : ''}`}
-                            onClick={() => handleCardSelect(card)}
-                        >
-                            <Card data={card} size="small" isFlipped={true} />
-                        </div>
-                    ))}
-                </div>
-
-                <div className="deck-info">
-                    <span>Deck: {p1Deck.length}</span>
-                    <span>Hand: {p1Hand.length}</span>
-                </div>
-
-                {turnPhase === 'SELECT' && selectedCard && (
-                    <button className="confirm-btn" onClick={confirmSelection}>PLAY CARD</button>
-                )}
-            </div>
+                    <button className="next-round-btn" onClick={nextRound}>CONTINUE</button>
+                </div>,
+                document.body
+            )}
 
             {/* Match Over Overlay */}
             {turnPhase === 'MATCH_OVER' && (

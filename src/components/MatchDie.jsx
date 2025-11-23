@@ -1,25 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import './MatchDie.css';
 
-const MatchDie = ({ onRollComplete, rolling }) => {
+const MatchDie = ({ onRollComplete, rolling, face }) => {
     const [result, setResult] = useState('ATT');
 
     useEffect(() => {
+        let interval;
         if (rolling) {
-            // Simulate rolling time
-            const duration = 2000;
-            const interval = setInterval(() => {
+            // Simulate rolling animation
+            interval = setInterval(() => {
                 const faces = ['ATT', 'MID', 'DEF', 'GK', 'ATT', 'MID'];
                 setResult(faces[Math.floor(Math.random() * faces.length)]);
             }, 100);
-
-            setTimeout(() => {
-                clearInterval(interval);
-                // Final result is determined by parent usually, but here we can just generate it
-                // Actually parent should pass the target result to ensure sync
-            }, duration);
+        } else {
+            if (face) {
+                setResult(face);
+            }
         }
-    }, [rolling]);
+
+        return () => {
+            if (interval) clearInterval(interval);
+        };
+    }, [rolling, face]);
 
     // We need the parent to tell us what the final face is to rotate correctly
     // For now, let's just accept a prop `face` which is the target
