@@ -31,7 +31,7 @@ const MultiplayerMatch = () => {
             return;
         }
 
-        setMyId(socket.id);
+        setMyId(socket.id || socket.myId || 'player_local');
 
         // Request state immediately in case we missed game_start
         socket.emit('get_state');

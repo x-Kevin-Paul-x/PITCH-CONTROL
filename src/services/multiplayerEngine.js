@@ -8,10 +8,11 @@ class MultiplayerEngine {
         this.channel = null;
         this.listeners = new Map();
         this.id = 'player_' + Math.floor(Math.random() * 100000);
+        this.socket = this;
         this.opponentId = 'opponent_rival';
         this.username = 'Knight';
-        this.roomId = null;
-        this.isHost = false;
+        this.roomId = 'REALM-' + Math.floor(100 + Math.random() * 900);
+        this.isHost = true;
         this.gameState = null;
         this.searchTimer = null;
 
@@ -154,7 +155,9 @@ class MultiplayerEngine {
     // Handle emit actions from socketService
     emit(event, data) {
         if (event === 'get_state') {
-            if (this.gameState) {
+            if (!this.gameState) {
+                this.startMultiplayerMatch(this.id, this.opponentId);
+            } else {
                 this.emitEvent('state_update', { state: this.gameState });
             }
             return;
