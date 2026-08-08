@@ -52,10 +52,43 @@
 
 .battle-cards {
     display: flex;
-    gap: clamp(20px, 5vw, 60px);
-    margin-bottom: 40px;
+    gap: clamp(12px, 4vw, 60px);
+    margin-bottom: 20px;
     align-items: center;
     animation: slideInRight 0.6s var(--ease-elastic) forwards;
+}
+
+/* Responsive Battle Overlay Fix so Continue / Result text NEVER gets cut off */
+@media (max-width: 650px), (max-height: 720px) {
+    .round-result {
+        padding: 16px 10px !important;
+        justify-content: space-between !important;
+        overflow-y: auto !important;
+    }
+
+    .overlay-header {
+        margin-bottom: 10px !important;
+        padding: 0 10px !important;
+    }
+
+    .battle-cards {
+        gap: 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .battle-card-wrapper .card-container {
+        width: 105px !important;
+        height: 155px !important;
+    }
+
+    .result-text-container {
+        height: 44px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .win-text, .lose-text, .draw-text {
+        font-size: 1.6rem !important;
+    }
 }
 
 @keyframes slideInLeft {

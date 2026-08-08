@@ -197,6 +197,23 @@ const MultiplayerLobby = () => {
                                 {copied ? '✓ COPIED!' : '📋 COPY CODE'}
                             </button>
                         </div>
+                        
+                        <div className="private-action-group" style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '15px', width: '100%', alignItems: 'center' }}>
+                            <button 
+                                className="quick-match-btn btn-wax-seal" 
+                                style={{ maxWidth: '320px' }}
+                                onClick={() => {
+                                    sound.playWaxSealClick();
+                                    socketService.joinLobby(username, desiredMode);
+                                }}
+                            >
+                                ⚔️ START BATTLE NOW (VS RIVAL)
+                            </button>
+                            <span className="waiting-subtext" style={{ fontSize: '0.8rem', color: '#a0aec0' }}>
+                                Searching for connected friends...
+                            </span>
+                        </div>
+
                         <div className="loader-pulse"></div>
                     </div>
                 )}

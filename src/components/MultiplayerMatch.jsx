@@ -116,12 +116,16 @@ const MultiplayerMatch = () => {
         toastTimerRef.current = setTimeout(() => setToastMessage(null), duration);
     };
 
-    if (!gameState) {
-        return <div className="full-screen flex-center"><h1>Waiting for server...</h1></div>;
-    }
-
-    if (!gameState.hands) {
-        return <div className="full-screen flex-center"><h1>Starting Match...</h1></div>;
+    if (!gameState || !gameState.hands) {
+        return (
+            <div className="full-screen flex-center" style={{ background: '#0a0f1d' }}>
+                <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', padding: '30px' }}>
+                    <div className="radar-spinner" style={{ width: '60px', height: '60px', borderRadius: '50%', border: '3px solid rgba(212, 175, 55, 0.2)', borderTopColor: '#d4af37', animation: 'spinRadar 1.2s linear infinite' }}></div>
+                    <h2 className="text-gradient-gold" style={{ fontFamily: 'Cinzel Decorative, serif', fontSize: '1.4rem' }}>PREPARING SOVEREIGN ARENA...</h2>
+                    <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.88rem', color: '#cbd5e0' }}>Synchronizing battlefield coordinates across Aurelia.</p>
+                </div>
+            </div>
+        );
     }
 
 
