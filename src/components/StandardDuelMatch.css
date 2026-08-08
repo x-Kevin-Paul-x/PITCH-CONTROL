@@ -1,325 +1,522 @@
 .standard-duel-match {
-    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    background-image: linear-gradient(180deg, rgba(13, 12, 10, 0.4) 0%, rgba(13, 12, 10, 0.92) 100%), url('/images/castle_tournament_pitch.jpg');
+    background-size: cover;
+    background-position: center;
     position: relative;
-    flex: 1;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Field Background for Drafting */
+.bg-draft-field {
+    background-image: linear-gradient(180deg, rgba(13, 12, 10, 0.6) 0%, rgba(13, 12, 10, 0.95) 100%), url('/images/castle_tournament_pitch.jpg');
+    background-size: cover;
+    position: relative;
     overflow-y: auto;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
 }
 
-.match-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-    width: 100%;
-    min-height: 100%;
-    flex: 1;
-}
-
-/* Preview Section */
+/* Scouting Report Layout */
 .preview-container {
     text-align: center;
-    max-width: 100%;
-    padding: 20px;
-    animation: fadeIn 0.5s ease-out;
-    flex: 1;
+    max-width: 980px;
+    width: 95%;
+    max-height: 92vh;
+    padding: 16px 20px;
+    background: rgba(26, 23, 20, 0.94);
+    border: 2px solid var(--gold-primary);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(212, 175, 55, 0.2);
+    animation: fadeIn 0.4s ease-out;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin: auto;
 }
 
-.preview-container h2 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    margin-bottom: 10px;
-}
-
-.preview-container p {
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
-    margin-bottom: 8px;
-}
-
-.hint-text {
-    color: var(--color-text-muted);
-    font-size: clamp(0.75rem, 1.5vw, 0.9rem) !important;
-    margin-bottom: 20px !important;
-}
-
-.preview-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--card-width-tablet), 1fr));
-    gap: 15px;
-    justify-content: center;
-    justify-items: center;
-    margin: 20px auto;
-    max-width: 1200px;
-    padding: 0 10px;
-}
-
-.preview-cards>* {
-    animation: popIn 0.4s var(--ease-elastic) backwards;
-}
-
-.preview-cards>*:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.preview-cards>*:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.preview-cards>*:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.preview-cards>*:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.preview-cards>*:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.deck-info {
-    display: flex;
-    gap: 15px;
-    font-family: var(--font-display);
-    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
-    color: var(--color-text-muted);
-    margin: 8px 0;
-    justify-content: center;
-}
-
-/* Match Screen Layout */
-.match-header {
-    padding: 10px 15px;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+.preview-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
+    border-bottom: 1px solid var(--gold-primary);
+    padding-bottom: 8px;
     margin-bottom: 10px;
 }
 
-.opponent-area,
-.player-area {
-    min-height: 0;
-    flex-shrink: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.opponent-hand,
-.player-hand {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 100%;
-    padding: 10px;
-    transition: all 0.3s ease;
-}
-
-.played-card-spot {
-    transform: scale(0.9);
-    margin: 10px 0;
-    z-index: 5;
-}
-
-/* Overlay Styles */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-    animation: fadeIn 0.5s ease-out;
-}
-
-.overlay h1 {
-    font-size: clamp(2rem, 6vw, 4rem);
-    margin-bottom: 20px;
-    animation: slideDown 0.6s var(--ease-elastic);
-}
-
-.final-score {
-    font-size: clamp(4rem, 10vw, 8rem);
+.preview-header h2 {
+    font-size: 1.4rem;
     font-weight: 900;
-    margin: 30px 0;
-    font-family: var(--font-display);
-    background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: scoreReveal 0.8s var(--ease-elastic) 0.3s backwards;
+    color: var(--gold-primary);
+    margin: 0;
 }
 
-.overlay h2 {
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    margin-bottom: 30px;
-    animation: slideUp 0.6s var(--ease-elastic) 0.5s backwards;
+.scouting-instruction {
+    font-size: 0.8rem;
+    color: var(--parchment);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
 }
 
-.overlay button {
-    padding: 15px 40px;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    background: var(--color-primary);
-    color: #000;
-    border-radius: 50px;
+.scouting-countdown {
+    background: #8b0000;
+    border: 1px solid var(--gold-primary);
+    color: #f6f1e5;
+    padding: 3px 10px;
+    border-radius: 4px;
     font-weight: 700;
-    transition: all 0.2s;
-    animation: popIn 0.4s var(--ease-elastic) 0.7s backwards;
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
 }
 
-.overlay button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 30px var(--color-primary-glow);
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes popIn {
-    from {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes scoreReveal {
-    from {
-        transform: scale(0.5) rotateY(90deg);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1) rotateY(0deg);
-        opacity: 1;
-    }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .preview-cards {
-        grid-template-columns: repeat(auto-fit, minmax(var(--card-width-tablet), 1fr));
-    }
+.scouting-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin: 8px 0 12px;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
-    .match-content {
-        padding: 10px;
+    .scouting-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
-
-    .preview-cards {
+}
+@media (max-width: 480px) {
+    .scouting-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    /* Mobile Hand - Horizontal Scroll */
-    .player-hand {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        justify-content: flex-start;
-        width: 100%;
-        padding: 10px 20px;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        /* Hide scrollbar */
-        scrollbar-width: none;
-    }
-
-    .player-hand::-webkit-scrollbar {
-        display: none;
-    }
-
-    .player-hand>* {
-        flex: 0 0 auto;
-        scroll-snap-align: center;
-        margin-right: 10px;
-    }
-
-    .opponent-hand {
-        transform: scale(0.8);
-        margin-bottom: -20px;
-    }
-
-    .played-card-spot {
-        transform: scale(0.8);
-    }
-
-    .duo-indicator {
-        padding: 8px 16px;
-        font-size: 1rem;
-    }
-
-    .roll-btn {
-        padding: 0.8rem 2rem;
-        width: 100%;
-        margin-top: 10px;
     }
 }
 
-@media (max-width: 480px) {
-    .preview-cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+/* Winston Draft Split UI */
+.draft-split-layout {
+    width: 96%;
+    max-width: 980px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+    margin: auto;
+}
+
+.split-desc {
+    color: var(--parchment);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.piles-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 640px) {
+    .piles-section {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+.pile-bucket {
+    background: rgba(26, 23, 20, 0.88);
+    border: 1.5px dashed var(--gold-primary);
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 220px;
+    transition: all 0.3s var(--ease-out);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pile-bucket h3 {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    color: var(--gold-primary);
+}
+
+.pile-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    width: 100%;
+    justify-items: center;
+}
+
+.draft-item {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.draft-item:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+.choose-interactive {
+    cursor: pointer;
+    border: 2px solid var(--gold-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.choose-interactive:hover {
+    border-color: #fff;
+    box-shadow: 0 0 20px var(--gold-glow);
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.choose-btn-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(13, 12, 10, 0.75);
+    color: var(--gold-primary);
+    font-size: 1.2rem;
+    font-weight: 900;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+.choose-interactive:hover .choose-btn-overlay {
+    opacity: 1;
+}
+
+/* Match Arena Layout Grid */
+.match-content-grid {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+/* Score Bar */
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    background: rgba(26, 23, 20, 0.9);
+    border: 1.5px solid var(--gold-primary);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.player-score {
+    font-family: var(--font-main);
+    font-size: 1.15rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+.player-score.you { color: var(--gold-primary); }
+.player-score.cpu { color: #c0392b; }
+
+.match-info {
+    text-align: center;
+}
+
+.round-indicator {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--parchment);
+}
+.ai-tag {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--gold-primary);
+}
+
+/* Bench Areas */
+.opponent-bench-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.opponent-cards-fan {
+    display: flex;
+    gap: 4px;
+}
+
+.card-back-mini-glow {
+    width: 26px;
+    height: 38px;
+    border-radius: 3px;
+    background: linear-gradient(135deg, #1e1812 0%, #0d0c0a 100%);
+    border: 1px solid var(--gold-primary);
+    box-shadow: 0 0 6px rgba(212, 175, 55, 0.2);
+}
+
+/* Center Pitch Stadium */
+.pitch-center-stadium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 8px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 80%);
+}
+
+.die-render-arena {
+    padding: 12px;
+    background: rgba(26, 23, 20, 0.85);
+    border: 1.5px solid var(--gold-primary);
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.roll-btn {
+    padding: 10px 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #8b0000 0%, #5c0000 100%);
+    color: #f6f1e5;
+    border: 1.5px solid var(--gold-primary);
+    letter-spacing: 1px;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+}
+
+.roll-btn:hover {
+    transform: scale(1.04) translateY(-2px);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.7);
+}
+
+/* Tactics Selector */
+.tactics-selector {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    width: 100%;
+    justify-content: center;
+}
+
+.tactic-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+}
+
+.tactic-badge {
+    padding: 3px 8px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--parchment);
+    background: rgba(26, 23, 20, 0.8);
+    border: 1px solid var(--gold-primary);
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+.tactic-badge:hover {
+    background: var(--gold-primary);
+    color: #140d07;
+}
+
+.tactic-badge.active {
+    background: #8b0000;
+    color: #fff;
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Hand Cards Grid */
+.hand-cards-list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.hand-card-wrapper-item {
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hand-card-wrapper-item:not(.disabled):hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.hand-card-wrapper-item.selected {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+    border-radius: 10px;
+}
+
+.player-action-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.bench-count {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--parchment);
+}
+
+.confirm-btn {
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #8b0000 0%, #5c0000 100%);
+    color: #f6f1e5;
+    border: 1.5px solid var(--gold-primary);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.confirm-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.6);
+}
+
+/* Commentary Parchment Ticker */
+.commentary-ticker {
+    background: rgba(26, 23, 20, 0.94);
+    border: 1.5px solid var(--gold-primary);
+    border-radius: 6px;
+    padding: 6px 10px;
+    max-height: 80px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.commentary-header {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+}
+
+.logs-feed {
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.72rem;
+    color: var(--parchment);
+    text-align: left;
+    text-transform: none !important;
+}
+
+.log-line {
+    padding: 1px 0;
+    border-bottom: 1px dashed rgba(212, 175, 55, 0.15);
+    text-transform: none !important;
+}
+
+/* Playmaker Context Choice Modal */
+.playmaker-choice-modal {
+    margin-top: 12px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    background: rgba(26, 23, 20, 0.95);
+    border: 1.5px solid var(--gold-primary);
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.5);
+    text-align: center;
+    z-index: 10000;
+}
+
+.playmaker-choice-modal h3 {
+    font-size: 0.85rem;
+    color: var(--gold-primary);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.choice-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.choice-btn {
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    background: rgba(139, 0, 0, 0.8);
+    border: 1px solid var(--gold-primary);
+    color: #f6f1e5;
+    transition: all 0.2s;
+}
+
+.choice-btn:hover {
+    background: var(--gold-primary);
+    color: #140d07;
+}
+
+/* Mobile Responsiveness Improvements for Battle Screen */
+@media (max-width: 600px) {
+    .match-content-grid {
+        padding: 4px;
+        gap: 4px;
+        height: 100vh;
+        overflow: hidden;
     }
 
     .match-header {
-        font-size: 0.9rem;
-        padding: 8px;
+        padding: 4px 8px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    .played-card-spot {
-        transform: scale(0.7);
+    .player-score {
+        font-size: 0.85rem;
+    }
+
+    .round-indicator {
+        font-size: 0.75rem;
+    }
+
+    .card-back-mini-glow {
+        width: 18px;
+        height: 26px;
+    }
+
+    /* Player Hand Cards horizontally scrollable on small mobile screens */
+    .hand-cards-list {
+        display: flex !important;
+        gap: 6px !important;
+        overflow-x: auto !important;
+        max-width: 100% !important;
+        padding-bottom: 4px !important;
+        justify-content: flex-start !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .hand-card-wrapper-item {
+        flex-shrink: 0 !important;
+    }
+
+    .hand-card-wrapper-item .card-container {
+        width: 66px !important;
+        height: 98px !important;
+    }
+
+    .tactic-badge {
+        padding: 2px 6px;
+        font-size: 0.55rem;
     }
 }

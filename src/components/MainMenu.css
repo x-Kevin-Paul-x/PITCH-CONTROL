@@ -1,96 +1,221 @@
 .main-menu {
-    background: radial-gradient(circle at center, #1a2133 0%, #05070a 100%);
+    background-image: linear-gradient(180deg, rgba(13, 12, 10, 0.5) 0%, rgba(13, 12, 10, 0.95) 100%), url('/images/castle_tournament_pitch.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
     flex-direction: column;
-    padding: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 60px 20px 20px;
     overflow-y: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.audio-toggle-container {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 100;
+}
+
+.audio-toggle-btn {
+    background: rgba(26, 23, 20, 0.9);
+    border: 1.5px solid var(--gold-primary);
+    color: var(--parchment);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-family: var(--font-main);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: all 0.2s ease;
+}
+
+.audio-toggle-btn:hover {
+    background: var(--gold-primary);
+    color: #140d07;
+}
+
+.bg-castle-pitch {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .menu-content {
     text-align: center;
     z-index: 2;
     width: 100%;
-    max-width: 600px;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 24px;
+    margin: auto 0;
+}
+
+.heraldic-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2px;
+}
+
+.heraldic-seal {
+    font-size: 1.2rem;
+    color: var(--gold-primary);
+    text-shadow: 0 0 10px var(--gold-glow);
 }
 
 .game-title {
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.05em;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    margin: 0;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    filter: drop-shadow(0 0 20px rgba(0, 255, 157, 0.3));
     line-height: 1.1;
+    font-family: var(--font-display);
+    font-weight: 900;
+    color: var(--gold-primary);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9), 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
 .game-subtitle {
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
-    color: var(--color-text-muted);
-    margin-bottom: 3rem;
+    font-size: clamp(0.75rem, 1.8vw, 0.9rem);
+    color: var(--parchment);
+    margin-bottom: 1.2rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    text-shadow: 0 0 8px var(--gold-glow);
+    font-weight: 700;
 }
 
+/* AI Difficulty Panel */
+.difficulty-container {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 1.2rem;
+    background: rgba(26, 23, 20, 0.9);
+    border: 1.5px solid var(--gold-primary);
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.15);
+}
+
+.diff-header-title {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.difficulty-selector {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 3px;
+    border-radius: 6px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    margin-bottom: 8px;
+}
+
+.diff-tab-btn {
+    padding: 6px 3px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--color-text-muted);
+    background: transparent;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.diff-tab-btn:hover {
+    color: #fff;
+    background: rgba(212, 175, 55, 0.15);
+}
+
+.diff-tab-btn.active {
+    color: #f6f1e5;
+    background: #8b0000;
+    border: 1px solid var(--gold-primary);
+    box-shadow: 0 2px 8px rgba(139, 0, 0, 0.6);
+}
+
+.difficulty-info {
+    min-height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.diff-title-highlight {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+    margin-bottom: 2px;
+    font-family: var(--font-main);
+}
+
+.diff-desc {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+    max-width: 95%;
+}
+
+/* Menu Buttons */
 .menu-buttons {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.75rem;
     width: 100%;
-    margin: 0 auto;
 }
 
 .menu-btn {
-    padding: 1.5rem;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
+    padding: 0.85rem 1.2rem;
     text-align: left;
-    transition: all 0.3s var(--ease-out);
-    position: relative;
-    overflow: hidden;
     width: 100%;
-}
-
-.menu-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-    border-color: var(--color-primary);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.menu-btn.primary:hover {
-    box-shadow: 0 0 30px var(--color-primary-glow);
-}
-
-.menu-btn.secondary:hover {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 30px var(--color-accent-glow);
+    display: flex;
+    flex-direction: column;
 }
 
 .btn-title {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.1rem;
+    font-family: var(--font-display);
+    color: var(--parchment);
 }
 
 .btn-desc {
     display: block;
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    color: #d4af37;
     font-family: var(--font-main);
+    font-weight: 400;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 480px) {
+@media (max-height: 720px) {
+    .main-menu {
+        padding-top: 45px;
+    }
+    .game-title {
+        font-size: 2.2rem;
+    }
+    .menu-content {
+        padding: 12px;
+    }
     .menu-btn {
-        padding: 1.2rem;
-    }
-
-    .btn-title {
-        font-size: 1.2rem;
-    }
-
-    .game-subtitle {
-        margin-bottom: 2rem;
+        padding: 0.7rem 1rem;
     }
 }

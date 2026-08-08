@@ -1,0 +1,354 @@
+/* ==========================================================================
+   SOVEREIGN WAR ROOM (MULTIPLAYER LOBBY) STYLES
+   ========================================================================== */
+
+.multiplayer-lobby {
+    background-image: linear-gradient(180deg, rgba(13, 12, 10, 0.75) 0%, rgba(5, 7, 10, 0.95) 100%), url('/images/castle_tournament_pitch.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.war-room-container {
+    width: 100%;
+    max-width: 680px;
+    background: rgba(14, 20, 32, 0.9);
+    border: 1.5px solid rgba(212, 175, 55, 0.35);
+    border-radius: 16px;
+    padding: 28px 32px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(212, 175, 55, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.war-room-header {
+    text-align: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    padding-bottom: 12px;
+}
+
+.realm-subtitle {
+    font-family: 'Cinzel Decorative', 'Cinzel', serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #f6ad55;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.war-room-title {
+    font-family: 'Cinzel Decorative', 'Cinzel', serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0 0 6px 0;
+    letter-spacing: 0.5px;
+}
+
+.war-room-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    color: #cbd5e0;
+    margin: 0;
+}
+
+/* Profile Config Card */
+.profile-config-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(20, 28, 45, 0.75);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+}
+
+.profile-inputs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.input-group label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #f6ad55;
+    letter-spacing: 0.8px;
+}
+
+.knight-name-input,
+.house-select-dropdown {
+    width: 100%;
+    padding: 8px 12px;
+    background: rgba(12, 16, 26, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 6px;
+    color: #f7fafc;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+.knight-name-input:focus,
+.house-select-dropdown:focus {
+    border-color: #d4af37;
+    outline: none;
+}
+
+/* Mode Cards Grid */
+.mode-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+@media (max-width: 550px) {
+    .mode-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mode-card {
+    background: rgba(20, 28, 45, 0.75);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mode-card:hover {
+    border-color: rgba(212, 175, 55, 0.6);
+    transform: translateY(-2px);
+    background: rgba(25, 36, 58, 0.85);
+}
+
+.mode-card.active {
+    border-color: #d4af37;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(139, 0, 0, 0.3) 100%);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+}
+
+.mode-icon {
+    font-size: 1.4rem;
+}
+
+.mode-card h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #f7fafc;
+    margin: 0;
+}
+
+.mode-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #a0aec0;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Matchmaking Actions Grid */
+.matchmaking-actions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.quick-match-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Private Room Box */
+.private-room-box {
+    background: rgba(20, 28, 45, 0.75);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.private-room-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f6ad55;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.private-btn-group {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+@media (max-width: 550px) {
+    .private-btn-group {
+        flex-direction: column;
+    }
+}
+
+.create-room-btn {
+    padding: 10px 16px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(0, 0, 0, 0.5) 100%);
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    color: #f6e05e;
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.create-room-btn:hover {
+    background: rgba(212, 175, 55, 0.35);
+    transform: translateY(-2px);
+}
+
+.join-room-input-group {
+    flex: 1;
+    display: flex;
+    gap: 6px;
+    width: 100%;
+}
+
+.join-room-input-group input {
+    flex: 1;
+    padding: 8px 12px;
+    background: rgba(12, 16, 26, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+}
+
+.join-room-btn {
+    padding: 8px 16px;
+    background: #8b0000;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.join-room-btn:hover {
+    background: #a00000;
+}
+
+/* Status Searching Radar */
+.status-radar-box,
+.status-waiting-box,
+.status-matched-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 30px 10px;
+}
+
+.radar-spinner {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid rgba(212, 175, 55, 0.2);
+    border-top-color: #d4af37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spinRadar 1.2s linear infinite;
+}
+
+.radar-emblem {
+    font-size: 1.8rem;
+}
+
+@keyframes spinRadar {
+    to { transform: rotate(360deg); }
+}
+
+.gold-room-code-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(12, 16, 26, 0.9);
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 12px 24px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.code-text {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #f6e05e;
+    letter-spacing: 2px;
+}
+
+.copy-code-btn {
+    padding: 6px 14px;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* Footer Back Button */
+.war-room-footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 14px;
+}
+
+.back-to-menu-btn {
+    background: transparent;
+    border: none;
+    color: #a0aec0;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.back-to-menu-btn:hover {
+    color: #f6e05e;
+}

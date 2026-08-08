@@ -10,14 +10,72 @@
 
 @media (max-width: 480px) {
     :root {
-        --die-size: 60px;
+        --die-size: 70px;
     }
+}
+
+.die-container-scene {
+    display: inline-block;
+    position: relative;
+}
+
+/* Landing rumble animation */
+.impact-rumble {
+    animation: rumble 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes rumble {
+    0%, 100% { transform: scale(1) translate(0, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: scale(1.02) translate(-2px, -3px); }
+    20%, 40%, 60%, 80% { transform: scale(0.98) translate(2px, 3px); }
+}
+
+/* Screen Flash landing overlay */
+.screen-flash-glow {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999999;
+    animation: flashFade 0.55s ease-out;
+}
+
+.screen-flash-glow.face-att { background: radial-gradient(circle, rgba(255, 59, 48, 0.4) 0%, transparent 70%); }
+.screen-flash-glow.face-mid { background: radial-gradient(circle, rgba(0, 210, 255, 0.4) 0%, transparent 70%); }
+.screen-flash-glow.face-def { background: radial-gradient(circle, rgba(0, 255, 157, 0.4) 0%, transparent 70%); }
+.screen-flash-glow.face-gk { background: radial-gradient(circle, rgba(168, 85, 247, 0.4) 0%, transparent 70%); }
+
+@keyframes flashFade {
+    0% { opacity: 1; backdrop-filter: brightness(2) blur(2px); }
+    100% { opacity: 0; backdrop-filter: brightness(1) blur(0px); }
+}
+
+/* Die shadow underneath */
+.die-shadow {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(var(--die-size) * 0.85);
+    height: 14px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.7) 0%, transparent 75%);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.die-shadow.rolling {
+    animation: shadowPulse 0.35s infinite alternate ease-in-out;
+}
+
+@keyframes shadowPulse {
+    from { transform: translateX(-50%) scale(0.8); opacity: 0.4; }
+    to { transform: translateX(-50%) scale(1.1); opacity: 0.8; }
 }
 
 .scene {
     width: var(--die-size);
     height: var(--die-size);
-    perspective: calc(var(--die-size) * 4);
+    perspective: calc(var(--die-size) * 5);
 }
 
 .cube {
@@ -26,74 +84,102 @@
     position: relative;
     transform-style: preserve-3d;
     transform: translateZ(calc(var(--die-size) * -0.5));
-    transition: transform 1s;
+    transition: transform 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.25); /* Snappy 3D bounce */
 }
 
 .cube.rolling {
-    animation: spin 0.5s infinite linear;
+    animation: spinCube 0.35s infinite linear;
 }
 
-@keyframes spin {
+@keyframes spinCube {
     0% {
-        transform: translateZ(calc(var(--die-size) * -0.5)) rotateX(0) rotateY(0);
+        transform: translateZ(calc(var(--die-size) * -0.5)) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
-
+    50% {
+        transform: translateZ(calc(var(--die-size) * -0.5) + 15px) rotateX(180deg) rotateY(270deg) rotateZ(90deg);
+    }
     100% {
-        transform: translateZ(calc(var(--die-size) * -0.5)) rotateX(360deg) rotateY(360deg);
+        transform: translateZ(calc(var(--die-size) * -0.5)) rotateX(360deg) rotateY(540deg) rotateZ(180deg);
     }
 }
 
+/* Glassmorphism Cube Faces with custom heraldic gold frame */
 .cube__face {
     position: absolute;
     width: var(--die-size);
     height: var(--die-size);
-    border: 2px solid white;
-    line-height: var(--die-size);
-    font-size: calc(var(--die-size) * 0.3);
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.8);
-    box-shadow: inset 0 0 20px rgba(0, 255, 157, 0.5);
+    border: 3px solid #d4af37;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    background: radial-gradient(circle at 30% 30%, rgba(30, 24, 18, 0.95) 0%, rgba(13, 12, 10, 0.98) 100%);
+    box-shadow: inset 0 0 16px rgba(212, 175, 55, 0.3), 0 8px 25px rgba(0, 0, 0, 0.7);
+    transform-style: preserve-3d;
+    box-sizing: border-box;
 }
 
+.face-icon {
+    font-size: calc(var(--die-size) * 0.28);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+    transform: translateZ(12px);
+}
+
+.face-inner-txt {
+    font-family: 'Cinzel Decorative', 'Cinzel', serif;
+    font-size: calc(var(--die-size) * 0.22);
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    transform: translateZ(12px); /* 3D pop for text inside face */
+}
+
+/* Face themes (Front = ATT, Right = MID, Back = DEF, Left = GK, Top = ATT, Bottom = MID) */
 .cube__face--front {
     transform: rotateY(0deg) translateZ(calc(var(--die-size) * 0.5));
-    border-color: #ff4757;
+    border-color: #ff3b30;
+    box-shadow: inset 0 0 18px rgba(255, 59, 48, 0.4), 0 0 20px rgba(255, 59, 48, 0.25);
 }
+.face-inner-txt.att { color: #ff6b60; text-shadow: 0 0 10px rgba(255, 59, 48, 0.7); }
 
-/* ATT */
 .cube__face--right {
     transform: rotateY(90deg) translateZ(calc(var(--die-size) * 0.5));
-    border-color: #2ed573;
+    border-color: #00d2ff;
+    box-shadow: inset 0 0 18px rgba(0, 210, 255, 0.4), 0 0 20px rgba(0, 210, 255, 0.25);
 }
+.face-inner-txt.mid { color: #60e0ff; text-shadow: 0 0 10px rgba(0, 210, 255, 0.7); }
 
-/* MID */
 .cube__face--back {
     transform: rotateY(180deg) translateZ(calc(var(--die-size) * 0.5));
-    border-color: #3742fa;
+    border-color: #00ff9d;
+    box-shadow: inset 0 0 18px rgba(0, 255, 157, 0.4), 0 0 20px rgba(0, 255, 157, 0.25);
 }
+.face-inner-txt.def { color: #60ffc0; text-shadow: 0 0 10px rgba(0, 255, 157, 0.7); }
 
-/* DEF */
 .cube__face--left {
     transform: rotateY(-90deg) translateZ(calc(var(--die-size) * 0.5));
-    border-color: #ffa502;
+    border-color: #a855f7;
+    box-shadow: inset 0 0 18px rgba(168, 85, 247, 0.4), 0 0 20px rgba(168, 85, 247, 0.25);
 }
+.face-inner-txt.gk { color: #c084fc; text-shadow: 0 0 10px rgba(168, 85, 247, 0.7); }
 
-/* GK */
 .cube__face--top {
     transform: rotateX(90deg) translateZ(calc(var(--die-size) * 0.5));
-    border-color: #ff4757;
+    border-color: #ff3b30;
+    box-shadow: inset 0 0 18px rgba(255, 59, 48, 0.4), 0 0 20px rgba(255, 59, 48, 0.25);
 }
+.face-inner-txt.att-top { color: #ff6b60; text-shadow: 0 0 10px rgba(255, 59, 48, 0.7); }
 
-/* ATT */
 .cube__face--bottom {
     transform: rotateX(-90deg) translateZ(calc(var(--die-size) * 0.5));
-    border-color: #2ed573;
+    border-color: #00d2ff;
+    box-shadow: inset 0 0 18px rgba(0, 210, 255, 0.4), 0 0 20px rgba(0, 210, 255, 0.25);
 }
+.face-inner-txt.mid-bottom { color: #60e0ff; text-shadow: 0 0 10px rgba(0, 210, 255, 0.7); }
 
-/* MID */
-
+/* Rotations for showing faces */
 .cube.show-ATT {
     transform: translateZ(calc(var(--die-size) * -0.5)) rotateY(0deg);
 }

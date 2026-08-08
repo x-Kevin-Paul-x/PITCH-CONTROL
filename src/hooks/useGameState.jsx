@@ -6,6 +6,7 @@ const GameContext = createContext();
 export const GameProvider = ({ children }) => {
     const [phase, setPhase] = useState('MENU'); // MENU, PACK_OPENING, DRAFT, SQUAD_BUILDING, MATCH, RESULT
     const [gameMode, setGameMode] = useState('STANDARD'); // STANDARD, TRI_SQUAD
+    const [aiDifficulty, setAiDifficulty] = useState('PROFESSIONAL'); // ROOKIE, PROFESSIONAL, VETERAN, LEGEND
 
     // Data
     const [collection, setCollection] = useState([]); // For Tri-Squad (15 cards)
@@ -83,7 +84,9 @@ export const GameProvider = ({ children }) => {
             assignToSquad,
             removeFromSquad,
             isSquadsReady,
-            startGame
+            startGame,
+            aiDifficulty,
+            setAiDifficulty
         }}>
             {children}
         </GameContext.Provider>

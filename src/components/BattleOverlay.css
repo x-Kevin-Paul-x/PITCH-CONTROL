@@ -185,6 +185,88 @@
     filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.8));
 }
 
+/* Decider overlay animations */
+.decider-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.decider-card {
+    width: 260px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0);
+    opacity: 0;
+}
+
+.decider-card.left { animation: cardFlyInLeft 0.5s cubic-bezier(.2,.9,.2,1) forwards; }
+.decider-card.right { animation: cardFlyInRight 0.5s cubic-bezier(.2,.9,.2,1) forwards; animation-delay: 0.05s; }
+
+.decider-vs {
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 0 30px rgba(255,255,255,0.2);
+    transform: scale(0);
+    animation: vsPop 0.45s cubic-bezier(.2,.9,.2,1) 0.35s forwards;
+}
+
+.decider-flash {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0) 60%);
+    opacity: 0;
+    transform: scale(0.6);
+    animation: flashPulse 0.45s ease-out 0.55s forwards;
+    pointer-events: none;
+}
+
+@keyframes cardFlyInLeft {
+    from { transform: translateX(-60vw) rotate(-6deg); opacity: 0; }
+    60% { transform: translateX(20px) rotate(-2deg); opacity: 1; }
+    to { transform: translateX(0) rotate(0); opacity: 1; }
+}
+
+@keyframes cardFlyInRight {
+    from { transform: translateX(60vw) rotate(6deg); opacity: 0; }
+    60% { transform: translateX(-20px) rotate(2deg); opacity: 1; }
+    to { transform: translateX(0) rotate(0); opacity: 1; }
+}
+
+@keyframes flashPulse {
+    0% { opacity: 0; transform: scale(0.6); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0; transform: scale(1.5); }
+}
+
+/* Reveal the inner card content after the flash */
+.decider-card > * { opacity: 0; transform: translateY(6px); animation: revealPop 0.35s ease-out 0.6s forwards; }
+
+@keyframes revealPop {
+    from { opacity: 0; transform: translateY(6px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.decider-back {
+    width: 160px;
+    height: 240px;
+    background: linear-gradient(180deg, rgba(30,41,59,1), rgba(15,23,42,1));
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.decider-duo { display:flex; gap:12px; }
+
 @keyframes resultTextPop {
     0% {
         transform: scale(0) translateZ(-100px);
@@ -224,6 +306,65 @@
 
 .next-round-btn:active {
     transform: scale(0.95);
+}
+
+.match-over .match-over-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.play-again-block { display:flex; flex-direction:column; align-items:center; gap:8px; }
+.play-again-btn {
+    padding: 12px 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.9);
+}
+.play-again-btn.ready {
+    background: linear-gradient(90deg,#10b981,#60a5fa);
+    color: #03101a;
+}
+.opponent-ready { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+/* Rematch Countdown */
+.rematch-countdown {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2150000000;
+    pointer-events: none;
+}
+.rematch-box {
+    background: linear-gradient(180deg, rgba(15,23,42,0.9), rgba(2,6,23,0.9));
+    padding: 18px 28px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    text-align: center;
+    pointer-events: auto;
+}
+.rematch-text { color: rgba(255,255,255,0.8); font-weight:700; margin-bottom:6px; }
+.rematch-number { font-size: 3rem; font-weight:900; color: #fff; }
+
+/* Toast */
+.toast-notification {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: rgba(10,10,10,0.9);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    z-index: 2150000001;
+    font-weight: 700;
 }
 
 @keyframes fadeUp {

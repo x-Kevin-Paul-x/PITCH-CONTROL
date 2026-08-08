@@ -1,0 +1,2342 @@
+[
+    {
+        "id": "club_1",
+        "name": "Aegis Citadel FC",
+        "moniker": "Aegis",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 1,
+        "motto": "Optimization is the only path to victory.",
+        "philosophy": "Low Block Defense",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Bastion Citadel",
+        "primaryColor": "hsl(0, 75%, 35%)",
+        "secondaryColor": "hsl(60, 90%, 65%)",
+        "managerName": "Enzo Bolt",
+        "staff": [
+            {
+                "name": "Atticus Dale",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Fang Byte",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_1",
+            "name": "Benedict Williams",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_21",
+            "name": "Zane Bow",
+            "clubName": "Cyber Nexus FC"
+        }
+    },
+    {
+        "id": "club_2",
+        "name": "Cyber Nexus FC",
+        "moniker": "Cyber",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 2,
+        "motto": "Optimization is the only path to victory.",
+        "philosophy": "Possession Control",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Neural Arena",
+        "primaryColor": "hsl(137, 75%, 35%)",
+        "secondaryColor": "hsl(197, 90%, 65%)",
+        "managerName": "Axel Howl",
+        "staff": [
+            {
+                "name": "Nils Frost",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Lucian Nova",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_21",
+            "name": "Zane Bow",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_161",
+            "name": "Matteo Glacier",
+            "clubName": "Titan Foundry FC"
+        }
+    },
+    {
+        "id": "club_3",
+        "name": "Valhalla Sentinels",
+        "moniker": "Valhalla",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 3,
+        "motto": "Heavy iron, heavy pressure.",
+        "philosophy": "Low Block Defense",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Great Keep",
+        "primaryColor": "hsl(274, 75%, 35%)",
+        "secondaryColor": "hsl(334, 90%, 65%)",
+        "managerName": "Hugo Wolf",
+        "staff": [
+            {
+                "name": "Xerxes Trickster",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Oliver Rivet",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_41",
+            "name": "Barnaby Capella",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_301",
+            "name": "Jaxon Hammer",
+            "clubName": "Ignis Steamers"
+        }
+    },
+    {
+        "id": "club_4",
+        "name": "Helios Sovereign",
+        "moniker": "Helios",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 4,
+        "motto": "Through grit, determination, and steel to glory.",
+        "philosophy": "Gegenpressing",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Solar Spire",
+        "primaryColor": "hsl(51, 75%, 35%)",
+        "secondaryColor": "hsl(111, 90%, 65%)",
+        "managerName": "Gulliver Dune",
+        "staff": [
+            {
+                "name": "Nash Arrow",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Marco Sword",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_61",
+            "name": "Rayna Ice",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_41",
+            "name": "Barnaby Capella",
+            "clubName": "Valhalla Sentinels"
+        }
+    },
+    {
+        "id": "club_5",
+        "name": "Crystalline Palace",
+        "moniker": "Crystalline",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 5,
+        "motto": "Light reveals all angles and opportunities.",
+        "philosophy": "Possession Control",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Glass Octagon",
+        "primaryColor": "hsl(188, 75%, 35%)",
+        "secondaryColor": "hsl(248, 90%, 65%)",
+        "managerName": "Leander Wind",
+        "staff": [
+            {
+                "name": "Archibald Lake",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Silas Syntax",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_81",
+            "name": "Barnaby Compiler",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_201",
+            "name": "Atticus Roar",
+            "clubName": "Phoenix Horizon"
+        }
+    },
+    {
+        "id": "club_6",
+        "name": "Solaris Vanguard",
+        "moniker": "Solaris",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 6,
+        "motto": "Light reveals all angles and opportunities.",
+        "philosophy": "Route One Direct",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Daybreak Pitch",
+        "primaryColor": "hsl(325, 75%, 35%)",
+        "secondaryColor": "hsl(25, 90%, 65%)",
+        "managerName": "Haruto Finch",
+        "staff": [
+            {
+                "name": "Luca Archer",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Lars Storm",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_101",
+            "name": "Felix Shields",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_341",
+            "name": "Leopold Vassal",
+            "clubName": "Echo Frequency"
+        }
+    },
+    {
+        "id": "club_7",
+        "name": "Zenith Ascendants",
+        "moniker": "Zenith",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 7,
+        "motto": "To the skies, on wings of speed.",
+        "philosophy": "Route One Direct",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Summit Colosseum",
+        "primaryColor": "hsl(102, 75%, 35%)",
+        "secondaryColor": "hsl(162, 90%, 65%)",
+        "managerName": "Clara Fletcher",
+        "staff": [
+            {
+                "name": "Dorian Roberts",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Adrian Bolt",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_121",
+            "name": "Fabian Thunder",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_81",
+            "name": "Barnaby Compiler",
+            "clubName": "Crystalline Palace"
+        }
+    },
+    {
+        "id": "club_8",
+        "name": "Aethelgard Royal FC",
+        "moniker": "Aethelgard",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 8,
+        "motto": "To the skies, on wings of speed.",
+        "philosophy": "Possession Control",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Crown Amphitheater",
+        "primaryColor": "hsl(239, 75%, 35%)",
+        "secondaryColor": "hsl(299, 90%, 65%)",
+        "managerName": "Javier Lake",
+        "staff": [
+            {
+                "name": "Nyx Dune",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Orion Sky",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_141",
+            "name": "Tiberius Taylor",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_241",
+            "name": "Reginald Lake",
+            "clubName": "Oceanus Depths FC"
+        }
+    },
+    {
+        "id": "club_9",
+        "name": "Titan Foundry FC",
+        "moniker": "Titan",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 9,
+        "motto": "Forged in fire, tempered in iron.",
+        "philosophy": "Route One Direct",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Automated Forge",
+        "primaryColor": "hsl(16, 75%, 35%)",
+        "secondaryColor": "hsl(76, 90%, 65%)",
+        "managerName": "Caspian Zephyr",
+        "staff": [
+            {
+                "name": "Brody Linker",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Leopold Adder",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_161",
+            "name": "Matteo Glacier",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_381",
+            "name": "Zephyr Matrix",
+            "clubName": "Runic Monoliths"
+        }
+    },
+    {
+        "id": "club_10",
+        "name": "Ironclad Harbors",
+        "moniker": "Ironclad",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 10,
+        "motto": "Roots in the soil, hearts in the match.",
+        "philosophy": "Counter-Attack Press",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Steel Drydock",
+        "primaryColor": "hsl(153, 75%, 35%)",
+        "secondaryColor": "hsl(213, 90%, 65%)",
+        "managerName": "Simeon Sword",
+        "staff": [
+            {
+                "name": "Nico Swift",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Barnaby Vega",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_181",
+            "name": "Cornelius Gorge",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_121",
+            "name": "Fabian Thunder",
+            "clubName": "Zenith Ascendants"
+        }
+    },
+    {
+        "id": "club_11",
+        "name": "Phoenix Horizon",
+        "moniker": "Phoenix",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 11,
+        "motto": "Light reveals all angles and opportunities.",
+        "philosophy": "Gegenpressing",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Burnished Sky-Dome",
+        "primaryColor": "hsl(290, 75%, 35%)",
+        "secondaryColor": "hsl(350, 90%, 65%)",
+        "managerName": "Ren Stack",
+        "staff": [
+            {
+                "name": "Finn Taylor",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Javier Bolt",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_201",
+            "name": "Atticus Roar",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_281",
+            "name": "Jude Hawthorne",
+            "clubName": "Silver Crowns"
+        }
+    },
+    {
+        "id": "club_12",
+        "name": "Specter Syndicate",
+        "moniker": "Specter",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 12,
+        "motto": "Forged in fire, tempered in iron.",
+        "philosophy": "Counter-Attack Press",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Shadow Grid",
+        "primaryColor": "hsl(67, 75%, 35%)",
+        "secondaryColor": "hsl(127, 90%, 65%)",
+        "managerName": "Magnus Castor",
+        "staff": [
+            {
+                "name": "Drake Sirius",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Finn Archer",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_221",
+            "name": "Wyatt Clay",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_21",
+            "name": "Zane Bow",
+            "clubName": "Cyber Nexus FC"
+        }
+    },
+    {
+        "id": "club_13",
+        "name": "Oceanus Depths FC",
+        "moniker": "Oceanus",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 13,
+        "motto": "Roots in the soil, hearts in the match.",
+        "philosophy": "Possession Control",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Geothermal Shelf",
+        "primaryColor": "hsl(204, 75%, 35%)",
+        "secondaryColor": "hsl(264, 90%, 65%)",
+        "managerName": "Nash Thorne",
+        "staff": [
+            {
+                "name": "Helios Zephyr",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Beck Adder",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_241",
+            "name": "Reginald Lake",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_161",
+            "name": "Matteo Glacier",
+            "clubName": "Titan Foundry FC"
+        }
+    },
+    {
+        "id": "club_14",
+        "name": "Wildwood United",
+        "moniker": "Wildwood",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 14,
+        "motto": "Forged in fire, tempered in iron.",
+        "philosophy": "Gegenpressing",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Ancient Redwood Grove",
+        "primaryColor": "hsl(341, 75%, 35%)",
+        "secondaryColor": "hsl(41, 90%, 65%)",
+        "managerName": "Nikolai Oak",
+        "staff": [
+            {
+                "name": "Milo Bolt",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Marina Forest",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_261",
+            "name": "Marina Linker",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_321",
+            "name": "Atticus Canyon",
+            "clubName": "Aero Sky-Knights"
+        }
+    },
+    {
+        "id": "club_15",
+        "name": "Silver Crowns",
+        "moniker": "Silver",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 15,
+        "motto": "Silent, stealthy, but lethal.",
+        "philosophy": "Possession Control",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Vault Sanctuary",
+        "primaryColor": "hsl(118, 75%, 35%)",
+        "secondaryColor": "hsl(178, 90%, 65%)",
+        "managerName": "Oliver Serpent",
+        "staff": [
+            {
+                "name": "Aurelius Steel",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Ryder Frost",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_281",
+            "name": "Jude Hawthorne",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_61",
+            "name": "Rayna Ice",
+            "clubName": "Helios Sovereign"
+        }
+    },
+    {
+        "id": "club_16",
+        "name": "Ignis Steamers",
+        "moniker": "Ignis",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 16,
+        "motto": "Light reveals all angles and opportunities.",
+        "philosophy": "Counter-Attack Press",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Geothermal Caldera",
+        "primaryColor": "hsl(255, 75%, 35%)",
+        "secondaryColor": "hsl(315, 90%, 65%)",
+        "managerName": "Sven Roberts",
+        "staff": [
+            {
+                "name": "Leander Roar",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Ryder Castor",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_301",
+            "name": "Jaxon Hammer",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_201",
+            "name": "Atticus Roar",
+            "clubName": "Phoenix Horizon"
+        }
+    },
+    {
+        "id": "club_17",
+        "name": "Aero Sky-Knights",
+        "moniker": "Aero",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 17,
+        "motto": "Optimization is the only path to victory.",
+        "philosophy": "Wing Attack & Cross",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Stratosphere Deck",
+        "primaryColor": "hsl(32, 75%, 35%)",
+        "secondaryColor": "hsl(92, 90%, 65%)",
+        "managerName": "Gavin Kepler",
+        "staff": [
+            {
+                "name": "Ryder Void",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Balthazar Rock",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_321",
+            "name": "Atticus Canyon",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_361",
+            "name": "Clement Bold",
+            "clubName": "Onyx Bastion"
+        }
+    },
+    {
+        "id": "club_18",
+        "name": "Echo Frequency",
+        "moniker": "Echo",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 18,
+        "motto": "Unleash the hunting pack.",
+        "philosophy": "Possession Control",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Resonant Amphitheater",
+        "primaryColor": "hsl(169, 75%, 35%)",
+        "secondaryColor": "hsl(229, 90%, 65%)",
+        "managerName": "Marco Hawthorne",
+        "staff": [
+            {
+                "name": "Luca Flint",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Carlos Shores",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_341",
+            "name": "Leopold Vassal",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_101",
+            "name": "Felix Shields",
+            "clubName": "Solaris Vanguard"
+        }
+    },
+    {
+        "id": "club_19",
+        "name": "Onyx Bastion",
+        "moniker": "Onyx",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 19,
+        "motto": "Optimization is the only path to victory.",
+        "philosophy": "Low Block Defense",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Obsidian Mine",
+        "primaryColor": "hsl(306, 75%, 35%)",
+        "secondaryColor": "hsl(6, 90%, 65%)",
+        "managerName": "Takuya Matrix",
+        "staff": [
+            {
+                "name": "Ivan Winter",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Winston Wolf",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_361",
+            "name": "Clement Bold",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_241",
+            "name": "Reginald Lake",
+            "clubName": "Oceanus Depths FC"
+        }
+    },
+    {
+        "id": "club_20",
+        "name": "Runic Monoliths",
+        "moniker": "Runic",
+        "leagueId": "apex",
+        "leagueName": "Apex Division",
+        "tier": 1,
+        "position": 20,
+        "motto": "Honor and duty run in our veins.",
+        "philosophy": "Low Block Defense",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Whispering Stone Glade",
+        "primaryColor": "hsl(83, 75%, 35%)",
+        "secondaryColor": "hsl(143, 90%, 65%)",
+        "managerName": "Drake Smith",
+        "staff": [
+            {
+                "name": "Colt Talon",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Umbra Glacier",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_381",
+            "name": "Zephyr Matrix",
+            "rarity": "LEGEND",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_1",
+            "name": "Benedict Williams",
+            "clubName": "Aegis Citadel FC"
+        }
+    },
+    {
+        "id": "club_21",
+        "name": "Vanguard Tactical",
+        "moniker": "Vanguard",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 21,
+        "motto": "To the skies, on wings of speed.",
+        "philosophy": "Gegenpressing",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Cadet Field",
+        "primaryColor": "hsl(220, 85%, 45%)",
+        "secondaryColor": "hsl(40, 100%, 55%)",
+        "managerName": "Dimitri Vance",
+        "staff": [
+            {
+                "name": "Leander Beach",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Asher Gear",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_401",
+            "name": "Milo Bolt",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_561",
+            "name": "Alejandro Ice",
+            "clubName": "Titan Automations"
+        }
+    },
+    {
+        "id": "club_22",
+        "name": "Ironclad Dockers",
+        "moniker": "Ironclad",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 22,
+        "motto": "Unbowed, Unbroken, Unyielding.",
+        "philosophy": "Low Block Defense",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Harbor Wall",
+        "primaryColor": "hsl(357, 85%, 45%)",
+        "secondaryColor": "hsl(177, 100%, 55%)",
+        "managerName": "Jude Matrix",
+        "staff": [
+            {
+                "name": "Ivan Void",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Wyatt Ice",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_421",
+            "name": "Augustus Ramirez",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_701",
+            "name": "Alistair Buffer",
+            "clubName": "Aethelgard Heralds"
+        }
+    },
+    {
+        "id": "club_23",
+        "name": "Solaris Rays",
+        "moniker": "Solaris",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 23,
+        "motto": "Unbowed, Unbroken, Unyielding.",
+        "philosophy": "Wing Attack & Cross",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Zenith Yard",
+        "primaryColor": "hsl(134, 85%, 45%)",
+        "secondaryColor": "hsl(314, 100%, 55%)",
+        "managerName": "Alexei Knight",
+        "staff": [
+            {
+                "name": "Dimitri Pollux",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Luis Cloud",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_441",
+            "name": "Haruto Ocean",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_461",
+            "name": "Axel Vance",
+            "clubName": "Glacier Pipelines"
+        }
+    },
+    {
+        "id": "club_24",
+        "name": "Glacier Pipelines",
+        "moniker": "Glacier",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 24,
+        "motto": "Optimization is the only path to victory.",
+        "philosophy": "Low Block Defense",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Frost Station",
+        "primaryColor": "hsl(271, 85%, 45%)",
+        "secondaryColor": "hsl(91, 100%, 55%)",
+        "managerName": "Ryder Anvil",
+        "staff": [
+            {
+                "name": "Ivan Miller",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Declan Current",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_461",
+            "name": "Axel Vance",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_601",
+            "name": "Breeze Linker",
+            "clubName": "Crystalline Optics"
+        }
+    },
+    {
+        "id": "club_25",
+        "name": "Void Geothermals",
+        "moniker": "Void",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 25,
+        "motto": "To the skies, on wings of speed.",
+        "philosophy": "Counter-Attack Press",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Basalt Trench",
+        "primaryColor": "hsl(48, 85%, 45%)",
+        "secondaryColor": "hsl(228, 100%, 55%)",
+        "managerName": "Nikolai Frost",
+        "staff": [
+            {
+                "name": "Ryouta Heap",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Matteo Hammer",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_481",
+            "name": "Torstein Davis",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_741",
+            "name": "Javier Lake",
+            "clubName": "Helios Sun-Wellers"
+        }
+    },
+    {
+        "id": "club_26",
+        "name": "Valhalla Sky-Raiders",
+        "moniker": "Valhalla",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 26,
+        "motto": "Precision in every coordinate.",
+        "philosophy": "Route One Direct",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The High Cloud Hangar",
+        "primaryColor": "hsl(185, 85%, 45%)",
+        "secondaryColor": "hsl(5, 100%, 55%)",
+        "managerName": "Yuri Wind",
+        "staff": [
+            {
+                "name": "Bruno Cache",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Hadrian Rigel",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_501",
+            "name": "Kenji Gorge",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_481",
+            "name": "Torstein Davis",
+            "clubName": "Void Geothermals"
+        }
+    },
+    {
+        "id": "club_27",
+        "name": "Oceanus Cargo FC",
+        "moniker": "Oceanus",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 27,
+        "motto": "The ocean returns all waves, we return all attacks.",
+        "philosophy": "Possession Control",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Sea-Port Pier",
+        "primaryColor": "hsl(322, 85%, 45%)",
+        "secondaryColor": "hsl(142, 100%, 55%)",
+        "managerName": "Kai Redwood",
+        "staff": [
+            {
+                "name": "Atticus Solar",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Marcus Ramirez",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_521",
+            "name": "Wyatt Ramirez",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_641",
+            "name": "Caspian Byte",
+            "clubName": "Onyx Tunnelers"
+        }
+    },
+    {
+        "id": "club_28",
+        "name": "Wildwood Rangers",
+        "moniker": "Wildwood",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 28,
+        "motto": "To the skies, on wings of speed.",
+        "philosophy": "Gegenpressing",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Mossy Outpost",
+        "primaryColor": "hsl(99, 85%, 45%)",
+        "secondaryColor": "hsl(279, 100%, 55%)",
+        "managerName": "Benedict Trapper",
+        "staff": [
+            {
+                "name": "Hadrian Roar",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Rafael Forest",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_541",
+            "name": "Max Taylor",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_781",
+            "name": "Ivan Slate",
+            "clubName": "Bramble Trappers"
+        }
+    },
+    {
+        "id": "club_29",
+        "name": "Titan Automations",
+        "moniker": "Titan",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 29,
+        "motto": "The ocean returns all waves, we return all attacks.",
+        "philosophy": "Wing Attack & Cross",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Foundry Belt",
+        "primaryColor": "hsl(236, 85%, 45%)",
+        "secondaryColor": "hsl(56, 100%, 55%)",
+        "managerName": "Bjorn Adder",
+        "staff": [
+            {
+                "name": "Kai Ironclad",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Antonio Tide",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_561",
+            "name": "Alejandro Ice",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_521",
+            "name": "Wyatt Ramirez",
+            "clubName": "Oceanus Cargo FC"
+        }
+    },
+    {
+        "id": "club_30",
+        "name": "Aero Cloud-Skiffs",
+        "moniker": "Aero",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 30,
+        "motto": "Light reveals all angles and opportunities.",
+        "philosophy": "Wing Attack & Cross",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Sky Hangar",
+        "primaryColor": "hsl(13, 85%, 45%)",
+        "secondaryColor": "hsl(193, 100%, 55%)",
+        "managerName": "Marcus Script",
+        "staff": [
+            {
+                "name": "Theodore Storm",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Dominic Bright",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_581",
+            "name": "Luca Rex",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_681",
+            "name": "Thorin Sky",
+            "clubName": "Cyber Hackers FC"
+        }
+    },
+    {
+        "id": "club_31",
+        "name": "Crystalline Optics",
+        "moniker": "Crystalline",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 31,
+        "motto": "Heavy iron, heavy pressure.",
+        "philosophy": "Possession Control",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Quartz Arena",
+        "primaryColor": "hsl(150, 85%, 45%)",
+        "secondaryColor": "hsl(330, 100%, 55%)",
+        "managerName": "Cyrus Capella",
+        "staff": [
+            {
+                "name": "Constantine Brook",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Barnaby Antares",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_601",
+            "name": "Breeze Linker",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_421",
+            "name": "Augustus Ramirez",
+            "clubName": "Ironclad Dockers"
+        }
+    },
+    {
+        "id": "club_32",
+        "name": "Echo Sonars",
+        "moniker": "Echo",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 32,
+        "motto": "Every pass a mathematical calculation.",
+        "philosophy": "Possession Control",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Abyss Dome",
+        "primaryColor": "hsl(287, 85%, 45%)",
+        "secondaryColor": "hsl(107, 100%, 55%)",
+        "managerName": "Dimitri Node",
+        "staff": [
+            {
+                "name": "Barnaby Stack",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Magnus Vector",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_621",
+            "name": "Cyrus Roar",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_561",
+            "name": "Alejandro Ice",
+            "clubName": "Titan Automations"
+        }
+    },
+    {
+        "id": "club_33",
+        "name": "Onyx Tunnelers",
+        "moniker": "Onyx",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 33,
+        "motto": "Every pass a mathematical calculation.",
+        "philosophy": "Counter-Attack Press",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Geode Shaft",
+        "primaryColor": "hsl(64, 85%, 45%)",
+        "secondaryColor": "hsl(244, 100%, 55%)",
+        "managerName": "Santiago Bright",
+        "staff": [
+            {
+                "name": "Carlos Dale",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Stefan Iron",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_641",
+            "name": "Caspian Byte",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_721",
+            "name": "Thaddeus Ice",
+            "clubName": "Nova Astrophysicists"
+        }
+    },
+    {
+        "id": "club_34",
+        "name": "Runic Stone-Cutters",
+        "moniker": "Runic",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 34,
+        "motto": "Unleash the hunting pack.",
+        "philosophy": "Low Block Defense",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Slate Quarry",
+        "primaryColor": "hsl(201, 85%, 45%)",
+        "secondaryColor": "hsl(21, 100%, 55%)",
+        "managerName": "Olaf Shield",
+        "staff": [
+            {
+                "name": "Fabian Winter",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Clara Squire",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_661",
+            "name": "Orion Pine",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_461",
+            "name": "Axel Vance",
+            "clubName": "Glacier Pipelines"
+        }
+    },
+    {
+        "id": "club_35",
+        "name": "Cyber Hackers FC",
+        "moniker": "Cyber",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 35,
+        "motto": "Unbowed, Unbroken, Unyielding.",
+        "philosophy": "Gegenpressing",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Server Rack",
+        "primaryColor": "hsl(338, 85%, 45%)",
+        "secondaryColor": "hsl(158, 100%, 55%)",
+        "managerName": "Leander Shell",
+        "staff": [
+            {
+                "name": "Carlos Tempest",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Kai Ramirez",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_681",
+            "name": "Thorin Sky",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_601",
+            "name": "Breeze Linker",
+            "clubName": "Crystalline Optics"
+        }
+    },
+    {
+        "id": "club_36",
+        "name": "Aethelgard Heralds",
+        "moniker": "Aethelgard",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 36,
+        "motto": "Unbowed, Unbroken, Unyielding.",
+        "philosophy": "Possession Control",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Manor Gate",
+        "primaryColor": "hsl(115, 85%, 45%)",
+        "secondaryColor": "hsl(295, 100%, 55%)",
+        "managerName": "Aero Pollux",
+        "staff": [
+            {
+                "name": "Sota Dale",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Aurora Buffer",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_701",
+            "name": "Alistair Buffer",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_761",
+            "name": "Felix Kernel",
+            "clubName": "Zenith Climbers"
+        }
+    },
+    {
+        "id": "club_37",
+        "name": "Nova Astrophysicists",
+        "moniker": "Nova",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 37,
+        "motto": "Wild, free, and fierce on the pitch.",
+        "philosophy": "Possession Control",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Observatory Peak",
+        "primaryColor": "hsl(252, 85%, 45%)",
+        "secondaryColor": "hsl(72, 100%, 55%)",
+        "managerName": "Stefan Bold",
+        "staff": [
+            {
+                "name": "Dante Frost",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Hadrian Ironclad",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_721",
+            "name": "Thaddeus Ice",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_501",
+            "name": "Kenji Gorge",
+            "clubName": "Valhalla Sky-Raiders"
+        }
+    },
+    {
+        "id": "club_38",
+        "name": "Helios Sun-Wellers",
+        "moniker": "Helios",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 38,
+        "motto": "Every pass a mathematical calculation.",
+        "philosophy": "Counter-Attack Press",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Power Well",
+        "primaryColor": "hsl(29, 85%, 45%)",
+        "secondaryColor": "hsl(209, 100%, 55%)",
+        "managerName": "Alexei Steel",
+        "staff": [
+            {
+                "name": "Gavin Ridge",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Diego Cloud",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_741",
+            "name": "Javier Lake",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_641",
+            "name": "Caspian Byte",
+            "clubName": "Onyx Tunnelers"
+        }
+    },
+    {
+        "id": "club_39",
+        "name": "Zenith Climbers",
+        "moniker": "Zenith",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 39,
+        "motto": "Precision in every coordinate.",
+        "philosophy": "Route One Direct",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The High Pass",
+        "primaryColor": "hsl(166, 85%, 45%)",
+        "secondaryColor": "hsl(346, 100%, 55%)",
+        "managerName": "Theodore Pollux",
+        "staff": [
+            {
+                "name": "Percival Cache",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Devin Compiler",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_761",
+            "name": "Felix Kernel",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_401",
+            "name": "Milo Bolt",
+            "clubName": "Vanguard Tactical"
+        }
+    },
+    {
+        "id": "club_40",
+        "name": "Bramble Trappers",
+        "moniker": "Bramble",
+        "leagueId": "challenger",
+        "leagueName": "Challenger League",
+        "tier": 2,
+        "position": 40,
+        "motto": "Through grit, determination, and steel to glory.",
+        "philosophy": "Counter-Attack Press",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Border Thicket",
+        "primaryColor": "hsl(303, 85%, 45%)",
+        "secondaryColor": "hsl(123, 100%, 55%)",
+        "managerName": "Simeon Shores",
+        "staff": [
+            {
+                "name": "Beck Clay",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Kenji Cobra",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_781",
+            "name": "Ivan Slate",
+            "rarity": "ELITE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_541",
+            "name": "Max Taylor",
+            "clubName": "Wildwood Rangers"
+        }
+    },
+    {
+        "id": "club_41",
+        "name": "Specter Phantoms",
+        "moniker": "Specter",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 41,
+        "motto": "Wild, free, and fierce on the pitch.",
+        "philosophy": "Counter-Attack Press",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Mist Valley",
+        "primaryColor": "hsl(80, 35%, 25%)",
+        "secondaryColor": "hsl(125, 45%, 40%)",
+        "managerName": "Kaelen Fang",
+        "staff": [
+            {
+                "name": "Jasper Wave",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Lucian Shield",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_801",
+            "name": "Drake Frost",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_1101",
+            "name": "Lucian Roberts",
+            "clubName": "Wildwood Druids"
+        }
+    },
+    {
+        "id": "club_42",
+        "name": "Zephyr Wind-Riders",
+        "moniker": "Zephyr",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 42,
+        "motto": "Ascend the highest peaks, conquer the field.",
+        "philosophy": "Wing Attack & Cross",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Coast Slope",
+        "primaryColor": "hsl(217, 35%, 25%)",
+        "secondaryColor": "hsl(262, 45%, 40%)",
+        "managerName": "Kelvin Gale",
+        "staff": [
+            {
+                "name": "Enzo Clay",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Alistair Dale",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_821",
+            "name": "Jude Miller",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_861",
+            "name": "Axel Slate",
+            "clubName": "Horizon Trackers"
+        }
+    },
+    {
+        "id": "club_43",
+        "name": "Apex Aviators",
+        "moniker": "Apex",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 43,
+        "motto": "Defend the crown, honor the legacy.",
+        "philosophy": "Gegenpressing",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Lower Airfield",
+        "primaryColor": "hsl(354, 35%, 25%)",
+        "secondaryColor": "hsl(39, 45%, 40%)",
+        "managerName": "Galahad Vassal",
+        "staff": [
+            {
+                "name": "Asher Bright",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Alistair Rock",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_841",
+            "name": "Lucian Antares",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_1001",
+            "name": "Riku Wrecker",
+            "clubName": "Vanguard Reserves"
+        }
+    },
+    {
+        "id": "club_44",
+        "name": "Horizon Trackers",
+        "moniker": "Horizon",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 44,
+        "motto": "Ride the ocean tide to triumph.",
+        "philosophy": "Route One Direct",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Open Savannah",
+        "primaryColor": "hsl(131, 35%, 25%)",
+        "secondaryColor": "hsl(176, 45%, 40%)",
+        "managerName": "Stefan Current",
+        "staff": [
+            {
+                "name": "Bramble Compiler",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Henry Oak",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_861",
+            "name": "Axel Slate",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_1141",
+            "name": "Dorian Buffer",
+            "clubName": "Aero Flyers"
+        }
+    },
+    {
+        "id": "club_45",
+        "name": "Sentinel Boundary",
+        "moniker": "Sentinel",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 45,
+        "motto": "Unleash the hunting pack.",
+        "philosophy": "Low Block Defense",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Border Tower",
+        "primaryColor": "hsl(268, 35%, 25%)",
+        "secondaryColor": "hsl(313, 45%, 40%)",
+        "managerName": "Valerius Fang",
+        "staff": [
+            {
+                "name": "Ivan Page",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Tristan Sun",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_881",
+            "name": "Manuel Kepler",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_901",
+            "name": "Atticus Smith",
+            "clubName": "Shadow Whispers"
+        }
+    },
+    {
+        "id": "club_46",
+        "name": "Shadow Whispers",
+        "moniker": "Shadow",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 46,
+        "motto": "Ride the ocean tide to triumph.",
+        "philosophy": "Counter-Attack Press",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Dark Crypt",
+        "primaryColor": "hsl(45, 35%, 25%)",
+        "secondaryColor": "hsl(90, 45%, 40%)",
+        "managerName": "Bruno Sands",
+        "staff": [
+            {
+                "name": "Clement Lance",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Cyrus Snow",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_901",
+            "name": "Atticus Smith",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_1041",
+            "name": "Ronan Ramirez",
+            "clubName": "Void Pitches"
+        }
+    },
+    {
+        "id": "club_47",
+        "name": "Silver Keepers",
+        "moniker": "Silver",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 47,
+        "motto": "Through grit, determination, and steel to glory.",
+        "philosophy": "Low Block Defense",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Guard Sanctuary",
+        "primaryColor": "hsl(182, 35%, 25%)",
+        "secondaryColor": "hsl(227, 45%, 40%)",
+        "managerName": "Oakley Smith",
+        "staff": [
+            {
+                "name": "Leopold Wolf",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Manuel Predator",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_921",
+            "name": "Kaito Vance",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_1181",
+            "name": "Aurelius Cobra",
+            "clubName": "Bramble Thickets"
+        }
+    },
+    {
+        "id": "club_48",
+        "name": "Ignis Boilers",
+        "moniker": "Ignis",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 48,
+        "motto": "Optimization is the only path to victory.",
+        "philosophy": "Counter-Attack Press",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Coal Cellar",
+        "primaryColor": "hsl(319, 35%, 25%)",
+        "secondaryColor": "hsl(4, 45%, 40%)",
+        "managerName": "Magnus Ridge",
+        "staff": [
+            {
+                "name": "Aurelius Byte",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Atticus Ironclad",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_941",
+            "name": "Sandy Forge",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_921",
+            "name": "Kaito Vance",
+            "clubName": "Silver Keepers"
+        }
+    },
+    {
+        "id": "club_49",
+        "name": "Aegis Stone-Masons",
+        "moniker": "Aegis",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 49,
+        "motto": "Honor and duty run in our veins.",
+        "philosophy": "Low Block Defense",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Mason Yard",
+        "primaryColor": "hsl(96, 35%, 25%)",
+        "secondaryColor": "hsl(141, 45%, 40%)",
+        "managerName": "Aurelius Smith",
+        "staff": [
+            {
+                "name": "Jude Ocean",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Alexei Kepler",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_961",
+            "name": "Sven Anvil",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_1081",
+            "name": "Reef Adder",
+            "clubName": "Oceanus Fishermen"
+        }
+    },
+    {
+        "id": "club_50",
+        "name": "Phoenix Ballistics",
+        "moniker": "Phoenix",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 50,
+        "motto": "The ocean returns all waves, we return all attacks.",
+        "philosophy": "Route One Direct",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Rocket Range",
+        "primaryColor": "hsl(233, 35%, 25%)",
+        "secondaryColor": "hsl(278, 45%, 40%)",
+        "managerName": "Riku Swift",
+        "staff": [
+            {
+                "name": "Fabian Flare",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Nyx Orion",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_981",
+            "name": "Freya Buffer",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_821",
+            "name": "Jude Miller",
+            "clubName": "Zephyr Wind-Riders"
+        }
+    },
+    {
+        "id": "club_51",
+        "name": "Vanguard Reserves",
+        "moniker": "Vanguard",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 51,
+        "motto": "Honor and duty run in our veins.",
+        "philosophy": "Gegenpressing",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Barracks Glacis",
+        "primaryColor": "hsl(10, 35%, 25%)",
+        "secondaryColor": "hsl(55, 45%, 40%)",
+        "managerName": "Haruto Lake",
+        "staff": [
+            {
+                "name": "Torstein Shield",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Talon Talon",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_1001",
+            "name": "Riku Wrecker",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_961",
+            "name": "Sven Anvil",
+            "clubName": "Aegis Stone-Masons"
+        }
+    },
+    {
+        "id": "club_52",
+        "name": "Glacier Ice-Diggers",
+        "moniker": "Glacier",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 52,
+        "motto": "We strike from the deepest shadow.",
+        "philosophy": "Low Block Defense",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Frozen Trench",
+        "primaryColor": "hsl(147, 35%, 25%)",
+        "secondaryColor": "hsl(192, 45%, 40%)",
+        "managerName": "Orion River",
+        "staff": [
+            {
+                "name": "Luca Cache",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Milo Taylor",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_1021",
+            "name": "Silas Wrecker",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_1121",
+            "name": "Hadrian Pine",
+            "clubName": "Titan Piston FC"
+        }
+    },
+    {
+        "id": "club_53",
+        "name": "Void Pitches",
+        "moniker": "Void",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 53,
+        "motto": "Every pass a mathematical calculation.",
+        "philosophy": "Counter-Attack Press",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Coal Pit",
+        "primaryColor": "hsl(284, 35%, 25%)",
+        "secondaryColor": "hsl(329, 45%, 40%)",
+        "managerName": "Kelvin Beach",
+        "staff": [
+            {
+                "name": "Marco Sword",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Nikolai Compiler",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_1041",
+            "name": "Ronan Ramirez",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_861",
+            "name": "Axel Slate",
+            "clubName": "Horizon Trackers"
+        }
+    },
+    {
+        "id": "club_54",
+        "name": "Valhalla Clans",
+        "moniker": "Valhalla",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 54,
+        "motto": "We strike from the deepest shadow.",
+        "philosophy": "Route One Direct",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Meadow Hall",
+        "primaryColor": "hsl(61, 35%, 25%)",
+        "secondaryColor": "hsl(106, 45%, 40%)",
+        "managerName": "Felix Rex",
+        "staff": [
+            {
+                "name": "Hugo Flint",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Brody Stone",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_1061",
+            "name": "Valerius Sky",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_1001",
+            "name": "Riku Wrecker",
+            "clubName": "Vanguard Reserves"
+        }
+    },
+    {
+        "id": "club_55",
+        "name": "Oceanus Fishermen",
+        "moniker": "Oceanus",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 55,
+        "motto": "Light reveals all angles and opportunities.",
+        "philosophy": "Wing Attack & Cross",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Floating Pier",
+        "primaryColor": "hsl(198, 35%, 25%)",
+        "secondaryColor": "hsl(243, 45%, 40%)",
+        "managerName": "Julian Peak",
+        "staff": [
+            {
+                "name": "Barnaby Capella",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Zane Ridge",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_1081",
+            "name": "Reef Adder",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_1161",
+            "name": "Valerius River",
+            "clubName": "Crystalline Glass-Weavers"
+        }
+    },
+    {
+        "id": "club_56",
+        "name": "Wildwood Druids",
+        "moniker": "Wildwood",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 56,
+        "motto": "Ascend the highest peaks, conquer the field.",
+        "philosophy": "Gegenpressing",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Hollow Oak",
+        "primaryColor": "hsl(335, 35%, 25%)",
+        "secondaryColor": "hsl(20, 45%, 40%)",
+        "managerName": "Reef Raster",
+        "staff": [
+            {
+                "name": "Ryder Thunder",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Mateo Sol",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_1101",
+            "name": "Lucian Roberts",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_901",
+            "name": "Atticus Smith",
+            "clubName": "Shadow Whispers"
+        }
+    },
+    {
+        "id": "club_57",
+        "name": "Titan Piston FC",
+        "moniker": "Titan",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 57,
+        "motto": "To the great hall of soccer glory.",
+        "philosophy": "Route One Direct",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Scrap Heap",
+        "primaryColor": "hsl(112, 35%, 25%)",
+        "secondaryColor": "hsl(157, 45%, 40%)",
+        "managerName": "Oliver Capella",
+        "staff": [
+            {
+                "name": "Sebastian Dune",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Sebastian Claw",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_1121",
+            "name": "Hadrian Pine",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_1041",
+            "name": "Ronan Ramirez",
+            "clubName": "Void Pitches"
+        }
+    },
+    {
+        "id": "club_58",
+        "name": "Aero Flyers",
+        "moniker": "Aero",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 58,
+        "motto": "Heavy iron, heavy pressure.",
+        "philosophy": "Wing Attack & Cross",
+        "focusAttribute": "ATT",
+        "strengths": "Lethal finishing, explosive counter-attacks, forward target aerial duels.",
+        "weaknesses": "Vulnerable to counter-attacks, midfield stamina drain, defensive coordination.",
+        "stadium": "The Low Runways",
+        "primaryColor": "hsl(249, 35%, 25%)",
+        "secondaryColor": "hsl(294, 45%, 40%)",
+        "managerName": "Henry Steel",
+        "staff": [
+            {
+                "name": "Sebastian Adder",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Sven Tide",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_1141",
+            "name": "Dorian Buffer",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_801",
+            "name": "Drake Frost",
+            "clubName": "Specter Phantoms"
+        }
+    },
+    {
+        "id": "club_59",
+        "name": "Crystalline Glass-Weavers",
+        "moniker": "Crystalline",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 59,
+        "motto": "Silent, stealthy, but lethal.",
+        "philosophy": "Possession Control",
+        "focusAttribute": "MID",
+        "strengths": "High possession control, passing accuracy, central spatial dominance.",
+        "weaknesses": "Occasionally lacks direct penetration, vulnerable to physical long balls.",
+        "stadium": "The Kiln Sanctuary",
+        "primaryColor": "hsl(26, 35%, 25%)",
+        "secondaryColor": "hsl(71, 45%, 40%)",
+        "managerName": "Freya Rex",
+        "staff": [
+            {
+                "name": "Gunnar Pride",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Aurelius Glitch",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_1161",
+            "name": "Valerius River",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_941",
+            "name": "Sandy Forge",
+            "clubName": "Ignis Boilers"
+        }
+    },
+    {
+        "id": "club_60",
+        "name": "Bramble Thickets",
+        "moniker": "Bramble",
+        "leagueId": "foundation",
+        "leagueName": "Foundation Shield",
+        "tier": 3,
+        "position": 60,
+        "motto": "Honor and duty run in our veins.",
+        "philosophy": "Counter-Attack Press",
+        "focusAttribute": "DEF",
+        "strengths": "Unbreakable low block defense, aggressive tackles, aerial clearances.",
+        "weaknesses": "Slow transition speed, limited creativity in midfield, goal scoring reliance.",
+        "stadium": "The Briar Glade",
+        "primaryColor": "hsl(163, 35%, 25%)",
+        "secondaryColor": "hsl(208, 45%, 40%)",
+        "managerName": "Balthazar Node",
+        "staff": [
+            {
+                "name": "Milo Flare",
+                "role": "Technical Director"
+            },
+            {
+                "name": "Kaito Stack",
+                "role": "Chief Tactical Analyst"
+            }
+        ],
+        "starPlayer": {
+            "id": "p_1181",
+            "name": "Aurelius Cobra",
+            "rarity": "RARE",
+            "position": "FW"
+        },
+        "rivalStar": {
+            "id": "p_1081",
+            "name": "Reef Adder",
+            "clubName": "Oceanus Fishermen"
+        }
+    }
+]

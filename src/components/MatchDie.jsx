@@ -1,17 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { sound } from '../utils/soundEngine';
 import './MatchDie.css';
 
-const MatchDie = ({ onRollComplete, rolling, face }) => {
+const MatchDie = ({ rolling, face }) => {
     const [result, setResult] = useState('ATT');
+    const [showFlash, setShowFlash] = useState(false);
+    const prevRolling = useRef(rolling);
 
     useEffect(() => {
         let interval;
         if (rolling) {
-            // Simulate rolling animation
+            sound.playDiceRoll();
+            // Rapidly cycle faces for a rolling effect
             interval = setInterval(() => {
-                const faces = ['ATT', 'MID', 'DEF', 'GK', 'ATT', 'MID'];
+                const faces = ['ATT', 'MID', 'DEF', 'GK'];
                 setResult(faces[Math.floor(Math.random() * faces.length)]);
-            }, 100);
+            }, 70);
         } else {
             if (face) {
                 setResult(face);
@@ -23,18 +27,52 @@ const MatchDie = ({ onRollComplete, rolling, face }) => {
         };
     }, [rolling, face]);
 
-    // We need the parent to tell us what the final face is to rotate correctly
-    // For now, let's just accept a prop `face` which is the target
+    // Handle landing impact flash & rumble
+    useEffect(() => {
+        if (prevRolling.current === true && rolling === false && face) {
+            setShowFlash(true);
+            sound.playWaxSealClick();
+            const timer = setTimeout(() => setShowFlash(false), 600);
+            return () => clearTimeout(timer);
+        }
+        prevRolling.current = rolling;
+    }, [rolling, face]);
 
     return (
-        <div className="scene">
-            <div className={`cube ${rolling ? 'rolling' : ''} show-${result}`}>
-                <div className="cube__face cube__face--front">ATT</div>
-                <div className="cube__face cube__face--back">DEF</div>
-                <div className="cube__face cube__face--right">MID</div>
-                <div className="cube__face cube__face--left">GK</div>
-                <div className="cube__face cube__face--top">ATT</div>
-                <div className="cube__face cube__face--bottom">MID</div>
+        <div className={`die-container-scene ${showFlash ? 'impact-rumble' : ''}`}>
+            {/* Landing flash layer */}
+            {showFlash && <div className={`screen-flash-glow face-${result.toLowerCase()}`} />}
+
+            {/* Die shadow */}
+            <div className={`die-shadow ${rolling ? 'rolling' : ''}`}></div>
+
+            <div className="scene">
+                <div className={`cube ${rolling ? 'rolling' : ''} show-${result}`}>
+                    <div className="cube__face cube__face--front">
+                        <span className="face-icon">⚔️</span>
+                        <span className="face-inner-txt att">ATT</span>
+                    </div>
+                    <div className="cube__face cube__face--back">
+                        <span className="face-icon">🛡️</span>
+                        <span className="face-inner-txt def">DEF</span>
+                    </div>
+                    <div className="cube__face cube__face--right">
+                        <span className="face-icon">⚜️</span>
+                        <span className="face-inner-txt mid">MID</span>
+                    </div>
+                    <div className="cube__face cube__face--left">
+                        <span className="face-icon">🧤</span>
+                        <span className="face-inner-txt gk">GK</span>
+                    </div>
+                    <div className="cube__face cube__face--top">
+                        <span className="face-icon">⚔️</span>
+                        <span className="face-inner-txt att-top">ATT</span>
+                    </div>
+                    <div className="cube__face cube__face--bottom">
+                        <span className="face-icon">⚜️</span>
+                        <span className="face-inner-txt mid-bottom">MID</span>
+                    </div>
+                </div>
             </div>
         </div>
     );

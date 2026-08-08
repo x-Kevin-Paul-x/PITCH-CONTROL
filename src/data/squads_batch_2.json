@@ -1,0 +1,4442 @@
+[
+    {
+        "id": "p_201",
+        "name": "Atticus Roar",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "FW",
+        "rarity": "LEGEND",
+        "stats": {
+            "ATT": 135,
+            "MID": 95,
+            "DEF": 30,
+            "GK": 10
+        },
+        "rating": 119,
+        "trait": {
+            "id": "Playmaker",
+            "name": "Playmaker",
+            "desc": "Win a MID duel to choose next round's attribute"
+        },
+        "workRate": "High",
+        "stamina": 96,
+        "aggression": 90,
+        "lore": "A legendary forward and the heartbeat of Phoenix Horizon. He is best remembered for his stunning overhead kick that bypassed [[p_281|Jude Hawthorne]]'s defense in the final seconds of the Apex derby, sealing a historic victory. Ren Stack's high-pressing system revolves entirely around Atticus's relentless movement and tactical intensity."
+    },
+    {
+        "id": "p_202",
+        "name": "Sota Forge",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "FW",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 125,
+            "MID": 80,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 107,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 68,
+        "aggression": 46,
+        "lore": "Brought in by Manager Ren Stack to serve as the chief goal threat alongside [[p_201|Atticus Roar]]. Off the pitch, they spend hours studying heat-map coordinates to refine their diagonal runs. Their blistering pace makes them a constant threat in high-pressing transitions."
+    },
+    {
+        "id": "p_203",
+        "name": "Leo Page",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "FW",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 110,
+            "MID": 70,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 94,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 81,
+        "aggression": 63,
+        "lore": "A highly direct forward who acts as a tactical lieutenant under Ren Stack. They frequently drop into half-spaces to drag defenders away, opening up corridors for [[p_201|Atticus Roar]]. They carry a piece of volcanic glass in their boot for good luck during high-altitude matches."
+    },
+    {
+        "id": "p_204",
+        "name": "Cornelius Vega",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 95,
+            "MID": 55,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 79,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 94,
+        "aggression": 80,
+        "lore": "Before transitioning to professional Pitch Control, they worked as a cargo handler on the desert-skiffs. They are famously superstitious and refuse to enter the training pitch before doing exactly three backward hops."
+    },
+    {
+        "id": "p_205",
+        "name": "Kenji Oak",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 100,
+            "MID": 50,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 80,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 66,
+        "aggression": 36,
+        "lore": "A young outlands striker who won their spot in the squad through an open-trial tournament. They spend their free time sketching the biomechanical training facilities of Phoenix Horizon, hoping to one day study stadium architecture."
+    },
+    {
+        "id": "p_206",
+        "name": "Colt Antares",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "MF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 65,
+            "MID": 120,
+            "DEF": 45,
+            "GK": 10
+        },
+        "rating": 87,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Medium",
+        "stamina": 79,
+        "aggression": 53,
+        "lore": "The primary motor in Ren Stack's counter-pressing midfield engine room. They work in tandem with [[p_201|Atticus Roar]] to execute traps, choking opponents of space within seconds of a turnover. They are an avid collector of antique copper coins from pre-Calibration Spatia."
+    },
+    {
+        "id": "p_207",
+        "name": "Luis Sword",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 55,
+            "MID": 110,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 77,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 92,
+        "aggression": 70,
+        "lore": "A tireless runner who represents the grit of Phoenix Horizon. They credits their extreme stamina to childhood training in the high-pressure sun-wells of the region. They always wear the same faded green headband, claiming it has been blessed by a nomadic windsinger."
+    },
+    {
+        "id": "p_208",
+        "name": "Angelo Shell",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 40,
+            "MID": 105,
+            "DEF": 55,
+            "GK": 10
+        },
+        "rating": 76,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 64,
+        "aggression": 87,
+        "lore": "A passing specialist who acts as the bridge between defense and attack. They studied neural coordinates under Ren Stack's academic mentors and excel at executing quick vertical channels. They are known for their calm demeanor, even in the rowdiest stadiums."
+    },
+    {
+        "id": "p_209",
+        "name": "Ivan Howl",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 45,
+            "MID": 90,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 65,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 77,
+        "aggression": 43,
+        "lore": "A utility midfielder who spent their early years operating hydro-pumps in the local agricultural rings. They are notoriously quiet in the locker room but are known to play aggressive chess matches against the coaching staff."
+    },
+    {
+        "id": "p_210",
+        "name": "Kai Rigel",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 40,
+            "MID": 95,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 90,
+        "aggression": 60,
+        "lore": "This player always laces their left boot twice before matches, a habit born during their academy days in the savanna. They are a self-proclaimed culinary enthusiast who cooks traditional outland stews for the squad after home games."
+    },
+    {
+        "id": "p_211",
+        "name": "Nyx Star",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 35,
+            "MID": 95,
+            "DEF": 40,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 62,
+        "aggression": 77,
+        "lore": "A former mechanical apprentice who joined the club to help tune the holographic projectors. Their surprising coordination in training matches led to a formal contract, and they now provide vital midfield cover."
+    },
+    {
+        "id": "p_212",
+        "name": "Kian Finch",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "DF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 20,
+            "MID": 80,
+            "DEF": 130,
+            "GK": 10
+        },
+        "rating": 110,
+        "trait": {
+            "id": "Playmaker",
+            "name": "Playmaker",
+            "desc": "Win a MID duel to choose next round's attribute"
+        },
+        "workRate": "Medium",
+        "stamina": 75,
+        "aggression": 33,
+        "lore": "An imposing defensive pillar who coordinates Phoenix Horizon's high defensive line. They work directly with Ren Stack to adjust spatial coverage on the fly, ensuring [[p_201|Atticus Roar]] has a secure platform to press from. Fans call them the 'Obsidian Wall' for their block-heavy playstyle."
+    },
+    {
+        "id": "p_213",
+        "name": "Hadrian Hammer",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 15,
+            "MID": 65,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 98,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 88,
+        "aggression": 50,
+        "lore": "A fullback known for explosive overlapping runs. They were scouted from the local skyship racing guilds, bringing intense speed and spatial awareness to the defensive flank. They are superstitious about matching their boot color to the stadium's holographic tint."
+    },
+    {
+        "id": "p_214",
+        "name": "Alejandro Roberts",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 20,
+            "MID": 60,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 96,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 60,
+        "aggression": 67,
+        "lore": "A tackling specialist who excels in 1v1 defensive duels. Under the guidance of Ren Stack, they transitioned from a physical central defender to a modern ball-winning fullback. They maintain a meticulously detailed journal of every opponent they have ever faced."
+    },
+    {
+        "id": "p_215",
+        "name": "Tiberius Adams",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 55,
+            "DEF": 100,
+            "GK": 10
+        },
+        "rating": 82,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 73,
+        "aggression": 84,
+        "lore": "An industrious defender who grew up on the borderlands. They are an amateur cartographer who spends their off-days mapping the shifting wind dunes of Spatia's outer sectors. They never play a match without checking the wind direction."
+    },
+    {
+        "id": "p_216",
+        "name": "Kelvin Rivet",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 50,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 86,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 86,
+        "aggression": 40,
+        "lore": "A quiet defender who relies on pure positioning rather than physical speed. They are known for their peculiar habit of meditating in the locker room for exactly twelve minutes before warm-ups. They remain a fan favorite for their friendly interaction with the local youth academy."
+    },
+    {
+        "id": "p_217",
+        "name": "Luca Wind",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 45,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 84,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 99,
+        "aggression": 57,
+        "lore": "A squad player who originally trained as an industrial welder in the harbor rim. Their physical strength makes them a major asset during set-pieces, and they are always the loudest cheerleader on the bench."
+    },
+    {
+        "id": "p_218",
+        "name": "Ivan Page",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "GK",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 20,
+            "GK": 200
+        },
+        "rating": 200,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Medium",
+        "stamina": 71,
+        "aggression": 74,
+        "lore": "The starting goalkeeper who commands the entire backline. They work closely with the tactical analysts to study striker ballistics, ensuring the defense remains coordinated even under heavy counter-attacks. They are known for their lightning-fast reflex saves."
+    },
+    {
+        "id": "p_219",
+        "name": "Cornelius Gear",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "GK",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 15,
+            "GK": 175
+        },
+        "rating": 175,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 84,
+        "aggression": 30,
+        "lore": "An agile goalkeeper who excels at distributing long balls. They study coordinates directly from Ren Stack's handbook, launching counter-attacks with pinpoint precision. They are superstitious about touching both goalposts before the Match Die is rolled."
+    },
+    {
+        "id": "p_220",
+        "name": "Kaito Thunder",
+        "clubId": "club_11",
+        "clubName": "Phoenix Horizon",
+        "position": "GK",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 10,
+            "GK": 150
+        },
+        "rating": 150,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 97,
+        "aggression": 47,
+        "lore": "A veteran keeper who spent a decade in the Challenger League before joining Phoenix Horizon. They are an avid skyship pilot who enjoys flying light cruisers through the northern basalt trenches during the off-season."
+    },
+    {
+        "id": "p_221",
+        "name": "Wyatt Clay",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "FW",
+        "rarity": "LEGEND",
+        "stats": {
+            "ATT": 135,
+            "MID": 85,
+            "DEF": 40,
+            "GK": 10
+        },
+        "rating": 115,
+        "trait": {
+            "id": "Enforcer",
+            "name": "Enforcer",
+            "desc": "Win a DEF duel to halve opponent's next card stats"
+        },
+        "workRate": "Low",
+        "stamina": 62,
+        "aggression": 40,
+        "lore": "An imposing target forward who serves as the spearhead of Specter Syndicate. He famously silenced Cyber Nexus FC by outmuscling [[p_21|Zane Bow]] in a physical duel to slot home the winning goal at the Shadow Grid. Under Magnus Castor's counter-attacking setup, Wyatt is the ultimate release valve."
+    },
+    {
+        "id": "p_222",
+        "name": "Alejandro Bold",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "FW",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 125,
+            "MID": 80,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 107,
+        "trait": {
+            "id": "Captain",
+            "name": "Captain",
+            "desc": "+10 to all stats if played in Round 5"
+        },
+        "workRate": "Medium",
+        "stamina": 75,
+        "aggression": 57,
+        "lore": "A lethal winger who coordinates with [[p_221|Wyatt Clay]] to tear apart defensive low blocks. They spend their training sessions studying the blind spots of opposing goalkeepers under the guidance of Magnus Castor. Their explosive acceleration makes them a nightmare on the counter."
+    },
+    {
+        "id": "p_223",
+        "name": "Takuya Hunter",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "FW",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 110,
+            "MID": 70,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 94,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 88,
+        "aggression": 74,
+        "lore": "A crafty forward who specializes in decoy runs. They are a close tactical student of Magnus Castor, using clever movement to pull defenders away and free up space for [[p_221|Wyatt Clay]]. They are known to carry a lucky silver thread woven into their collar."
+    },
+    {
+        "id": "p_224",
+        "name": "Kai Bolt",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 95,
+            "MID": 55,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 79,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 60,
+        "aggression": 30,
+        "lore": "This striker spent their youth working in the deep-sea cargo fleets. They are highly superstitious and always wear their lucky coral pendant during pre-game warm-ups, removing it only when stepping onto the pitch."
+    },
+    {
+        "id": "p_225",
+        "name": "Mateo Gear",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 100,
+            "MID": 50,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 80,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 73,
+        "aggression": 47,
+        "lore": "A young striker who developed their quick reflexes playing street soccer in the narrow alleyways of the basalt trenches. They are known for their unpredictable shooting angles and lighthearted locker room jokes."
+    },
+    {
+        "id": "p_226",
+        "name": "Knox Spear",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "MF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 65,
+            "MID": 120,
+            "DEF": 45,
+            "GK": 10
+        },
+        "rating": 87,
+        "trait": {
+            "id": "Captain",
+            "name": "Captain",
+            "desc": "+10 to all stats if played in Round 5"
+        },
+        "workRate": "High",
+        "stamina": 86,
+        "aggression": 64,
+        "lore": "A defensive midfielder who serves as the tactical anchor in Magnus Castor's system. They work tirelessly to win back possession and feed quick transition balls directly to [[p_221|Wyatt Clay]]. Off the pitch, they design custom tactical boards for local youth clubs."
+    },
+    {
+        "id": "p_227",
+        "name": "Javier Fletcher",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 55,
+            "MID": 110,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 77,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 99,
+        "aggression": 81,
+        "lore": "A tireless box-to-box midfielder who thrives in gritty matches. They developed their immense stamina by running the mountain paths around their childhood home in the northern peaks. They never step onto the pitch without tapping the badge twice."
+    },
+    {
+        "id": "p_228",
+        "name": "Kaelen Capella",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 40,
+            "MID": 105,
+            "DEF": 55,
+            "GK": 10
+        },
+        "rating": 76,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 71,
+        "aggression": 37,
+        "lore": "A technical midfielder who excels at short, rapid passing. Under Magnus Castor's guidance, they have mastered the art of drawing opponents out of position to exploit central gaps. They are an amateur astronomer who spends clear nights tracking stellar drift."
+    },
+    {
+        "id": "p_229",
+        "name": "Tristan Trickster",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 45,
+            "MID": 90,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 65,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 84,
+        "aggression": 54,
+        "lore": "A former clockmaker's assistant who joined Specter Syndicate after being spotted in an amateur tournament. They treat the pitch as a clockwork mechanism, calculating passing lanes with high precision."
+    },
+    {
+        "id": "p_230",
+        "name": "Kaelen Bolt",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 40,
+            "MID": 95,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 97,
+        "aggression": 71,
+        "lore": "A quiet squad player who is highly respected for their work ethic in training. They are superstitious about wearing their socks inside out during away matches to ward off bad luck. They spend their free time volunteering at the local animal sanctuaries."
+    },
+    {
+        "id": "p_231",
+        "name": "Nikolai Wolf",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 35,
+            "MID": 95,
+            "DEF": 40,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 69,
+        "aggression": 88,
+        "lore": "An outland scout who originally signed as a fitness coordinator. Their raw speed in training drills caught the eye of Magnus Castor, who quickly converted them into a utility winger."
+    },
+    {
+        "id": "p_232",
+        "name": "Bjorn Wave",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "DF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 20,
+            "MID": 80,
+            "DEF": 130,
+            "GK": 10
+        },
+        "rating": 110,
+        "trait": {
+            "id": "Enforcer",
+            "name": "Enforcer",
+            "desc": "Win a DEF duel to halve opponent's next card stats"
+        },
+        "workRate": "High",
+        "stamina": 82,
+        "aggression": 44,
+        "lore": "A commanding centerback who forms the heart of the Syndicate's low block. They coordinate closely with Magnus Castor to set offside traps, protecting [[p_221|Wyatt Clay]] from having to drop too deep. Their aggressive slide tackles are a major crowd-pleaser at the Shadow Grid."
+    },
+    {
+        "id": "p_233",
+        "name": "Dorian Shield",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 15,
+            "MID": 65,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 98,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 95,
+        "aggression": 61,
+        "lore": "A quick fullback who specializes in neutralizing opposing wingers. They credits their sharp reflexes to years of competitive sky-skiff racing in the upper atmospheric layers. They always wear a blue wristband to honor their family's seafaring heritage."
+    },
+    {
+        "id": "p_234",
+        "name": "Javier Rigel",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 20,
+            "MID": 60,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 96,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 67,
+        "aggression": 78,
+        "lore": "A physical defender who excels in aerial clearances. Under Magnus Castor's defensive regime, they have become a crucial asset during set-pieces. They keep a small collection of fossilized ferns found during their travels."
+    },
+    {
+        "id": "p_235",
+        "name": "Nash Howl",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 55,
+            "DEF": 100,
+            "GK": 10
+        },
+        "rating": 82,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 80,
+        "aggression": 34,
+        "lore": "An industrious defender who grew up in the shadow of the Great Boundary Wall. They are an avid historian who spends their free time reading about pre-Calibration tactical formations."
+    },
+    {
+        "id": "p_236",
+        "name": "Cypher Archer",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 50,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 86,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 93,
+        "aggression": 51,
+        "lore": "A quiet defender who always enters the pitch with their right foot first. They have a superstition that playing with a wet pitch improves their tackling accuracy, often checking the humidity levels before kick-off."
+    },
+    {
+        "id": "p_237",
+        "name": "Rin Vega",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 45,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 84,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 65,
+        "aggression": 68,
+        "lore": "A physical squad player who worked as a metal press operator before joining the club. They provide raw strength to the defensive rotation and are known for their powerful long-range clearances."
+    },
+    {
+        "id": "p_238",
+        "name": "Aurora Forge",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "GK",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 20,
+            "GK": 200
+        },
+        "rating": 200,
+        "trait": {
+            "id": "Captain",
+            "name": "Captain",
+            "desc": "+10 to all stats if played in Round 5"
+        },
+        "workRate": "High",
+        "stamina": 78,
+        "aggression": 85,
+        "lore": "The starting goalkeeper who has kept numerous clean sheets at the Shadow Grid. They work closely with Magnus Castor's analysts to study the ballistics of rival forwards, developing near-instantaneous reflex reactions. They are considered one of the top keepers in the division."
+    },
+    {
+        "id": "p_239",
+        "name": "Mateo Shield",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "GK",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 15,
+            "GK": 175
+        },
+        "rating": 175,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 91,
+        "aggression": 41,
+        "lore": "A tall goalkeeper known for dominant aerial claims. They study the tactical manuals of Specter Syndicate, ensuring they are always positioned optimally during corner kicks. They are superstitious about tapping the crossbar before every penalty kick."
+    },
+    {
+        "id": "p_240",
+        "name": "Sora Slate",
+        "clubId": "club_12",
+        "clubName": "Specter Syndicate",
+        "position": "GK",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 10,
+            "GK": 150
+        },
+        "rating": 150,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 63,
+        "aggression": 58,
+        "lore": "A veteran goalkeeper who has played for several clubs across the PCL. They spend their free time restoring vintage hover-bikes and sharing stories of legendary matches with the younger players."
+    },
+    {
+        "id": "p_241",
+        "name": "Reginald Lake",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "FW",
+        "rarity": "LEGEND",
+        "stats": {
+            "ATT": 130,
+            "MID": 105,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 120,
+        "trait": {
+            "id": "False Nine",
+            "name": "False Nine",
+            "desc": "Can use MID stat instead of ATT stat on Attack rolls"
+        },
+        "workRate": "Medium",
+        "stamina": 69,
+        "aggression": 51,
+        "lore": "A master technician and the undisputed focal point of Oceanus Depths FC. His legendary spatial awareness was on full display when he dribbled past [[p_161|Matteo Glacier]] to score a delicate chip in the geothermal derby. Nash Thorne builds his entire possession-based philosophy around Reginald's ability to drop deep and dictate play."
+    },
+    {
+        "id": "p_242",
+        "name": "Jasper Ice",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "FW",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 125,
+            "MID": 80,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 107,
+        "trait": {
+            "id": "Playmaker",
+            "name": "Playmaker",
+            "desc": "Win a MID duel to choose next round's attribute"
+        },
+        "workRate": "High",
+        "stamina": 82,
+        "aggression": 68,
+        "lore": "A clinical striker who forms a lethal partnership with [[p_241|Reginald Lake]]. Under the guidance of Nash Thorne, they have refined their movement in the penalty box to exploit the smallest gaps. They are an avid ocean diver who spends their off-days exploring deep-sea reefs."
+    },
+    {
+        "id": "p_243",
+        "name": "Devin Snow",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "FW",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 110,
+            "MID": 70,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 94,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 95,
+        "aggression": 85,
+        "lore": "A fast winger who excels at stretch defenses. They work closely with Nash Thorne to coordinate overlapping runs, creating space for [[p_241|Reginald Lake]] to operate in the center. They are superstitious about carrying a tiny sea-glass pebble in their pocket."
+    },
+    {
+        "id": "p_244",
+        "name": "Hiroto Thunder",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 95,
+            "MID": 55,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 79,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 67,
+        "aggression": 41,
+        "lore": "A former harbor courier who won their place in the team during a public tournament. They are known for their quick acceleration and superstitious habit of kissing the turf before every kickoff."
+    },
+    {
+        "id": "p_245",
+        "name": "Ivan Shield",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 100,
+            "MID": 50,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 80,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 80,
+        "aggression": 58,
+        "lore": "A young striker who grew up in the floating suburbs of the harbor. They are an amateur painter who captures the stormy seascapes of Spatia, often selling their art to support local youth sport programs."
+    },
+    {
+        "id": "p_246",
+        "name": "Tristan Page",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "MF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 65,
+            "MID": 120,
+            "DEF": 45,
+            "GK": 10
+        },
+        "rating": 87,
+        "trait": {
+            "id": "Playmaker",
+            "name": "Playmaker",
+            "desc": "Win a MID duel to choose next round's attribute"
+        },
+        "workRate": "Low",
+        "stamina": 93,
+        "aggression": 75,
+        "lore": "A creative playmaker who dominates the center of the pitch. Under the guidance of Nash Thorne, they orchestrate the team's possession play, constantly feeding passes to [[p_241|Reginald Lake]]. They spent their youth studying mathematical coordinates at the central academy."
+    },
+    {
+        "id": "p_247",
+        "name": "Xerxes Oak",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 55,
+            "MID": 110,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 77,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 65,
+        "aggression": 31,
+        "lore": "A hardworking midfielder who covers immense ground. They credit their stamina to their childhood spent working on geothermal heat-exchangers in the basalt trenches. They are superstitious about wearing the same pair of faded blue socks."
+    },
+    {
+        "id": "p_248",
+        "name": "Yuri Shell",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 40,
+            "MID": 105,
+            "DEF": 55,
+            "GK": 10
+        },
+        "rating": 76,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 78,
+        "aggression": 48,
+        "lore": "A tactical midfielder who specializes in disrupting opposing counter-attacks. They work closely with Nash Thorne's analysts to study opponent passing lanes, cutting off supply lines before they develop. They are a collector of rare sea shells."
+    },
+    {
+        "id": "p_249",
+        "name": "Ryder Redwood",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 45,
+            "MID": 90,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 65,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 91,
+        "aggression": 65,
+        "lore": "A former mechanical technician who originally worked on the stadium's holographic projectors. Their passing range in staff matches impressed Nash Thorne, earning them a professional contract."
+    },
+    {
+        "id": "p_250",
+        "name": "Cornelius Blackwood",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 40,
+            "MID": 95,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 63,
+        "aggression": 82,
+        "lore": "A quiet player who always laces their right boot first. They have a superstition that chewing a specific outland root before matches increases their focus. They provide solid cover in the central midfield rotation."
+    },
+    {
+        "id": "p_251",
+        "name": "Cornelius Adams",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 35,
+            "MID": 95,
+            "DEF": 40,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 76,
+        "aggression": 38,
+        "lore": "A local kid who rose through the Oceanus youth ranks. They are known for their cheerful attitude and dedication to community charity events, often visiting local hospitals after home games."
+    },
+    {
+        "id": "p_252",
+        "name": "Hugo Blackwood",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "DF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 20,
+            "MID": 80,
+            "DEF": 130,
+            "GK": 10
+        },
+        "rating": 110,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 89,
+        "aggression": 55,
+        "lore": "A rock-solid defender who anchors the backline. They work in tandem with Nash Thorne to coordinate the team's defensive structure, allowing [[p_241|Reginald Lake]] to focus on offensive transitions. They are known for their physical dominance in the air."
+    },
+    {
+        "id": "p_253",
+        "name": "Bjarni Kepler",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 15,
+            "MID": 65,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 98,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 61,
+        "aggression": 72,
+        "lore": "A fullback known for high passing accuracy. They transitioned from midfield under the guidance of Nash Thorne, bringing excellent vision and crossing ability to the defensive flanks. They are an amateur skyship pilot who enjoys aerial tours."
+    },
+    {
+        "id": "p_254",
+        "name": "Cyrus Rock",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 20,
+            "MID": 60,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 96,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 74,
+        "aggression": 89,
+        "lore": "A defensive specialist who excels at tracking quick forwards. Under the tactical guidance of Nash Thorne, they have developed an aggressive yet clean tackling style. They maintain a detailed database of opponent winger stats."
+    },
+    {
+        "id": "p_255",
+        "name": "Kelvin Cache",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 55,
+            "DEF": 100,
+            "GK": 10
+        },
+        "rating": 82,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 87,
+        "aggression": 45,
+        "lore": "An industrious defender who grew up in the rural coastal regions. They are superstitious about checking the tide charts before matches, believing that high tide brings them good defensive fortune."
+    },
+    {
+        "id": "p_256",
+        "name": "Antonio Wave",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 50,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 86,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 100,
+        "aggression": 62,
+        "lore": "A quiet centerback who relies on anticipation and tactical reading. They are known for their pre-game ritual of listening to ocean waves on their headset. They provide reliable depth during congested fixture lists."
+    },
+    {
+        "id": "p_257",
+        "name": "Stefan Bold",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 45,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 84,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 72,
+        "aggression": 79,
+        "lore": "A former dockworker who brings raw physical strength to the squad. They are always the first to defend their teammates on the pitch and are known for their booming clearances."
+    },
+    {
+        "id": "p_258",
+        "name": "Orion Wave",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "GK",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 20,
+            "GK": 200
+        },
+        "rating": 200,
+        "trait": {
+            "id": "Playmaker",
+            "name": "Playmaker",
+            "desc": "Win a MID duel to choose next round's attribute"
+        },
+        "workRate": "Low",
+        "stamina": 85,
+        "aggression": 35,
+        "lore": "A premier goalkeeper who has kept numerous clean sheets at the Geothermal Shelf. They work closely with the coaching staff to refine their positioning against long-range shots. They are known for their exceptional reflexes and vocal leadership."
+    },
+    {
+        "id": "p_259",
+        "name": "Fang Knight",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "GK",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 15,
+            "GK": 175
+        },
+        "rating": 175,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 98,
+        "aggression": 52,
+        "lore": "A tall goalkeeper who commands the penalty box with authority. They study coordinate charts from Nash Thorne's files to optimize their starting position during corner kicks. They always touch both posts and the crossbar before kickoff."
+    },
+    {
+        "id": "p_260",
+        "name": "Kelvin Shield",
+        "clubId": "club_13",
+        "clubName": "Oceanus Depths FC",
+        "position": "GK",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 10,
+            "GK": 150
+        },
+        "rating": 150,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 70,
+        "aggression": 69,
+        "lore": "A veteran keeper who enjoys mentoring the younger players. Off the pitch, they are an avid fisherman who spends hours on the harbor, finding peace in the quiet before intense matchdays."
+    },
+    {
+        "id": "p_261",
+        "name": "Marina Linker",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "FW",
+        "rarity": "LEGEND",
+        "stats": {
+            "ATT": 132,
+            "MID": 98,
+            "DEF": 30,
+            "GK": 10
+        },
+        "rating": 118,
+        "trait": {
+            "id": "Playmaker",
+            "name": "Playmaker",
+            "desc": "Win a MID duel to choose next round's attribute"
+        },
+        "workRate": "High",
+        "stamina": 76,
+        "aggression": 62,
+        "lore": "A highly dynamic forward who commands the frontline of Wildwood United. She etched her name into league history by scoring a brilliant solo counter-attack goal after dispossessing rival star [[p_321|Atticus Canyon]] in a high-octane derby. Nikolai Oak relies on her rapid transition play to trigger the team's deadly gegenpressing."
+    },
+    {
+        "id": "p_262",
+        "name": "Julian Clay",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "FW",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 125,
+            "MID": 80,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 107,
+        "trait": {
+            "id": "Enforcer",
+            "name": "Enforcer",
+            "desc": "Win a DEF duel to halve opponent's next card stats"
+        },
+        "workRate": "Low",
+        "stamina": 89,
+        "aggression": 79,
+        "lore": "A quick and versatile forward who works closely with [[p_261|Marina Linker]] to lead the attack. They are a key tactical lieutenant under Nikolai Oak, executing the high-pressing triggers that define the team's style. They spend their free time studying forest ecology."
+    },
+    {
+        "id": "p_263",
+        "name": "Gideon Serpent",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "FW",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 110,
+            "MID": 70,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 94,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 61,
+        "aggression": 35,
+        "lore": "A direct winger who excels at crossing. Under the guidance of Nikolai Oak, they have developed a deadly partnership with [[p_261|Marina Linker]], providing deep crosses to the far post. They always wear a green wristband for good luck."
+    },
+    {
+        "id": "p_264",
+        "name": "Brody Spindle",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 95,
+            "MID": 55,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 79,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 74,
+        "aggression": 52,
+        "lore": "A former timber cruiser who joined the club after being noticed in a regional league. They are highly superstitious and always walk onto the pitch with their eyes closed for the first three steps."
+    },
+    {
+        "id": "p_265",
+        "name": "Cyrus Thorne",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 100,
+            "MID": 50,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 80,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 87,
+        "aggression": 69,
+        "lore": "A young striker who developed their skills in the outland borderlands. They are known for their tireless running and love of wood carving, often gifting handmade wooden charms to their teammates."
+    },
+    {
+        "id": "p_266",
+        "name": "Ren Pollux",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "MF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 65,
+            "MID": 120,
+            "DEF": 45,
+            "GK": 10
+        },
+        "rating": 87,
+        "trait": {
+            "id": "Enforcer",
+            "name": "Enforcer",
+            "desc": "Win a DEF duel to halve opponent's next card stats"
+        },
+        "workRate": "Medium",
+        "stamina": 100,
+        "aggression": 86,
+        "lore": "A box-to-box midfielder who forms the core of Nikolai Oak's high-pressing system. They work in tandem with [[p_261|Marina Linker]] to force turnovers high up the pitch, turning defense into attack instantly. They are a collector of ancient botanical texts."
+    },
+    {
+        "id": "p_267",
+        "name": "Javier Jones",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 55,
+            "MID": 110,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 77,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 72,
+        "aggression": 42,
+        "lore": "A relentless midfielder with boundless energy. They credits their stamina to childhood training in the deep redwood groves, running up steep mountain ridges. They are superstitious about wearing their lucky green socks."
+    },
+    {
+        "id": "p_268",
+        "name": "Gideon Pine",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 40,
+            "MID": 105,
+            "DEF": 55,
+            "GK": 10
+        },
+        "rating": 76,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 85,
+        "aggression": 59,
+        "lore": "A tactical midfielder who excels at interception. Under Nikolai Oak's instruction, they monitor the central spaces, shielding the backline while launching rapid counter-attacks. They are an amateur astronomer who tracks seasonal meteor showers."
+    },
+    {
+        "id": "p_269",
+        "name": "Darius Wave",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 45,
+            "MID": 90,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 65,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 98,
+        "aggression": 76,
+        "lore": "A former botanist's assistant who joined the team after winning an amateur cup. They treat the pitch as an ecosystem, analyzing how player movements affect the space around them."
+    },
+    {
+        "id": "p_270",
+        "name": "Torstein Wind",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 40,
+            "MID": 95,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 70,
+        "aggression": 32,
+        "lore": "A quiet player who always enters the pitch with a small pine needle tucked in their boot. They have a superstition that the scent of pine brings them clarity and focus during intense matches."
+    },
+    {
+        "id": "p_271",
+        "name": "Alejandro Heap",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 35,
+            "MID": 95,
+            "DEF": 40,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 83,
+        "aggression": 49,
+        "lore": "A local player who rose through the Wildwood academy. They are known for their cheerful personality and dedication to forest preservation programs, often leading volunteer tree-planting events."
+    },
+    {
+        "id": "p_272",
+        "name": "Marcus Buffer",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "DF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 20,
+            "MID": 80,
+            "DEF": 130,
+            "GK": 10
+        },
+        "rating": 110,
+        "trait": {
+            "id": "Captain",
+            "name": "Captain",
+            "desc": "+10 to all stats if played in Round 5"
+        },
+        "workRate": "Medium",
+        "stamina": 96,
+        "aggression": 66,
+        "lore": "A physical centerback who coordinates the defense in Nikolai Oak's high line. They work directly with [[p_261|Marina Linker]] to ensure the team remains compact, allowing the forwards to press aggressively. They are known as the 'Redwood Sentry' by fans."
+    },
+    {
+        "id": "p_273",
+        "name": "Bjorn Vega",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 15,
+            "MID": 65,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 98,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 68,
+        "aggression": 83,
+        "lore": "A fullback known for their pace and work rate. They were scouted from the mountain-climbing guilds, bringing intense physical conditioning and balance to the defensive flank. They are superstitious about wearing the same boots in successive games."
+    },
+    {
+        "id": "p_274",
+        "name": "Gale Current",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 20,
+            "MID": 60,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 96,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 81,
+        "aggression": 39,
+        "lore": "A defensive specialist who excels in 1v1 duels. Under Nikolai Oak, they have transitioned into a ball-playing centerback who can initiate attacks from deep. They keep a meticulously detailed journal of winger movement patterns."
+    },
+    {
+        "id": "p_275",
+        "name": "Knox Lake",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 55,
+            "DEF": 100,
+            "GK": 10
+        },
+        "rating": 82,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 94,
+        "aggression": 56,
+        "lore": "An industrious defender who grew up in the logging camps. They are an amateur woodworker who spends their off-days building custom furniture for the local youth center. They always check the wood moisture of the stadium benches."
+    },
+    {
+        "id": "p_276",
+        "name": "Takuya Beach",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 50,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 86,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 66,
+        "aggression": 73,
+        "lore": "A quiet defender who relies on reading the game. They have a superstition that wearing their hair in a specific braid brings them luck during derby matches. They are a consistent performer who provides valuable squad depth."
+    },
+    {
+        "id": "p_277",
+        "name": "Rin Sato",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 45,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 84,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 79,
+        "aggression": 90,
+        "lore": "A former track athlete who brings exceptional speed to the defensive rotation. They are always the first to support their teammates and are known for their spectacular goal-line clearances."
+    },
+    {
+        "id": "p_278",
+        "name": "Aurelius Dale",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "GK",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 20,
+            "GK": 200
+        },
+        "rating": 200,
+        "trait": {
+            "id": "Enforcer",
+            "name": "Enforcer",
+            "desc": "Win a DEF duel to halve opponent's next card stats"
+        },
+        "workRate": "Medium",
+        "stamina": 92,
+        "aggression": 46,
+        "lore": "The starting goalkeeper who has saved numerous penalties this season. They work closely with Nikolai Oak's analysts to study opponent striker habits, developing lightning-fast reactions. They are a key leader in the locker room."
+    },
+    {
+        "id": "p_279",
+        "name": "Rowan Crown",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "GK",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 15,
+            "GK": 175
+        },
+        "rating": 175,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 64,
+        "aggression": 63,
+        "lore": "An agile goalkeeper who excels at sweeping behind the high defensive line. They study coordinates from Nikolai Oak's tactical guides to optimize their positioning. They are superstitious about tapping both posts before kickoff."
+    },
+    {
+        "id": "p_280",
+        "name": "Henry Shore",
+        "clubId": "club_14",
+        "clubName": "Wildwood United",
+        "position": "GK",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 10,
+            "GK": 150
+        },
+        "rating": 150,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 77,
+        "aggression": 80,
+        "lore": "A veteran goalkeeper who has played in multiple divisions. They spend their free time building model skyships and sharing their vast experience with the younger keepers in the squad."
+    },
+    {
+        "id": "p_281",
+        "name": "Jude Hawthorne",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "FW",
+        "rarity": "LEGEND",
+        "stats": {
+            "ATT": 130,
+            "MID": 105,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 120,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Low",
+        "stamina": 83,
+        "aggression": 73,
+        "lore": "A refined and clinical striker who captains the Silver Crowns. He famously scored a hat-trick against Helios Sovereign, finishing a sequence of quick passes that completely neutralized [[p_61|Rayna Ice]]'s pressing game. Oliver Serpent coordinates the team's patient possession play to ensure Jude gets maximum service in the final third."
+    },
+    {
+        "id": "p_282",
+        "name": "Leander Solar",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "FW",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 125,
+            "MID": 80,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 107,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Medium",
+        "stamina": 96,
+        "aggression": 90,
+        "lore": "A clinical winger who works in perfect harmony with [[p_281|Jude Hawthorne]]. Under the guidance of Oliver Serpent, they have mastered the team's patient build-up play, waiting for the perfect moment to deliver crosses. They spend their free time practicing calligraphy."
+    },
+    {
+        "id": "p_283",
+        "name": "Tobias Solar",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "FW",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 110,
+            "MID": 70,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 94,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 68,
+        "aggression": 46,
+        "lore": "A clever forward who excels at finding pockets of space. They are a tactical student of Oliver Serpent, using their movement to pull defenders away and create channels for [[p_281|Jude Hawthorne]]. They carry a lucky silver coin in their locker."
+    },
+    {
+        "id": "p_284",
+        "name": "Dominic Zephyr",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 95,
+            "MID": 55,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 79,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 81,
+        "aggression": 63,
+        "lore": "A former palace page who won a spot on the roster during a royal tournament. They are highly superstitious and always wear their lucky silver ring during pre-game warm-ups."
+    },
+    {
+        "id": "p_285",
+        "name": "Cormac Sky",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 100,
+            "MID": 50,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 80,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 94,
+        "aggression": 80,
+        "lore": "A young striker who developed their skills in the citadel's courtyards. They are an amateur historian who spends their off-days studying the history of the Pitch Control League, hoping to write a book on classic tactics."
+    },
+    {
+        "id": "p_286",
+        "name": "Gulliver Cloud",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "MF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 65,
+            "MID": 120,
+            "DEF": 45,
+            "GK": 10
+        },
+        "rating": 87,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "High",
+        "stamina": 66,
+        "aggression": 36,
+        "lore": "A masterful playmaker who dictates the game from the center of the park. Under Oliver Serpent, they control the tempo of matches, linking up with [[p_281|Jude Hawthorne]] to unlock stubborn defenses. They are an expert chess player who competes in regional tournaments."
+    },
+    {
+        "id": "p_287",
+        "name": "Julian Iron",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 55,
+            "MID": 110,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 77,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 79,
+        "aggression": 53,
+        "lore": "A hardworking midfielder who provides excellent defensive cover. They credits their stamina to childhood training in the high-altitude citadel garrisons. They always wear the same faded silver band around their left wrist."
+    },
+    {
+        "id": "p_288",
+        "name": "Sandy Bow",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 40,
+            "MID": 105,
+            "DEF": 55,
+            "GK": 10
+        },
+        "rating": 76,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 92,
+        "aggression": 70,
+        "lore": "A technical midfielder who excels at retaining possession under pressure. They work closely with Oliver Serpent's tactical team to analyze spatial maps, ensuring the team maintains central control. They enjoy painting miniature models."
+    },
+    {
+        "id": "p_289",
+        "name": "Kenji Vale",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 45,
+            "MID": 90,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 65,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 64,
+        "aggression": 87,
+        "lore": "A former archivist who transitioned to professional Pitch Control after being spotted in an amateur league. They analyze player data with high precision, maintaining their own hand-written ledger of match statistics."
+    },
+    {
+        "id": "p_290",
+        "name": "Gulliver Arrow",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 40,
+            "MID": 95,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 77,
+        "aggression": 43,
+        "lore": "A quiet player who always laces their boots with a specific silver thread. They have a superstition that doing so ensures their passing accuracy remains high during crucial away derbies."
+    },
+    {
+        "id": "p_291",
+        "name": "Nova Wolf",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 35,
+            "MID": 95,
+            "DEF": 40,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 90,
+        "aggression": 60,
+        "lore": "A local youth academy product who recently signed a professional contract. They are known for their positive attitude and dedication to community coaching, hosting free clinics for citadel kids."
+    },
+    {
+        "id": "p_292",
+        "name": "Fabian Kepler",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "DF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 20,
+            "MID": 80,
+            "DEF": 130,
+            "GK": 10
+        },
+        "rating": 110,
+        "trait": {
+            "id": "Playmaker",
+            "name": "Playmaker",
+            "desc": "Win a MID duel to choose next round's attribute"
+        },
+        "workRate": "High",
+        "stamina": 62,
+        "aggression": 77,
+        "lore": "A commanding centerback who anchors the Silver Crowns' defense. They work directly with Oliver Serpent to organize the backline, providing a secure platform for [[p_281|Jude Hawthorne]]'s attacking transitions. They are known for their intelligence and composure."
+    },
+    {
+        "id": "p_293",
+        "name": "Cyrus Serpent",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 15,
+            "MID": 65,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 98,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 75,
+        "aggression": 33,
+        "lore": "A quick fullback known for precise crossing. They were scouted from the palace guard academies, bringing intense discipline and physical conditioning to the team. They are superstitious about being the last player to leave the tunnel."
+    },
+    {
+        "id": "p_294",
+        "name": "Kieran Raster",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 20,
+            "MID": 60,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 96,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 88,
+        "aggression": 50,
+        "lore": "A tackling specialist who excels in 1v1 defensive situations. Under Oliver Serpent's guidance, they have developed into a highly reliable defender who rarely commits fouls. They keep a collection of antique maps."
+    },
+    {
+        "id": "p_295",
+        "name": "Augustus Tempest",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 55,
+            "DEF": 100,
+            "GK": 10
+        },
+        "rating": 82,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 60,
+        "aggression": 67,
+        "lore": "An industrious defender who grew up in the outer districts. They are an amateur astronomer who spends their off-days tracking the movements of Spatia's twin moons. They always check the moon phases before a match."
+    },
+    {
+        "id": "p_296",
+        "name": "Mateo Wrecker",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 50,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 86,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 73,
+        "aggression": 84,
+        "lore": "A quiet defender who relies on reading the game and anticipation. They have a superstition that eating a specific honey pastry before warm-ups brings them defensive luck. They are a highly reliable squad player."
+    },
+    {
+        "id": "p_297",
+        "name": "Augustus Sato",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 45,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 84,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 86,
+        "aggression": 40,
+        "lore": "A physical defender who worked as a palace blacksmith's apprentice before joining the club. They bring immense strength to the defensive rotation and are known for their powerful long-range clearances."
+    },
+    {
+        "id": "p_298",
+        "name": "Nico Blackwood",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "GK",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 20,
+            "GK": 200
+        },
+        "rating": 200,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "High",
+        "stamina": 99,
+        "aggression": 57,
+        "lore": "A top-tier goalkeeper who has kept the most clean sheets in the division. They work closely with Oliver Serpent to analyze opposing striker habits, developing incredibly fast reactions. They are a vocal leader in the locker room."
+    },
+    {
+        "id": "p_299",
+        "name": "Tiberius Rex",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "GK",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 15,
+            "GK": 175
+        },
+        "rating": 175,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 71,
+        "aggression": 74,
+        "lore": "A tall goalkeeper who dominates the penalty box. They study tactical coordinate charts from Oliver Serpent's files to optimize their starting positions. They always touch both posts and the crossbar before kickoff."
+    },
+    {
+        "id": "p_300",
+        "name": "Enzo Bow",
+        "clubId": "club_15",
+        "clubName": "Silver Crowns",
+        "position": "GK",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 10,
+            "GK": 150
+        },
+        "rating": 150,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 84,
+        "aggression": 30,
+        "lore": "A veteran goalkeeper who has played in multiple divisions. They spend their free time building model skyships and sharing their vast experience with the younger keepers in the squad."
+    },
+    {
+        "id": "p_301",
+        "name": "Jaxon Hammer",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "FW",
+        "rarity": "LEGEND",
+        "stats": {
+            "ATT": 140,
+            "MID": 80,
+            "DEF": 40,
+            "GK": 10
+        },
+        "rating": 116,
+        "trait": {
+            "id": "Enforcer",
+            "name": "Enforcer",
+            "desc": "Win a DEF duel to halve opponent's next card stats"
+        },
+        "workRate": "Medium",
+        "stamina": 90,
+        "aggression": 84,
+        "lore": "A powerhouse of a forward who leads the charge for Ignis Steamers. He is legendary for his thunderous 30-yard strike that shattered the crossbar before crossing the line, matching [[p_201|Atticus Roar]]'s squad goal-for-goal in a tense 4-4 draw. Sven Roberts utilizes Jaxon's physical presence to hold up the ball during counter-attacks."
+    },
+    {
+        "id": "p_302",
+        "name": "Javier Pixel",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "FW",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 125,
+            "MID": 80,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 107,
+        "trait": {
+            "id": "Captain",
+            "name": "Captain",
+            "desc": "+10 to all stats if played in Round 5"
+        },
+        "workRate": "High",
+        "stamina": 62,
+        "aggression": 40,
+        "lore": "A clinical striker who forms a powerful partnership with [[p_301|Jaxon Hammer]]. Under Sven Roberts, they have developed a deadly understanding, exchanging quick passes to break through low blocks. They spend their free time studying thermodynamics."
+    },
+    {
+        "id": "p_303",
+        "name": "Archibald Rigel",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "FW",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 110,
+            "MID": 70,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 94,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 75,
+        "aggression": 57,
+        "lore": "A quick winger who specializes in stretching defenses. They work closely with Sven Roberts to coordinate overlapping runs, creating space for [[p_301|Jaxon Hammer]] to exploit in the box. They carry a lucky piece of coal in their pocket."
+    },
+    {
+        "id": "p_304",
+        "name": "Lucian Crown",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 95,
+            "MID": 55,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 79,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 88,
+        "aggression": 74,
+        "lore": "A former steam-valve operator who won their spot in the squad during a public trial. They are highly superstitious and always step onto the pitch with their left foot first while kissing the club badge."
+    },
+    {
+        "id": "p_305",
+        "name": "Bjarni Bright",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 100,
+            "MID": 50,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 80,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 60,
+        "aggression": 30,
+        "lore": "A young striker who developed their quick reflexes in the narrow corridors of the geothermal caldera. They are known for their unpredictable shooting angles and lighthearted locker room jokes."
+    },
+    {
+        "id": "p_306",
+        "name": "Aero Buffer",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "MF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 65,
+            "MID": 120,
+            "DEF": 45,
+            "GK": 10
+        },
+        "rating": 87,
+        "trait": {
+            "id": "Captain",
+            "name": "Captain",
+            "desc": "+10 to all stats if played in Round 5"
+        },
+        "workRate": "Low",
+        "stamina": 73,
+        "aggression": 47,
+        "lore": "A defensive midfielder who serves as the tactical anchor in Sven Roberts' system. They work in tandem with [[p_301|Jaxon Hammer]] to break up opposing plays and launch quick counter-attacks. They are an avid collector of vintage steam gauges."
+    },
+    {
+        "id": "p_307",
+        "name": "Cornelius Ironclad",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 55,
+            "MID": 110,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 77,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 86,
+        "aggression": 64,
+        "lore": "A tireless box-to-box midfielder with exceptional stamina. They credits their endless energy to childhood runs up the steep volcanic slopes surrounding the caldera. They always wear the same faded red wristband."
+    },
+    {
+        "id": "p_308",
+        "name": "Kaito Script",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 40,
+            "MID": 105,
+            "DEF": 55,
+            "GK": 10
+        },
+        "rating": 76,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 99,
+        "aggression": 81,
+        "lore": "A technical midfielder who excels at quick transition passing. Under the guidance of Sven Roberts, they have mastered the art of drawing opponents out of position to exploit central gaps. They are an amateur cartographer."
+    },
+    {
+        "id": "p_309",
+        "name": "Xerxes Stack",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 45,
+            "MID": 90,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 65,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 71,
+        "aggression": 37,
+        "lore": "A former mechanical technician who originally worked on the stadium's heating grids. Their passing range in staff matches caught the eye of Sven Roberts, earning them a professional contract."
+    },
+    {
+        "id": "p_310",
+        "name": "Helios Void",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 40,
+            "MID": 95,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 84,
+        "aggression": 54,
+        "lore": "A quiet player who always laces their right boot first. They have a superstition that playing with a high-pressure steam vent active near the pitch brings them luck. They provide solid cover in the midfield rotation."
+    },
+    {
+        "id": "p_311",
+        "name": "Gulliver Regis",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 35,
+            "MID": 95,
+            "DEF": 40,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 97,
+        "aggression": 71,
+        "lore": "A local kid who rose through the Ignis youth ranks. They are known for their positive attitude and dedication to community charity events, hosting free clinics for local caldera children."
+    },
+    {
+        "id": "p_312",
+        "name": "Fabian Bold",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "DF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 20,
+            "MID": 80,
+            "DEF": 130,
+            "GK": 10
+        },
+        "rating": 110,
+        "trait": {
+            "id": "Enforcer",
+            "name": "Enforcer",
+            "desc": "Win a DEF duel to halve opponent's next card stats"
+        },
+        "workRate": "Low",
+        "stamina": 69,
+        "aggression": 88,
+        "lore": "A physical centerback who coordinates the Steamers' low block. They work directly with Sven Roberts to organize the defense, providing a secure platform for [[p_301|Jaxon Hammer]]'s counter-attacks. They are known as the 'Steam Shield'."
+    },
+    {
+        "id": "p_313",
+        "name": "Kieran Adams",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 15,
+            "MID": 65,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 98,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 82,
+        "aggression": 44,
+        "lore": "A fullback known for explosive overlapping runs. They were scouted from the local hover-bike racing leagues, bringing intense speed and spatial awareness to the defensive flank. They are superstitious about matching their boot color."
+    },
+    {
+        "id": "p_314",
+        "name": "Mateo Rigel",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 20,
+            "MID": 60,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 96,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 95,
+        "aggression": 61,
+        "lore": "A defensive specialist who excels in 1v1 situations. Under Sven Roberts, they have transitioned into a ball-playing centerback who can initiate attacks from deep. They keep a meticulously detailed journal of opponent forward stats."
+    },
+    {
+        "id": "p_315",
+        "name": "Clement Core",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 55,
+            "DEF": 100,
+            "GK": 10
+        },
+        "rating": 82,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 67,
+        "aggression": 78,
+        "lore": "An industrious defender who grew up in the geothermal mines. They are an amateur geologist who spends their off-days collecting unique rock samples from the volcanic sectors. They always check the pitch temperature."
+    },
+    {
+        "id": "p_316",
+        "name": "Archibald Stone",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 50,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 86,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 80,
+        "aggression": 34,
+        "lore": "A quiet defender who relies on positioning and anticipation. They have a superstition that eating a specific volcanic spice before matches increases their focus. They provide reliable depth in the defensive rotation."
+    },
+    {
+        "id": "p_317",
+        "name": "Luca Void",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 45,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 84,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 93,
+        "aggression": 51,
+        "lore": "A former metal press operator who brings raw physical strength to the squad. They are always the loudest cheerleader on the bench and are known for their powerful long-range clearances."
+    },
+    {
+        "id": "p_318",
+        "name": "Loki Rock",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "GK",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 20,
+            "GK": 200
+        },
+        "rating": 200,
+        "trait": {
+            "id": "Captain",
+            "name": "Captain",
+            "desc": "+10 to all stats if played in Round 5"
+        },
+        "workRate": "Low",
+        "stamina": 65,
+        "aggression": 68,
+        "lore": "The starting goalkeeper who has kept the most clean sheets at the Caldera. They work closely with Sven Roberts' analysts to study opposing forward habits, developing near-instantaneous reactions. They are a key leader in the locker room."
+    },
+    {
+        "id": "p_319",
+        "name": "Cyrus Cloud",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "GK",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 15,
+            "GK": 175
+        },
+        "rating": 175,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 78,
+        "aggression": 85,
+        "lore": "A tall goalkeeper known for dominant aerial claims. They study tactical guides from Sven Roberts to optimize their positioning during set-pieces. They are superstitious about tapping the crossbar before kickoff."
+    },
+    {
+        "id": "p_320",
+        "name": "Brody Shores",
+        "clubId": "club_16",
+        "clubName": "Ignis Steamers",
+        "position": "GK",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 10,
+            "GK": 150
+        },
+        "rating": 150,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 91,
+        "aggression": 41,
+        "lore": "A veteran keeper who enjoys mentoring the younger players. Off the pitch, they are an avid skyship enthusiast who enjoys flying light cruisers through the northern basalt trenches."
+    },
+    {
+        "id": "p_321",
+        "name": "Atticus Canyon",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "FW",
+        "rarity": "LEGEND",
+        "stats": {
+            "ATT": 150,
+            "MID": 80,
+            "DEF": 30,
+            "GK": 10
+        },
+        "rating": 122,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "High",
+        "stamina": 97,
+        "aggression": 34,
+        "lore": "An explosive aerial specialist and the captain of Aero Sky-Knights. He famously climbed above [[p_361|Clement Bold]] to head in the winning goal from a deep cross in the final minute of the Stratosphere derby. Gavin Kepler's wing-attack tactics are custom-built to maximize Atticus's unmatched dominance in the air."
+    },
+    {
+        "id": "p_322",
+        "name": "Tobias River",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "FW",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 125,
+            "MID": 80,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 107,
+        "trait": {
+            "id": "Playmaker",
+            "name": "Playmaker",
+            "desc": "Win a MID duel to choose next round's attribute"
+        },
+        "workRate": "Low",
+        "stamina": 69,
+        "aggression": 51,
+        "lore": "A clinical winger who works in perfect harmony with [[p_321|Atticus Canyon]]. Under Gavin Kepler's wing-attack system, they specialize in beating fullbacks and delivering high, arching crosses. They spend their free time studying aerodynamics."
+    },
+    {
+        "id": "p_323",
+        "name": "Diego Shields",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "FW",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 110,
+            "MID": 70,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 94,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 82,
+        "aggression": 68,
+        "lore": "A clever forward who excels at finding space in the penalty area. They work closely with Gavin Kepler to create decoy runs that draw defenders away from [[p_321|Atticus Canyon]]. They carry a lucky falcon feather in their pocket."
+    },
+    {
+        "id": "p_324",
+        "name": "Leif Pollux",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 95,
+            "MID": 55,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 79,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 95,
+        "aggression": 85,
+        "lore": "A former skyship deckhand who won their place in the squad during a public trial. They are highly superstitious and always step onto the pitch with their right foot first while looking up at the sky."
+    },
+    {
+        "id": "p_325",
+        "name": "Viktor Serpent",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 100,
+            "MID": 50,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 80,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 67,
+        "aggression": 41,
+        "lore": "A young striker who developed their quick reflexes playing street soccer on the levitation platforms. They are known for their unpredictable shooting angles and lighthearted locker room jokes."
+    },
+    {
+        "id": "p_326",
+        "name": "Nico Glitch",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "MF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 65,
+            "MID": 120,
+            "DEF": 45,
+            "GK": 10
+        },
+        "rating": 87,
+        "trait": {
+            "id": "Playmaker",
+            "name": "Playmaker",
+            "desc": "Win a MID duel to choose next round's attribute"
+        },
+        "workRate": "Medium",
+        "stamina": 80,
+        "aggression": 58,
+        "lore": "A creative midfielder who orchestrates the Sky-Knights' attacks. They work in tandem with [[p_321|Atticus Canyon]] to execute quick passing sequences that unlock defensive low blocks. They are an avid collector of vintage aviation compasses."
+    },
+    {
+        "id": "p_327",
+        "name": "Stefan Moon",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 55,
+            "MID": 110,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 77,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 93,
+        "aggression": 75,
+        "lore": "A tireless box-to-box midfielder with exceptional stamina. They credits their endless energy to childhood runs up the steep mountain slopes surrounding the stratospheric deck. They always wear the same faded blue headband."
+    },
+    {
+        "id": "p_328",
+        "name": "Olaf Frost",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 40,
+            "MID": 105,
+            "DEF": 55,
+            "GK": 10
+        },
+        "rating": 76,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 65,
+        "aggression": 31,
+        "lore": "A technical midfielder who excels at maintaining possession under pressure. Under Gavin Kepler's instruction, they monitor the central spaces, shielding the backline while launching rapid attacks. They are an amateur astronomer."
+    },
+    {
+        "id": "p_329",
+        "name": "Silas Dale",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 45,
+            "MID": 90,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 65,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 78,
+        "aggression": 48,
+        "lore": "A former mechanical apprentice who originally worked on the stadium's levitation engines. Their passing range in staff matches caught the eye of Gavin Kepler, earning them a professional contract."
+    },
+    {
+        "id": "p_330",
+        "name": "Giovanni Capella",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 40,
+            "MID": 95,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 91,
+        "aggression": 65,
+        "lore": "A quiet player who always laces their left boot first. They have a superstition that playing with a high wind velocity active near the pitch brings them luck. They provide solid cover in the midfield rotation."
+    },
+    {
+        "id": "p_331",
+        "name": "Benedict Redwood",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 35,
+            "MID": 95,
+            "DEF": 40,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 63,
+        "aggression": 82,
+        "lore": "A local kid who rose through the Aero youth ranks. They are known for their positive attitude and dedication to community charity events, hosting free clinics for local platform children."
+    },
+    {
+        "id": "p_332",
+        "name": "Winston Ramirez",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "DF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 20,
+            "MID": 80,
+            "DEF": 130,
+            "GK": 10
+        },
+        "rating": 110,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Medium",
+        "stamina": 76,
+        "aggression": 38,
+        "lore": "A physical centerback who coordinates the Sky-Knights' defense. They work directly with Gavin Kepler to organize the backline, providing a secure platform for [[p_321|Atticus Canyon]]'s aerial attacks. They are known as the 'Sky Shield'."
+    },
+    {
+        "id": "p_333",
+        "name": "Sven Cache",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 15,
+            "MID": 65,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 98,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 89,
+        "aggression": 55,
+        "lore": "A fullback known for explosive overlapping runs. They were scouted from the local hover-bike racing leagues, bringing intense speed and spatial awareness to the defensive flank. They are superstitious about matching their boot color."
+    },
+    {
+        "id": "p_334",
+        "name": "Erik Trapper",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 20,
+            "MID": 60,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 96,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 61,
+        "aggression": 72,
+        "lore": "A defensive specialist who excels in 1v1 situations. Under Gavin Kepler, they have transitioned into a ball-playing centerback who can initiate attacks from deep. They keep a meticulously detailed journal of opponent forward stats."
+    },
+    {
+        "id": "p_335",
+        "name": "Breeze Rigel",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 55,
+            "DEF": 100,
+            "GK": 10
+        },
+        "rating": 82,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 74,
+        "aggression": 89,
+        "lore": "An industrious defender who grew up in the high-altitude sectors. They are an amateur meteorologist who spends their off-days collecting unique cloud data from the sky sectors. They always check the wind direction."
+    },
+    {
+        "id": "p_336",
+        "name": "Aero Beach",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 50,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 86,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 87,
+        "aggression": 45,
+        "lore": "A quiet defender who relies on reading the game and anticipation. They have a superstition that eating a specific cloud pastry before warm-ups brings them defensive luck. They are a highly reliable squad player."
+    },
+    {
+        "id": "p_337",
+        "name": "Rico Star",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 45,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 84,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 100,
+        "aggression": 62,
+        "lore": "A former sky-ship welder who brings raw physical strength to the squad. They are always the loudest cheerleader on the bench and are known for their powerful long-range clearances."
+    },
+    {
+        "id": "p_338",
+        "name": "Marina Trickster",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "GK",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 20,
+            "GK": 200
+        },
+        "rating": 200,
+        "trait": {
+            "id": "Playmaker",
+            "name": "Playmaker",
+            "desc": "Win a MID duel to choose next round's attribute"
+        },
+        "workRate": "Medium",
+        "stamina": 72,
+        "aggression": 79,
+        "lore": "The starting goalkeeper who has kept the most clean sheets at the Stratosphere. They work closely with Gavin Kepler's analysts to study opposing forward habits, developing near-instantaneous reactions. They are a key leader in the locker room."
+    },
+    {
+        "id": "p_339",
+        "name": "Aero Canyon",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "GK",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 15,
+            "GK": 175
+        },
+        "rating": 175,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 85,
+        "aggression": 35,
+        "lore": "A tall goalkeeper known for dominant aerial claims. They study tactical guides from Gavin Kepler to optimize their positioning during set-pieces. They are superstitious about tapping the crossbar before kickoff."
+    },
+    {
+        "id": "p_340",
+        "name": "Zephyr Zephyr",
+        "clubId": "club_17",
+        "clubName": "Aero Sky-Knights",
+        "position": "GK",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 10,
+            "GK": 150
+        },
+        "rating": 150,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 98,
+        "aggression": 52,
+        "lore": "A veteran keeper who enjoys mentoring the younger players. Off the pitch, they are an avid skyship enthusiast who enjoys flying light cruisers through the northern basalt trenches."
+    },
+    {
+        "id": "p_341",
+        "name": "Leopold Vassal",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "FW",
+        "rarity": "LEGEND",
+        "stats": {
+            "ATT": 125,
+            "MID": 110,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 119,
+        "trait": {
+            "id": "False Nine",
+            "name": "False Nine",
+            "desc": "Can use MID stat instead of ATT stat on Attack rolls"
+        },
+        "workRate": "Low",
+        "stamina": 63,
+        "aggression": 45,
+        "lore": "A highly creative forward who dictates the tempo for Echo Frequency. He famously unlocked Solaris Vanguard's defense with a no-look pass that directly assisted the winner, completely outsmarting [[p_101|Felix Shields]]'s backline. Marco Hawthorne relies on Leopold's movement to drop into pockets of space and create overload situations."
+    },
+    {
+        "id": "p_342",
+        "name": "Hiroto Fang",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "FW",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 125,
+            "MID": 80,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 107,
+        "trait": {
+            "id": "Enforcer",
+            "name": "Enforcer",
+            "desc": "Win a DEF duel to halve opponent's next card stats"
+        },
+        "workRate": "Medium",
+        "stamina": 76,
+        "aggression": 62,
+        "lore": "A clinical striker who forms a lethal partnership with [[p_341|Leopold Vassal]]. Under Marco Hawthorne, they have developed a deadly understanding, exchanging quick passes to break through low blocks. They spend their free time studying acoustics."
+    },
+    {
+        "id": "p_343",
+        "name": "Gunnar Predator",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "FW",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 110,
+            "MID": 70,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 94,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 89,
+        "aggression": 79,
+        "lore": "A quick winger who specializes in stretching defenses. They work closely with Marco Hawthorne to coordinate overlapping runs, creating space for [[p_341|Leopold Vassal]] to exploit in the box. They carry a lucky piece of tuning fork in their pocket."
+    },
+    {
+        "id": "p_344",
+        "name": "Simeon Predator",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 95,
+            "MID": 55,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 79,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 61,
+        "aggression": 35,
+        "lore": "A former sound-board operator who won their spot in the squad during a public trial. They are highly superstitious and always step onto the pitch with their left foot first while kissing the club badge."
+    },
+    {
+        "id": "p_345",
+        "name": "Yuri Capella",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 100,
+            "MID": 50,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 80,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 74,
+        "aggression": 52,
+        "lore": "A young striker who developed their quick reflexes playing street soccer in the acoustic chambers. They are known for their unpredictable shooting angles and lighthearted locker room jokes."
+    },
+    {
+        "id": "p_346",
+        "name": "Dominic Stone",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "MF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 65,
+            "MID": 120,
+            "DEF": 45,
+            "GK": 10
+        },
+        "rating": 87,
+        "trait": {
+            "id": "Enforcer",
+            "name": "Enforcer",
+            "desc": "Win a DEF duel to halve opponent's next card stats"
+        },
+        "workRate": "High",
+        "stamina": 87,
+        "aggression": 69,
+        "lore": "A defensive midfielder who serves as the tactical anchor in Marco Hawthorne's system. They work in tandem with [[p_341|Leopold Vassal]] to break up opposing plays and launch quick counter-attacks. They are an avid collector of vintage subwoofers."
+    },
+    {
+        "id": "p_347",
+        "name": "Marina Arrow",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 55,
+            "MID": 110,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 77,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 100,
+        "aggression": 86,
+        "lore": "A tireless box-to-box midfielder with exceptional stamina. They credits their endless energy to childhood runs up the steep acoustic hills. They always wear the same faded green wristband."
+    },
+    {
+        "id": "p_348",
+        "name": "Rin Sirius",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 40,
+            "MID": 105,
+            "DEF": 55,
+            "GK": 10
+        },
+        "rating": 76,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 72,
+        "aggression": 42,
+        "lore": "A technical midfielder who excels at quick transition passing. Under the guidance of Marco Hawthorne, they have mastered the art of drawing opponents out of position to exploit central gaps. They are an amateur cartographer."
+    },
+    {
+        "id": "p_349",
+        "name": "Cypher Bow",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 45,
+            "MID": 90,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 65,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 85,
+        "aggression": 59,
+        "lore": "A former sound technician who originally worked on the stadium's holographic speakers. Their passing range in staff matches caught the eye of Marco Hawthorne, earning them a professional contract."
+    },
+    {
+        "id": "p_350",
+        "name": "Hadrian Page",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 40,
+            "MID": 95,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 98,
+        "aggression": 76,
+        "lore": "A quiet player who always laces their right boot first. They have a superstition that playing with a high sound frequency active near the pitch brings them luck. They provide solid cover in the midfield rotation."
+    },
+    {
+        "id": "p_351",
+        "name": "Matteo Adder",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 35,
+            "MID": 95,
+            "DEF": 40,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 70,
+        "aggression": 32,
+        "lore": "A local kid who rose through the Echo youth ranks. They are known for their positive attitude and dedication to community charity events, hosting free clinics for local acoustic children."
+    },
+    {
+        "id": "p_352",
+        "name": "Percival Adams",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "DF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 20,
+            "MID": 80,
+            "DEF": 130,
+            "GK": 10
+        },
+        "rating": 110,
+        "trait": {
+            "id": "Captain",
+            "name": "Captain",
+            "desc": "+10 to all stats if played in Round 5"
+        },
+        "workRate": "High",
+        "stamina": 83,
+        "aggression": 49,
+        "lore": "A physical centerback who coordinates the Frequency's low block. They work directly with Marco Hawthorne to organize the defense, providing a secure platform for [[p_341|Leopold Vassal]]'s counter-attacks. They are known as the 'Sound Shield'."
+    },
+    {
+        "id": "p_353",
+        "name": "Asher Heap",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 15,
+            "MID": 65,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 98,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 96,
+        "aggression": 66,
+        "lore": "A fullback known for explosive overlapping runs. They were scouted from the local hover-bike racing leagues, bringing intense speed and spatial awareness to the defensive flank. They are superstitious about matching their boot color."
+    },
+    {
+        "id": "p_354",
+        "name": "Oliver Ocean",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 20,
+            "MID": 60,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 96,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 68,
+        "aggression": 83,
+        "lore": "A defensive specialist who excels in 1v1 situations. Under Marco Hawthorne, they have transitioned into a ball-playing centerback who can initiate attacks from deep. They keep a meticulously detailed journal of opponent forward stats."
+    },
+    {
+        "id": "p_355",
+        "name": "Nils Flint",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 55,
+            "DEF": 100,
+            "GK": 10
+        },
+        "rating": 82,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 81,
+        "aggression": 39,
+        "lore": "An industrious defender who grew up in the acoustic mines. They are an amateur geologist who spends their off-days collecting unique sound wave data. They always check the pitch volume."
+    },
+    {
+        "id": "p_356",
+        "name": "Cormac Vector",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 50,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 86,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 94,
+        "aggression": 56,
+        "lore": "A quiet defender who relies on positioning and anticipation. They have a superstition that eating a specific sound wave pastry before matches increases their focus. They provide reliable depth in the defensive rotation."
+    },
+    {
+        "id": "p_357",
+        "name": "Aurelius Bold",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 45,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 84,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 66,
+        "aggression": 73,
+        "lore": "A former sound press operator who brings raw physical strength to the squad. They are always the loudest cheerleader on the bench and are known for their powerful long-range clearances."
+    },
+    {
+        "id": "p_358",
+        "name": "Lars Vega",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "GK",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 20,
+            "GK": 200
+        },
+        "rating": 200,
+        "trait": {
+            "id": "Enforcer",
+            "name": "Enforcer",
+            "desc": "Win a DEF duel to halve opponent's next card stats"
+        },
+        "workRate": "High",
+        "stamina": 79,
+        "aggression": 90,
+        "lore": "The starting goalkeeper who has kept the most clean sheets at the Amphitheater. They work closely with Marco Hawthorne's analysts to study opposing forward habits, developing near-instantaneous reactions. They are a key leader in the locker room."
+    },
+    {
+        "id": "p_359",
+        "name": "Adrian Cobra",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "GK",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 15,
+            "GK": 175
+        },
+        "rating": 175,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 92,
+        "aggression": 46,
+        "lore": "A tall goalkeeper known for dominant aerial claims. They study tactical guides from Marco Hawthorne to optimize their positioning during set-pieces. They are superstitious about tapping the crossbar before kickoff."
+    },
+    {
+        "id": "p_360",
+        "name": "Drake Pixel",
+        "clubId": "club_18",
+        "clubName": "Echo Frequency",
+        "position": "GK",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 10,
+            "GK": 150
+        },
+        "rating": 150,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 64,
+        "aggression": 63,
+        "lore": "A veteran keeper who enjoys mentoring the younger players. Off the pitch, they are an avid sound enthusiast who enjoys flying light cruisers through the northern basalt trenches."
+    },
+    {
+        "id": "p_361",
+        "name": "Clement Bold",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "FW",
+        "rarity": "LEGEND",
+        "stats": {
+            "ATT": 130,
+            "MID": 80,
+            "DEF": 50,
+            "GK": 10
+        },
+        "rating": 110,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "Medium",
+        "stamina": 70,
+        "aggression": 56,
+        "lore": "A physical powerhouse who anchors the attack of Onyx Bastion. He famously scored the only goal of the Obsidian derby by shielding the ball from [[p_241|Reginald Lake]] before turning and firing into the top corner. Takuya Matrix's low block relies on Clement to act as a target man during direct clearances."
+    },
+    {
+        "id": "p_362",
+        "name": "Oscar Rigel",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "FW",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 125,
+            "MID": 80,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 107,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "High",
+        "stamina": 83,
+        "aggression": 73,
+        "lore": "A clinical striker who forms a powerful partnership with [[p_361|Clement Bold]]. Under Takuya Matrix, they have developed a deadly understanding, exchanging quick passes to break through low blocks. They spend their free time studying geology."
+    },
+    {
+        "id": "p_363",
+        "name": "Orion Ocean",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "FW",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 110,
+            "MID": 70,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 94,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 96,
+        "aggression": 90,
+        "lore": "A quick winger who specializes in stretching defenses. They work closely with Takuya Matrix to coordinate overlapping runs, creating space for [[p_361|Clement Bold]] to exploit in the box. They carry a lucky piece of onyx in their pocket."
+    },
+    {
+        "id": "p_364",
+        "name": "Reginald Forge",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 95,
+            "MID": 55,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 79,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 68,
+        "aggression": 46,
+        "lore": "A former mine-valve operator who won their spot in the squad during a public trial. They are highly superstitious and always step onto the pitch with their left foot first while kissing the club badge."
+    },
+    {
+        "id": "p_365",
+        "name": "Viper Ridge",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 100,
+            "MID": 50,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 80,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 81,
+        "aggression": 63,
+        "lore": "A young striker who developed their quick reflexes in the narrow corridors of the volcanic mines. They are known for their unpredictable shooting angles and lighthearted locker room jokes."
+    },
+    {
+        "id": "p_366",
+        "name": "Cruz Bold",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "MF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 65,
+            "MID": 120,
+            "DEF": 45,
+            "GK": 10
+        },
+        "rating": 87,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 94,
+        "aggression": 80,
+        "lore": "A defensive midfielder who serves as the tactical anchor in Takuya Matrix's system. They work in tandem with [[p_361|Clement Bold]] to break up opposing plays and launch quick counter-attacks. They are an avid collector of vintage mine gauges."
+    },
+    {
+        "id": "p_367",
+        "name": "Torstein Brook",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 55,
+            "MID": 110,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 77,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 66,
+        "aggression": 36,
+        "lore": "A tireless box-to-box midfielder with exceptional stamina. They credits their endless energy to childhood runs up the steep volcanic slopes surrounding the mine. They always wear the same faded black wristband."
+    },
+    {
+        "id": "p_368",
+        "name": "Wyatt Bright",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 40,
+            "MID": 105,
+            "DEF": 55,
+            "GK": 10
+        },
+        "rating": 76,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 79,
+        "aggression": 53,
+        "lore": "A technical midfielder who excels at quick transition passing. Under the guidance of Takuya Matrix, they have mastered the art of drawing opponents out of position to exploit central gaps. They are an amateur cartographer."
+    },
+    {
+        "id": "p_369",
+        "name": "Bruno Sun",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 45,
+            "MID": 90,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 65,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 92,
+        "aggression": 70,
+        "lore": "A former mechanical technician who originally worked on the stadium's cooling grids. Their passing range in staff matches caught the eye of Takuya Matrix, earning them a professional contract."
+    },
+    {
+        "id": "p_370",
+        "name": "Henry Predator",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 40,
+            "MID": 95,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 64,
+        "aggression": 87,
+        "lore": "A quiet player who always laces their right boot first. They have a superstition that playing with a high-pressure ventilation active near the pitch brings them luck. They provide solid cover in the midfield rotation."
+    },
+    {
+        "id": "p_371",
+        "name": "Kenji Frost",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 35,
+            "MID": 95,
+            "DEF": 40,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 77,
+        "aggression": 43,
+        "lore": "A local kid who rose through the Onyx youth ranks. They are known for their positive attitude and dedication to community charity events, hosting free clinics for local mine children."
+    },
+    {
+        "id": "p_372",
+        "name": "Leander Sands",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "DF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 20,
+            "MID": 80,
+            "DEF": 130,
+            "GK": 10
+        },
+        "rating": 110,
+        "trait": {
+            "id": "Playmaker",
+            "name": "Playmaker",
+            "desc": "Win a MID duel to choose next round's attribute"
+        },
+        "workRate": "Low",
+        "stamina": 90,
+        "aggression": 60,
+        "lore": "A physical centerback who coordinates the Bastion's low block. They work directly with Takuya Matrix to organize the defense, providing a secure platform for [[p_361|Clement Bold]]'s counter-attacks. They are known as the 'Obsidian Shield'."
+    },
+    {
+        "id": "p_373",
+        "name": "Santiago Miller",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 15,
+            "MID": 65,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 98,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 62,
+        "aggression": 77,
+        "lore": "A fullback known for explosive overlapping runs. They were scouted from the local hover-bike racing leagues, bringing intense speed and spatial awareness to the defensive flank. They are superstitious about matching their boot color."
+    },
+    {
+        "id": "p_374",
+        "name": "Ryouta Rock",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 20,
+            "MID": 60,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 96,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 75,
+        "aggression": 33,
+        "lore": "A defensive specialist who excels in 1v1 situations. Under Takuya Matrix, they have transitioned into a ball-playing centerback who can initiate attacks from deep. They keep a meticulously detailed journal of opponent forward stats."
+    },
+    {
+        "id": "p_375",
+        "name": "Asher Page",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 55,
+            "DEF": 100,
+            "GK": 10
+        },
+        "rating": 82,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 88,
+        "aggression": 50,
+        "lore": "An industrious defender who grew up in the volcanic mines. They are an amateur geologist who spends their off-days collecting unique rock samples from the volcanic sectors. They always check the pitch temperature."
+    },
+    {
+        "id": "p_376",
+        "name": "Clara Iron",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 50,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 86,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 60,
+        "aggression": 67,
+        "lore": "A quiet defender who relies on positioning and anticipation. They have a superstition that eating a specific mine spice before matches increases their focus. They provide reliable depth in the defensive rotation."
+    },
+    {
+        "id": "p_377",
+        "name": "Balthazar Castor",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 45,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 84,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 73,
+        "aggression": 84,
+        "lore": "A former metal press operator who brings raw physical strength to the squad. They are always the loudest cheerleader on the bench and are known for their powerful long-range clearances."
+    },
+    {
+        "id": "p_378",
+        "name": "Gulliver Valerius",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "GK",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 20,
+            "GK": 200
+        },
+        "rating": 200,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 86,
+        "aggression": 40,
+        "lore": "The starting goalkeeper who has kept the most clean sheets at the Mine. They work closely with Takuya Matrix's analysts to study opposing forward habits, developing near-instantaneous reactions. They are a key leader in the locker room."
+    },
+    {
+        "id": "p_379",
+        "name": "Axel Vector",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "GK",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 15,
+            "GK": 175
+        },
+        "rating": 175,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 99,
+        "aggression": 57,
+        "lore": "A tall goalkeeper known for dominant aerial claims. They study tactical guides from Takuya Matrix to optimize their positioning during set-pieces. They are superstitious about tapping the crossbar before kickoff."
+    },
+    {
+        "id": "p_380",
+        "name": "Umbra Davis",
+        "clubId": "club_19",
+        "clubName": "Onyx Bastion",
+        "position": "GK",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 10,
+            "GK": 150
+        },
+        "rating": 150,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 71,
+        "aggression": 74,
+        "lore": "A veteran keeper who enjoys mentoring the younger players. Off the pitch, they are an avid skyship enthusiast who enjoys flying light cruisers through the northern basalt trenches."
+    },
+    {
+        "id": "p_381",
+        "name": "Zephyr Matrix",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "FW",
+        "rarity": "LEGEND",
+        "stats": {
+            "ATT": 130,
+            "MID": 80,
+            "DEF": 50,
+            "GK": 10
+        },
+        "rating": 110,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 77,
+        "aggression": 67,
+        "lore": "A legendary forward known for his clinical efficiency at Runic Monoliths. He secured his place in club folklore by scoring a quick-fire double against Aegis Citadel, finding pockets of space that [[p_1|Benedict Williams]] could not cover. Drake Smith's defensive setup depends on Zephyr's clinical finishing to convert their limited chances."
+    },
+    {
+        "id": "p_382",
+        "name": "Atticus Rigel",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "FW",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 125,
+            "MID": 80,
+            "DEF": 25,
+            "GK": 10
+        },
+        "rating": 107,
+        "trait": {
+            "id": "Captain",
+            "name": "Captain",
+            "desc": "+10 to all stats if played in Round 5"
+        },
+        "workRate": "Low",
+        "stamina": 90,
+        "aggression": 84,
+        "lore": "A clinical striker who forms a powerful partnership with [[p_381|Zephyr Matrix]]. Under Drake Smith, they have developed a deadly understanding, exchanging quick passes to break through low blocks. They spend their free time studying ancient runes."
+    },
+    {
+        "id": "p_383",
+        "name": "Cruz Stack",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "FW",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 110,
+            "MID": 70,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 94,
+        "trait": {
+            "id": "Poacher",
+            "name": "Poacher",
+            "desc": "+20 ATT if opponent plays a GK card"
+        },
+        "workRate": "Medium",
+        "stamina": 62,
+        "aggression": 40,
+        "lore": "A quick winger who specializes in stretching defenses. They work closely with Drake Smith to coordinate overlapping runs, creating space for [[p_381|Zephyr Matrix]] to exploit in the box. They carry a lucky piece of stone in their pocket."
+    },
+    {
+        "id": "p_384",
+        "name": "Kaito Smith",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 95,
+            "MID": 55,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 79,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 75,
+        "aggression": 57,
+        "lore": "A former stone-carver who won their spot in the squad during a public trial. They are highly superstitious and always step onto the pitch with their left foot first while kissing the club badge."
+    },
+    {
+        "id": "p_385",
+        "name": "Leif Claw",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "FW",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 100,
+            "MID": 50,
+            "DEF": 20,
+            "GK": 10
+        },
+        "rating": 80,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 88,
+        "aggression": 74,
+        "lore": "A young striker who developed their quick reflexes in the narrow corridors of the stone glade. They are known for their unpredictable shooting angles and lighthearted locker room jokes."
+    },
+    {
+        "id": "p_386",
+        "name": "Galahad Fletcher",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "MF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 65,
+            "MID": 120,
+            "DEF": 45,
+            "GK": 10
+        },
+        "rating": 87,
+        "trait": {
+            "id": "Captain",
+            "name": "Captain",
+            "desc": "+10 to all stats if played in Round 5"
+        },
+        "workRate": "Medium",
+        "stamina": 60,
+        "aggression": 30,
+        "lore": "A defensive midfielder who serves as the tactical anchor in Drake Smith's system. They work in tandem with [[p_381|Zephyr Matrix]] to break up opposing plays and launch quick counter-attacks. They are an avid collector of vintage stone carvings."
+    },
+    {
+        "id": "p_387",
+        "name": "Cornelius Heap",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 55,
+            "MID": 110,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 77,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 73,
+        "aggression": 47,
+        "lore": "A tireless box-to-box midfielder with exceptional stamina. They credits their endless energy to childhood runs up the steep stone cliffs. They always wear the same faded gray wristband."
+    },
+    {
+        "id": "p_388",
+        "name": "Carlos Cobra",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "MF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 40,
+            "MID": 105,
+            "DEF": 55,
+            "GK": 10
+        },
+        "rating": 76,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 86,
+        "aggression": 64,
+        "lore": "A technical midfielder who excels at quick transition passing. Under the guidance of Drake Smith, they have mastered the art of drawing opponents out of position to exploit central gaps. They are an amateur cartographer."
+    },
+    {
+        "id": "p_389",
+        "name": "Aurora Ice",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 45,
+            "MID": 90,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 65,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 99,
+        "aggression": 81,
+        "lore": "A former stone technician who originally worked on the stadium's holographic pillars. Their passing range in staff matches caught the eye of Drake Smith, earning them a professional contract."
+    },
+    {
+        "id": "p_390",
+        "name": "Declan Capella",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 40,
+            "MID": 95,
+            "DEF": 35,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 71,
+        "aggression": 37,
+        "lore": "A quiet player who always laces their right boot first. They have a superstition that playing with a high-pressure wind active near the pitch brings them luck. They provide solid cover in the midfield rotation."
+    },
+    {
+        "id": "p_391",
+        "name": "Jaxon Beach",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "MF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 35,
+            "MID": 95,
+            "DEF": 40,
+            "GK": 10
+        },
+        "rating": 66,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 84,
+        "aggression": 54,
+        "lore": "A local kid who rose through the Runic youth ranks. They are known for their positive attitude and dedication to community charity events, hosting free clinics for local stone children."
+    },
+    {
+        "id": "p_392",
+        "name": "Jaxon Gear",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "DF",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 20,
+            "MID": 80,
+            "DEF": 130,
+            "GK": 10
+        },
+        "rating": 110,
+        "trait": {
+            "id": "Enforcer",
+            "name": "Enforcer",
+            "desc": "Win a DEF duel to halve opponent's next card stats"
+        },
+        "workRate": "Medium",
+        "stamina": 97,
+        "aggression": 71,
+        "lore": "A physical centerback who coordinates the Monoliths' low block. They work directly with Drake Smith to organize the defense, providing a secure platform for [[p_381|Zephyr Matrix]]'s counter-attacks. They are known as the 'Runic Shield'."
+    },
+    {
+        "id": "p_393",
+        "name": "Angelo Altair",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 15,
+            "MID": 65,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 98,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 69,
+        "aggression": 88,
+        "lore": "A fullback known for explosive overlapping runs. They were scouted from the local hover-bike racing leagues, bringing intense speed and spatial awareness to the defensive flank. They are superstitious about matching their boot color."
+    },
+    {
+        "id": "p_394",
+        "name": "Sven Vega",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "DF",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 20,
+            "MID": 60,
+            "DEF": 120,
+            "GK": 10
+        },
+        "rating": 96,
+        "trait": {
+            "id": "Super Sub",
+            "name": "Super Sub",
+            "desc": "+15 to active stat if drawn from bench"
+        },
+        "workRate": "Low",
+        "stamina": 82,
+        "aggression": 44,
+        "lore": "A defensive specialist who excels in 1v1 situations. Under Drake Smith, they have transitioned into a ball-playing centerback who can initiate attacks from deep. They keep a meticulously detailed journal of opponent forward stats."
+    },
+    {
+        "id": "p_395",
+        "name": "Loki Moon",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 55,
+            "DEF": 100,
+            "GK": 10
+        },
+        "rating": 82,
+        "trait": null,
+        "workRate": "Medium",
+        "stamina": 95,
+        "aggression": 61,
+        "lore": "An industrious defender who grew up in the stone mines. They are an amateur geologist who spends their off-days collecting unique rock samples from the volcanic sectors. They always check the pitch temperature."
+    },
+    {
+        "id": "p_396",
+        "name": "Rin Sky",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 50,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 86,
+        "trait": null,
+        "workRate": "High",
+        "stamina": 67,
+        "aggression": 78,
+        "lore": "A quiet defender who relies on positioning and anticipation. They have a superstition that eating a specific runic spice before matches increases their focus. They provide reliable depth in the defensive rotation."
+    },
+    {
+        "id": "p_397",
+        "name": "Lysander Wave",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "DF",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 15,
+            "MID": 45,
+            "DEF": 110,
+            "GK": 10
+        },
+        "rating": 84,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 80,
+        "aggression": 34,
+        "lore": "A former stone press operator who brings raw physical strength to the squad. They are always the loudest cheerleader on the bench and are known for their powerful long-range clearances."
+    },
+    {
+        "id": "p_398",
+        "name": "Reginald Squire",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "GK",
+        "rarity": "ELITE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 20,
+            "GK": 200
+        },
+        "rating": 200,
+        "trait": {
+            "id": "Captain",
+            "name": "Captain",
+            "desc": "+10 to all stats if played in Round 5"
+        },
+        "workRate": "Medium",
+        "stamina": 93,
+        "aggression": 51,
+        "lore": "The starting goalkeeper who has kept the most clean sheets at the Glade. They work closely with Drake Smith's analysts to study opposing forward habits, developing near-instantaneous reactions. They are a key leader in the locker room."
+    },
+    {
+        "id": "p_399",
+        "name": "Nova Slate",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "GK",
+        "rarity": "RARE",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 15,
+            "GK": 175
+        },
+        "rating": 175,
+        "trait": {
+            "id": "Wall",
+            "name": "Wall",
+            "desc": "Wins all ties on DEF rolls"
+        },
+        "workRate": "High",
+        "stamina": 65,
+        "aggression": 68,
+        "lore": "A tall goalkeeper known for dominant aerial claims. They study tactical guides from Drake Smith to optimize their positioning during set-pieces. They are superstitious about tapping the crossbar before kickoff."
+    },
+    {
+        "id": "p_400",
+        "name": "Rin Script",
+        "clubId": "club_20",
+        "clubName": "Runic Monoliths",
+        "position": "GK",
+        "rarity": "COMMON",
+        "stats": {
+            "ATT": 10,
+            "MID": 10,
+            "DEF": 10,
+            "GK": 150
+        },
+        "rating": 150,
+        "trait": null,
+        "workRate": "Low",
+        "stamina": 78,
+        "aggression": 85,
+        "lore": "A veteran keeper who enjoys mentoring the younger players. Off the pitch, they are an avid skyship enthusiast who enjoys flying light cruisers through the northern basalt trenches."
+    }
+]

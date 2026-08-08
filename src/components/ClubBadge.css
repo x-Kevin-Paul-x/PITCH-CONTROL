@@ -1,0 +1,49 @@
+.club-badge-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.club-badge-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    transition: filter 0.3s ease;
+}
+
+.club-badge-container:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.club-badge-container:hover .club-badge-svg {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.35)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+}
+
+/* Badge Sizes */
+.badge-size-tiny {
+    width: 20px;
+    height: 20px;
+}
+
+.badge-size-small {
+    width: 32px;
+    height: 32px;
+}
+
+.badge-size-medium {
+    width: 48px;
+    height: 48px;
+}
+
+.badge-size-large {
+    width: 80px;
+    height: 80px;
+}
+
+.badge-size-huge {
+    width: 120px;
+    height: 120px;
+}
