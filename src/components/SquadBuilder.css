@@ -20,102 +20,195 @@
     gap: 15px;
 }
 
-.sb-header h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    margin-right: 20px;
-}
-
-.sb-actions {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.quick-build-btn {
-    padding: 0.8rem 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.2s;
-    white-space: nowrap;
-}
-
-.quick-build-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-}
-
-.start-match-btn {
-    padding: 1rem 2rem;
-    background: #333;
-    color: #666;
-    border-radius: 8px;
-    font-weight: 700;
-    cursor: not-allowed;
-    white-space: nowrap;
-}
-
-.start-match-btn.ready {
-    background: var(--color-primary);
-    color: #000;
-    box-shadow: 0 0 20px var(--color-primary-glow);
-    cursor: pointer;
-    animation: pulseBtn 2s infinite;
-}
-
-@keyframes pulseBtn {
-    0% {
-        box-shadow: 0 0 20px var(--color-primary-glow);
-    }
-
-    50% {
-        box-shadow: 0 0 40px var(--color-primary-glow);
-    }
-
-    100% {
-        box-shadow: 0 0 20px var(--color-primary-glow);
-    }
-}
-
-.squads-area {
-    display: flex;
-    gap: 20px;
-    min-height: 300px;
-    margin-bottom: 20px;
-}
-
-.squad-column {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 10px;
-    transition: all 0.2s;
+.sb-title-group {
     display: flex;
     flex-direction: column;
 }
 
-.squad-column:hover {
+.sb-header h2 {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    margin: 0;
+}
+
+.sb-subtitle {
+    font-size: 0.8rem;
+    color: var(--parchment);
+    margin: 3px 0 0;
+    letter-spacing: 0.5px;
+}
+
+.sb-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.auto-build-btn {
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(139, 0, 0, 0.4));
+    color: var(--gold-primary);
+    border: 1.5px solid var(--gold-primary);
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.auto-build-btn:hover {
+    background: var(--gold-primary);
+    color: #140d07;
+    transform: translateY(-1px);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+
+.clear-build-btn {
+    padding: 0.6rem 1rem;
     background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-.squad-column.highlight-target {
-    border-color: var(--color-primary);
-    box-shadow: inset 0 0 20px rgba(0, 255, 157, 0.1);
+.clear-build-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border-color: #ef4444;
 }
 
-.squad-header {
+.start-match-btn {
+    padding: 0.65rem 1.4rem;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.4);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.82rem;
+    font-family: var(--font-display);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.25);
+    white-space: nowrap;
+}
+
+.start-match-btn.ready,
+.start-match-btn:not(:disabled) {
+    background: linear-gradient(135deg, #ffd700 0%, #d4af37 40%, #8b0000 100%);
+    color: #140d07;
+    border: 1.5px solid #fff;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), inset 0 0 8px rgba(255, 255, 255, 0.4);
+    animation: pulseReadyBtn 2s infinite ease-in-out;
+}
+
+.start-match-btn.ready:hover,
+.start-match-btn:not(:disabled):hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.9), inset 0 0 12px rgba(255, 255, 255, 0.6);
+    color: #000;
+}
+
+.start-match-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    animation: none;
+}
+
+.squad-title-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.set-avg-badge {
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid var(--gold-primary);
+    color: var(--gold-primary);
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 1px 6px;
+    border-radius: 12px;
+}
+
+.squad-balance-bar {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    padding: 6px 4px 0;
+    border-top: 1px dashed rgba(212, 175, 55, 0.2);
+    margin-top: auto;
+}
+
+.bal-warn {
+    font-size: 0.65rem;
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.15);
+    border: 1px solid rgba(251, 191, 36, 0.4);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.bal-ok {
+    font-size: 0.65rem;
+    color: #4ade80;
+    background: rgba(74, 222, 128, 0.15);
+    border: 1px solid rgba(74, 222, 128, 0.4);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.pool-controls {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
-    font-family: var(--font-display);
-    font-size: 1.1rem;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.count.full {
-    color: var(--color-primary);
+.pool-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--gold-primary);
+    letter-spacing: 1px;
+}
+
+.pos-filter-group {
+    display: flex;
+    gap: 4px;
+}
+
+.pos-pill {
+    padding: 3px 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: var(--parchment);
+    border-radius: 14px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.pos-pill:hover {
+    border-color: var(--gold-primary);
+    color: #fff;
+}
+
+.pos-pill.active {
+    background: var(--gold-primary);
+    color: #140d07;
+    border-color: #fff;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
 }
 
 .squad-slots {

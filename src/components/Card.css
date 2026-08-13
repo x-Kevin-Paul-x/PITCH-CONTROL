@@ -20,6 +20,28 @@
     height: calc(var(--card-height-desktop) * 0.72);
 }
 
+.card-container.responsive {
+    width: clamp(105px, 13vw, 155px);
+    height: clamp(145px, 19vh, 215px);
+}
+
+@media (max-height: 850px) {
+    .card-container.responsive {
+        width: clamp(92px, 11.5vw, 135px);
+        height: clamp(130px, 16.5vh, 185px);
+    }
+    
+    .card-container.responsive .badge-rating {
+        font-size: 0.8rem;
+    }
+    .card-container.responsive .player-name-text {
+        font-size: 0.65rem;
+    }
+    .card-container.responsive .stat-val {
+        font-size: 0.65rem;
+    }
+}
+
 @media (max-width: 1280px) {
     .card-container {
         width: var(--card-width-tablet);

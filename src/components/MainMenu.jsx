@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useGameState } from '../hooks/useGameState';
 import { sound } from '../utils/soundEngine';
 import './MainMenu.css';
@@ -28,6 +28,18 @@ const MainMenu = () => {
         setAiDifficulty(level);
     };
 
+    // Generate floating ambient embers
+    const embers = useMemo(() => {
+        return Array.from({ length: 24 }).map((_, i) => ({
+            id: i,
+            left: `${Math.random() * 100}%`,
+            size: `${2 + Math.random() * 4}px`,
+            duration: `${5 + Math.random() * 7}s`,
+            delay: `${Math.random() * 5}s`,
+            opacity: 0.2 + Math.random() * 0.6
+        }));
+    }, []);
+
     const difficultyDescriptions = {
         ROOKIE: {
             title: '⚔️ Knight Rookie (Greedy)',
@@ -54,6 +66,24 @@ const MainMenu = () => {
                 <button className="audio-toggle-btn" onClick={handleToggleMute}>
                     {muted ? '🔇 Muted' : '🔊 Realm Sound'}
                 </button>
+            </div>
+
+            {/* Floating Medieval Embers */}
+            <div className="embers-container">
+                {embers.map(e => (
+                    <div
+                        key={e.id}
+                        className="ember-particle"
+                        style={{
+                            left: e.left,
+                            width: e.size,
+                            height: e.size,
+                            animationDuration: e.duration,
+                            animationDelay: e.delay,
+                            opacity: e.opacity
+                        }}
+                    />
+                ))}
             </div>
 
             {/* Castle Pitch Background */}

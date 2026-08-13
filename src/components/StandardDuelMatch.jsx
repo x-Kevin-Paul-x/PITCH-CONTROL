@@ -52,6 +52,8 @@ const StandardDuelMatch = () => {
     const [scores, setScores] = useState({ p1: 0, p2: 0 });
     const [roundWinner, setRoundWinner] = useState(null);
     const [round, setRound] = useState(1);
+    const [roundPegs, setRoundPegs] = useState([]); // [{ round, winner, context }]
+    const [clashBreakdown, setClashBreakdown] = useState(null);
 
     // Modifiers from Traits / Tactics
     const [enforcedNextRound, setEnforcedNextRound] = useState({ p1: false, p2: false });
@@ -97,19 +99,16 @@ const StandardDuelMatch = () => {
     };
 
     const startDraftPhase = () => {
-        // Randomly assign who splits
         const splitter = Math.random() < 0.5 ? 'P1' : 'P2';
         setDraftSplitter(splitter);
         setTurnPhase('DRAFT_SPLIT');
 
         if (splitter === 'P1') {
             addLog("🛠️ Winston Draft: You are the splitter. Separate cards into two piles of 5.");
-            // Initially dump all in Pile A
             setPileA([...scoutingPool]);
             setPileB([]);
         } else {
             addLog("🤖 Winston Draft: AI is splitting the pool into two balanced piles.");
-            // AI balances: sorts by rating, distributes zig-zag
             const sorted = [...scoutingPool].sort((a, b) => b.rating - a.rating);
             const pA = [];
             const pB = [];
@@ -119,7 +118,6 @@ const StandardDuelMatch = () => {
             });
             setPileA(pA);
             setPileB(pB);
-            // Move player straight to choose phase
             setTimeout(() => {
                 setTurnPhase('DRAFT_CHOOSE');
                 addLog("📋 Piles ready. Choose Pile A or Pile B. AI receives the other.");
@@ -148,7 +146,6 @@ const StandardDuelMatch = () => {
         setTurnPhase('DRAFT_CHOOSE');
         addLog("🧠 AI is analyzing the split piles...");
         
-        // AI chooses the better pile (sum of ratings)
         setTimeout(() => {
             const sumA = pileA.reduce((sum, c) => sum + c.rating, 0);
             const sumB = pileB.reduce((sum, c) => sum + c.rating, 0);
@@ -175,7 +172,6 @@ const StandardDuelMatch = () => {
     };
 
     const finalizeDraft = (p1Cards, p2Cards) => {
-        // Draw 3 cards, bench 2. High work rate cards drawn first!
         const sortedP1 = [...p1Cards].sort((a, b) => {
             const weights = { High: 3, Medium: 2, Low: 1 };
             return weights[b.workRate] - weights[a.workRate];
@@ -185,19 +181,17 @@ const StandardDuelMatch = () => {
             return weights[b.workRate] - weights[a.workRate];
         });
 
-        // Set Decks & Hands
         setP1Deck(sortedP1.slice(3));
         setP2Deck(sortedP2.slice(3));
         setP1Hand(sortedP1.slice(0, 3));
         setP2Hand(sortedP2.slice(0, 3));
 
-        // Deal 2 random tactics
         const shuffledTactics = [...TACTICS_POOL].sort(() => Math.random() - 0.5);
         setP1Tactics(shuffledTactics.slice(0, 2));
         setP2Tactics(shuffledTactics.slice(2, 4));
 
         setTurnPhase('ROLL');
-        addLog("⚽ Teams drafted. Round 1 Kickoff!");
+        addLog("⚔️ Squads ready. 1v1 Duel Match Commences!");
     };
 
     // Roll Die Context
@@ -206,7 +200,6 @@ const StandardDuelMatch = () => {
         setTurnPhase('ROLLING');
         sound.playDiceRoll();
 
-        // Reset round values
         setP1ActiveTactic(null);
         setP2ActiveTactic(null);
 
@@ -215,7 +208,7 @@ const StandardDuelMatch = () => {
             if (chosenNextAttribute) {
                 result = chosenNextAttribute;
                 setChosenNextAttribute(null);
-                addLog(`⚡ Playmaker Trait: Attribute chosen: ${result}!`);
+                addLog(`⚡ Playmaker Trait: Contested attribute locked to ${result}!`);
             } else {
                 const faces = ['ATT', 'MID', 'DEF', 'GK', 'ATT', 'MID'];
                 result = faces[Math.floor(Math.random() * faces.length)];
@@ -224,24 +217,20 @@ const StandardDuelMatch = () => {
             setDieResult(result);
             setIsRolling(false);
             setTurnPhase('SELECT');
-            addLog(`🎲 Context Roll: ${result} Duel! Select your player card.`);
+            addLog(`🎲 Contest: ${result} Duel! Select your champion card.`);
 
-            // Trigger AI Tactic Decision and Card Selection
             decideAIMove(result);
-        }, 2000);
+        }, 1600);
     };
 
     // AI Card Selection & Tactic Decision
     const decideAIMove = (rollContext) => {
-        // 1. AI plays tactics with chance
         let activeTactic = null;
         let p2T = [...p2Tactics];
         
-        // Legend/Veteran play tactics smarter
         const playsTactics = ['VETERAN', 'LEGEND'].includes(aiDifficulty) ? Math.random() < 0.35 : Math.random() < 0.15;
         if (playsTactics && p2T.length > 0) {
             const chosenT = p2T[0];
-            // Match tactic criteria
             if (chosenT.id === 'COUNTER_ATTACK' && rollContext === 'DEF') {
                 activeTactic = chosenT;
                 p2T.shift();
@@ -250,8 +239,7 @@ const StandardDuelMatch = () => {
             } else if (chosenT.id === 'VAR_CHECK' && rollContext === 'GK' && !p2Hand.some(c => c.position === 'GK')) {
                 activeTactic = chosenT;
                 p2T.shift();
-                addLog(`🤖 AI plays [VAR Check]! Rerolling die...`);
-                // Simple inline reroll
+                addLog(`🤖 AI plays [VAR Check]! Rerolling contest...`);
                 const faces = ['ATT', 'MID', 'DEF'];
                 const reroll = faces[Math.floor(Math.random() * faces.length)];
                 setDieResult(reroll);
@@ -260,71 +248,47 @@ const StandardDuelMatch = () => {
         setP2Tactics(p2T);
         setP2ActiveTactic(activeTactic);
 
-        // 2. Select AI Card based on Difficulty Algorithm
         const finalContext = activeTactic?.id === 'COUNTER_ATTACK' ? 'ATT' : rollContext;
         const aiSelected = selectAICard(p2Hand, p1Hand, finalContext, aiDifficulty);
         setAiCard(aiSelected);
     };
 
-    // AI Difficulty Decision Core
     const selectAICard = (hand, opponentHand, context, difficulty) => {
         if (hand.length === 0) return null;
 
-        // Level 1: Rookie - Greedy Heuristic
         if (difficulty === 'ROOKIE') {
-            return hand.reduce((max, card) => card.stats[context] > max.stats[context] ? card : max, hand[0]);
+            return hand.reduce((max, card) => (card.stats[context] || 0) > (max.stats[context] || 0) ? card : max, hand[0]);
         }
 
-        // Level 2: Professional - Minimax (Holds back on dead rolls)
         if (difficulty === 'PROFESSIONAL') {
-            // Check if we can beat opponent's best card. If not, trash lowest stat card
-            const oppBestVal = opponentHand.reduce((max, card) => Math.max(max, card.stats[context]), 0);
-            const myBestCard = hand.reduce((max, card) => card.stats[context] > max.stats[context] ? card : max, hand[0]);
+            const oppBestVal = opponentHand.reduce((max, card) => Math.max(max, card.stats[context] || 0), 0);
+            const myBestCard = hand.reduce((max, card) => (card.stats[context] || 0) > (max.stats[context] || 0) ? card : max, hand[0]);
             
-            if (myBestCard.stats[context] < oppBestVal - 15) {
-                // We are highly likely to lose, dump lowest card
-                return hand.reduce((min, card) => card.stats[context] < min.stats[context] ? card : min, hand[0]);
+            if ((myBestCard.stats[context] || 0) < oppBestVal - 15) {
+                return hand.reduce((min, card) => (card.stats[context] || 0) < (min.stats[context] || 0) ? card : min, hand[0]);
             }
             return myBestCard;
         }
 
-        // Level 3: Veteran - Bayesian Inference (Card Counting)
-        // Tracks remaining draft pool cards (10 pool minus owned hand/deck/discarded)
-        if (difficulty === 'VETERAN') {
-            // Count cards
-            const oppMaxDef = opponentHand.length > 0 ? opponentHand.reduce((max, card) => Math.max(max, card.stats[context]), 0) : 70;
-            const playableCards = [...hand].sort((a, b) => b.stats[context] - a.stats[context]);
-            
-            // If we have a card that cleanly beats average expected, play it. Otherwise, conserve.
-            if (playableCards[0].stats[context] > oppMaxDef) {
-                return playableCards[0];
-            }
-            // Fallback: minimax-like play
-            return playableCards[Math.floor(Math.random() * playableCards.length)];
-        }
-
-        // Level 4: Legend - ISMCTS / Lookahead Simulation
-        if (difficulty === 'LEGEND') {
+        if (difficulty === 'VETERAN' || difficulty === 'LEGEND') {
             let bestCard = hand[0];
             let bestWinRate = -1;
 
             hand.forEach(card => {
                 let wins = 0;
-                // Run 200 simulation games with random opponent cards
-                for (let i = 0; i < 200; i++) {
+                for (let i = 0; i < 150; i++) {
                     const simOppCard = opponentHand[Math.floor(Math.random() * opponentHand.length)] || card;
-                    let myVal = card.stats[context];
-                    let oppVal = simOppCard.stats[context];
+                    let myVal = card.stats[context] || 0;
+                    let oppVal = simOppCard.stats[context] || 0;
 
-                    // Resolve Sweeper Keeper
                     if (context === 'DEF') {
-                        if (card.position === 'GK') myVal += Math.floor(card.stats.GK * 0.5);
-                        if (simOppCard.position === 'GK') oppVal += Math.floor(simOppCard.stats.GK * 0.5);
+                        if (card.position === 'GK') myVal += Math.floor((card.stats.GK || 0) * 0.5);
+                        if (simOppCard.position === 'GK') oppVal += Math.floor((simOppCard.stats.GK || 0) * 0.5);
                     }
 
                     if (myVal > oppVal) wins++;
                 }
-                const winRate = wins / 200;
+                const winRate = wins / 150;
                 if (winRate > bestWinRate) {
                     bestWinRate = winRate;
                     bestCard = card;
@@ -337,11 +301,16 @@ const StandardDuelMatch = () => {
         return hand[0];
     };
 
-    // Play Player Tactic
     const playTactic = (tactic) => {
         if (turnPhase !== 'SELECT') return;
-        if (p1ActiveTactic) return; // Only 1 tactic per round
+        if (p1ActiveTactic) return;
 
+        if (tactic.id === 'COUNTER_ATTACK' && dieResult !== 'DEF') {
+            addLog("⚠️ Counter-Attack can only be activated during a DEFENSE contest.");
+            return;
+        }
+
+        sound.playTacticPower();
         setP1ActiveTactic(tactic);
         setP1Tactics(p1Tactics.filter(t => t.id !== tactic.id));
 
@@ -349,26 +318,20 @@ const StandardDuelMatch = () => {
             const faces = ['ATT', 'MID', 'DEF', 'GK'];
             const reroll = faces[Math.floor(Math.random() * faces.length)];
             setDieResult(reroll);
-            addLog(`⚡ Player plays [VAR Check]! Rerolling context to ${reroll}!`);
+            addLog(`⚡ Player activates [VAR Check]! Contested attribute is now ${reroll}!`);
         } else if (tactic.id === 'COUNTER_ATTACK') {
-            if (dieResult === 'DEF') {
-                setDieResult('ATT');
-                addLog("⚡ Player plays [Counter-Attack]! Shifting defensive duel into ATTACK!");
-            } else {
-                addLog("⚠️ Counter-Attack can only be played on a DEF roll.");
-            }
+            setDieResult('ATT');
+            addLog("⚡ Player activates [Counter-Attack]! Defense duel reversed into ATTACK!");
         } else if (tactic.id === 'HIGH_PRESS') {
-            addLog("⚡ Player plays [High Press]! Opponent's card is revealed!");
+            addLog("⚡ Player activates [High Press]! Opponent card revealed!");
         } else if (tactic.id === 'SUBSTITUTION') {
-            // Swap a card inside hand
-            addLog("⚡ Player plays [Tactical Sub]. Select a card in hand to swap with Bench.");
+            addLog("⚡ Player activates [Tactical Sub]. Select a card in hand to swap with Bench.");
         }
     };
 
     const handleCardSelect = (card) => {
         if (turnPhase !== 'SELECT') return;
 
-        // Handle substitution tactic logic
         if (p1ActiveTactic?.id === 'SUBSTITUTION') {
             if (p1Deck.length === 0) {
                 addLog("⚠️ Bench is empty. Substitution failed.");
@@ -380,10 +343,12 @@ const StandardDuelMatch = () => {
             setP1Hand(newHand);
             setP1Deck(p1Deck.slice(1));
             setP1ActiveTactic(null);
+            sound.playCardFlip();
             addLog(`🔄 Substituted ${card.name} with ${benchCard.name} from the bench.`);
             return;
         }
 
+        sound.playWaxSealClick();
         setSelectedCard(card);
     };
 
@@ -392,197 +357,207 @@ const StandardDuelMatch = () => {
         setTurnPhase('REVEAL');
         sound.playSwordClash();
 
-        // Introduce brief reveal delay
         setTimeout(() => {
             resolveRound();
-        }, 1200);
+        }, 1100);
     };
 
-    // Match Combat Resolution
-    const resolveRound = () => {
-        let p1Val = selectedCard.stats[dieResult] || 0;
-        let p2Val = aiCard.stats[dieResult] || 0;
+    // Calculate Complete 1v1 Clash Math
+    const calculateClashData = () => {
+        const context = dieResult;
+        let p1Base = selectedCard?.stats?.[context] || 0;
+        let p2Base = aiCard?.stats?.[context] || 0;
 
-        addLog(`⚔️ Duel: ${selectedCard.name} (${p1Val} ${dieResult}) vs ${aiCard.name} (${p2Val} ${dieResult})`);
+        let p1Mods = [];
+        let p2Mods = [];
 
-        // 1. Resolve Sweeper Keeper (+50% GK stat on DEF context)
-        if (dieResult === 'DEF') {
-            if (selectedCard.position === 'GK') {
-                const bonus = Math.floor(selectedCard.stats.GK * 0.5);
-                p1Val += bonus;
-                addLog(`🛡️ GK Sweeper Keeper: ${selectedCard.name} adds +${bonus} to Defense!`);
+        // Sweeper Keeper Bonus (+50% GK on DEF)
+        if (context === 'DEF') {
+            if (selectedCard?.position === 'GK') {
+                const bonus = Math.floor((selectedCard.stats.GK || 0) * 0.5);
+                p1Mods.push({ label: 'Sweeper Keeper (+50% GK)', val: `+${bonus}`, num: bonus });
             }
-            if (aiCard.position === 'GK') {
-                const bonus = Math.floor(aiCard.stats.GK * 0.5);
-                p2Val += bonus;
-                addLog(`🛡️ GK Sweeper Keeper: ${aiCard.name} adds +${bonus} to Defense!`);
-            }
-        }
-
-        // 2. Resolve Active Tactics modifiers
-        if (p1ActiveTactic?.id === 'OFFSIDE_TRAP' && aiCard.position === 'FW') {
-            p2Val = Math.floor(p2Val * 0.5);
-            addLog(`🥅 Offside Trap: Opponent FW stats are halved! (${p2Val})`);
-        }
-        if (p2ActiveTactic?.id === 'OFFSIDE_TRAP' && selectedCard.position === 'FW') {
-            p1Val = Math.floor(p1Val * 0.5);
-            addLog(`🥅 AI Offside Trap: Your FW stats are halved! (${p1Val})`);
-        }
-
-        // 3. Resolve Passives Traits
-        // Poacher (+20 ATT vs GK card)
-        if (dieResult === 'ATT') {
-            if (selectedCard.trait?.id === 'Poacher' && aiCard.position === 'GK') {
-                p1Val += 20;
-                addLog(`⚡ Poacher Trait: ${selectedCard.name} gains +20 Attack vs Goalkeeper!`);
-            }
-            if (aiCard.trait?.id === 'Poacher' && selectedCard.position === 'GK') {
-                p2Val += 20;
-                addLog(`⚡ AI Poacher Trait: ${aiCard.name} gains +20 Attack vs Goalkeeper!`);
+            if (aiCard?.position === 'GK') {
+                const bonus = Math.floor((aiCard.stats.GK || 0) * 0.5);
+                p2Mods.push({ label: 'Sweeper Keeper (+50% GK)', val: `+${bonus}`, num: bonus });
             }
         }
-        // Captain (+10 to all in Round 5)
+
+        // Tactic Modifiers
+        if (p1ActiveTactic?.id === 'OFFSIDE_TRAP' && aiCard?.position === 'FW') {
+            p2Mods.push({ label: 'Offside Trap Debuff', val: '-50%', mult: 0.5 });
+        }
+        if (p2ActiveTactic?.id === 'OFFSIDE_TRAP' && selectedCard?.position === 'FW') {
+            p1Mods.push({ label: 'AI Offside Trap', val: '-50%', mult: 0.5 });
+        }
+
+        // Passive Traits
+        if (context === 'ATT') {
+            if (selectedCard?.trait?.id === 'Poacher' && aiCard?.position === 'GK') {
+                p1Mods.push({ label: 'Poacher (+20 vs GK)', val: '+20', num: 20 });
+            }
+            if (aiCard?.trait?.id === 'Poacher' && selectedCard?.position === 'GK') {
+                p2Mods.push({ label: 'AI Poacher (+20 vs GK)', val: '+20', num: 20 });
+            }
+        }
+
         if (round === 5) {
-            if (selectedCard.trait?.id === 'Captain') {
-                p1Val += 10;
-                addLog(`⚡ Captain Trait: ${selectedCard.name} inspires the squad with +10 stats in Round 5!`);
+            if (selectedCard?.trait?.id === 'Captain') {
+                p1Mods.push({ label: 'Captain Clutch Boost', val: '+10', num: 10 });
             }
-            if (aiCard.trait?.id === 'Captain') {
-                p2Val += 10;
-                addLog(`⚡ AI Captain Trait: ${aiCard.name} inspires the squad with +10 stats in Round 5!`);
+            if (aiCard?.trait?.id === 'Captain') {
+                p2Mods.push({ label: 'AI Captain Boost', val: '+10', num: 10 });
             }
         }
-        // False Nine (can use MID instead of ATT on ATT rolls)
-        if (dieResult === 'ATT') {
-            if (selectedCard.trait?.id === 'False Nine' && selectedCard.stats.MID > selectedCard.stats.ATT) {
-                p1Val = selectedCard.stats.MID;
-                addLog(`⚡ False Nine Trait: ${selectedCard.name} uses Midfield stat on Attack! (${p1Val})`);
+
+        if (context === 'ATT') {
+            if (selectedCard?.trait?.id === 'False Nine' && ((selectedCard.stats.MID || 0) > (selectedCard.stats.ATT || 0))) {
+                const diff = selectedCard.stats.MID - selectedCard.stats.ATT;
+                p1Mods.push({ label: 'False Nine (Uses MID stat)', val: `+${diff}`, num: diff });
             }
-            if (aiCard.trait?.id === 'False Nine' && aiCard.stats.MID > aiCard.stats.ATT) {
-                p2Val = aiCard.stats.MID;
-                addLog(`⚡ AI False Nine Trait: ${aiCard.name} uses Midfield stat on Attack! (${p2Val})`);
+            if (aiCard?.trait?.id === 'False Nine' && ((aiCard.stats.MID || 0) > (aiCard.stats.ATT || 0))) {
+                const diff = aiCard.stats.MID - aiCard.stats.ATT;
+                p2Mods.push({ label: 'AI False Nine (Uses MID stat)', val: `+${diff}`, num: diff });
             }
         }
-        // Enforcer checks next round penalty flag
+
         if (enforcedNextRound.p1) {
-            p1Val = Math.floor(p1Val * 0.5);
-            setEnforcedNextRound(prev => ({ ...prev, p1: false }));
-            addLog(`💥 Enforced: Your active stat is halved this round! (${p1Val})`);
+            p1Mods.push({ label: 'Enforcer Intimidation', val: '-50%', mult: 0.5 });
         }
         if (enforcedNextRound.p2) {
-            p2Val = Math.floor(p2Val * 0.5);
-            setEnforcedNextRound(prev => ({ ...prev, p2: false }));
-            addLog(`💥 AI Enforced: AI active stat is halved this round! (${p2Val})`);
+            p2Mods.push({ label: 'Enforcer Intimidation', val: '-50%', mult: 0.5 });
         }
 
-        // 4. Resolve Stamina Penalties in Round 5
         if (round >= 5) {
-            if (selectedCard.stamina < 70) {
-                p1Val = Math.max(0, p1Val - 10);
-                addLog(`💤 Fatigue: ${selectedCard.name} suffers -10 due to low Stamina!`);
+            if (selectedCard?.stamina < 70) {
+                p1Mods.push({ label: 'Stamina Fatigue', val: '-10', num: -10 });
             }
-            if (aiCard.stamina < 70) {
-                p2Val = Math.max(0, p2Val - 10);
-                addLog(`💤 AI Fatigue: ${aiCard.name} suffers -10 due to low Stamina!`);
+            if (aiCard?.stamina < 70) {
+                p2Mods.push({ label: 'Stamina Fatigue', val: '-10', num: -10 });
             }
         }
 
-        // 5. Compare Values
-        let winner = 'DRAW';
-        if (p1Val > p2Val) {
-            winner = 'P1';
-            setScores(prev => ({ ...prev, p1: prev.p1 + 1 }));
-            sound.playGoalScored();
-            addLog(`⚽ GOAL! ${selectedCard.name} scores!`);
-            
-            // Resolve Enforcer / Playmaker Traits
-            if (selectedCard.trait?.id === 'Enforcer' && dieResult === 'DEF') {
-                setEnforcedNextRound(prev => ({ ...prev, p2: true }));
-                addLog(`⚡ Enforcer: ${selectedCard.name} intimidates opponents. Next round stats halved!`);
-            }
-            if (selectedCard.trait?.id === 'Playmaker' && dieResult === 'MID') {
-                // Let player choose next round context!
-                setChosenNextAttribute('CHOOSE');
-                addLog(`⚡ Playmaker: Choose the attribute context for the next round!`);
-            }
-        } else if (p2Val > p1Val) {
-            winner = 'P2';
-            setScores(prev => ({ ...prev, p2: prev.p2 + 1 }));
-            sound.playGoalScored();
-            addLog(`🥅 GOAL! AI scores!`);
+        // Calculate Totals
+        let p1Total = p1Base;
+        p1Mods.forEach(m => {
+            if (m.num) p1Total += m.num;
+            if (m.mult) p1Total = Math.floor(p1Total * m.mult);
+        });
 
-            // AI Trait Triggers
-            if (aiCard.trait?.id === 'Enforcer' && dieResult === 'DEF') {
-                setEnforcedNextRound(prev => ({ ...prev, p1: true }));
-                addLog(`⚡ AI Enforcer: Next round your stats will be halved!`);
-            }
-            if (aiCard.trait?.id === 'Playmaker' && dieResult === 'MID') {
-                const statsList = ['ATT', 'MID', 'DEF'];
-                setChosenNextAttribute(statsList[Math.floor(Math.random() * statsList.length)]);
-                addLog(`⚡ AI Playmaker: AI dictates next round context.`);
-            }
+        let p2Total = p2Base;
+        p2Mods.forEach(m => {
+            if (m.num) p2Total += m.num;
+            if (m.mult) p2Total = Math.floor(p2Total * m.mult);
+        });
+
+        p1Total = Math.max(0, p1Total);
+        p2Total = Math.max(0, p2Total);
+
+        let winner = 'DRAW';
+        let reason = 'Equal Total Power';
+
+        if (p1Total > p2Total) {
+            winner = 'P1';
+            reason = `Higher ${context} Power (${p1Total} vs ${p2Total})`;
+        } else if (p2Total > p1Total) {
+            winner = 'P2';
+            reason = `Opponent Higher ${context} Power (${p2Total} vs ${p1Total})`;
         } else {
-            // TIE-BREAKER
-            addLog("🤝 Stats are level! Resolving tie...");
-            
-            // Wall Passive (Wins all DEF ties)
-            const p1Wall = selectedCard.trait?.id === 'Wall' && dieResult === 'DEF';
-            const p2Wall = aiCard.trait?.id === 'Wall' && dieResult === 'DEF';
+            const p1Wall = selectedCard?.trait?.id === 'Wall' && context === 'DEF';
+            const p2Wall = aiCard?.trait?.id === 'Wall' && context === 'DEF';
 
             if (p1Wall && !p2Wall) {
                 winner = 'P1';
-                setScores(prev => ({ ...prev, p1: prev.p1 + 1 }));
-                addLog(`⚡ Wall Trait: ${selectedCard.name} holds the defensive line! Goal scored!`);
+                reason = 'Wall Trait holds defensive line!';
             } else if (p2Wall && !p1Wall) {
                 winner = 'P2';
-                setScores(prev => ({ ...prev, p2: prev.p2 + 1 }));
-                addLog(`⚡ AI Wall Trait: Opponent holds the defensive line! Goal scored!`);
+                reason = 'AI Wall Trait holds defensive line!';
             } else {
-                // Aggression Tie Breaker check
-                // Higher aggression wins, but runs 5% chance of Red Card!
-                const p1Agg = selectedCard.aggression;
-                const p2Agg = aiCard.aggression;
+                const p1Agg = selectedCard?.aggression || 50;
+                const p2Agg = aiCard?.aggression || 50;
 
-                addLog(`🔥 Aggression Check: You (${p1Agg}) vs AI (${p2Agg})`);
-                
-                // Check Red Card Risk (5% chance if Aggression > 70)
                 const p1Red = p1Agg > 70 && Math.random() < 0.05;
                 const p2Red = p2Agg > 70 && Math.random() < 0.05;
 
                 if (p1Red) {
-                    addLog(`🔴 RED CARD! ${selectedCard.name} is sent off for a dangerous tackle! Opponent gets a goal!`);
                     winner = 'P2';
-                    setScores(prev => ({ ...prev, p2: prev.p2 + 1 }));
+                    reason = 'Red Card Foul! Dangerous tackle conceded!';
                 } else if (p2Red) {
-                    addLog(`🔴 AI RED CARD! ${aiCard.name} is sent off! Penalty goal awarded!`);
                     winner = 'P1';
-                    setScores(prev => ({ ...prev, p1: prev.p1 + 1 }));
+                    reason = 'AI Red Card! Opponent sent off for dangerous foul!';
+                } else if (p1Agg > p2Agg) {
+                    winner = 'P1';
+                    reason = `Physical Aggression Duel (${p1Agg} vs ${p2Agg})`;
+                } else if (p2Agg > p1Agg) {
+                    winner = 'P2';
+                    reason = `AI Physical Aggression Duel (${p2Agg} vs ${p1Agg})`;
                 } else {
-                    if (p1Agg > p2Agg) {
-                        winner = 'P1';
-                        setScores(prev => ({ ...prev, p1: prev.p1 + 1 }));
-                        addLog(`🏆 You win the physical duel via higher aggression!`);
-                    } else if (p2Agg > p1Agg) {
-                        winner = 'P2';
-                        setScores(prev => ({ ...prev, p2: prev.p2 + 1 }));
-                        addLog(`🏆 AI wins the physical duel via higher aggression!`);
-                    } else {
-                        addLog(`🙅 Ball blocked! Match remains level.`);
-                    }
+                    winner = 'DRAW';
+                    reason = 'Duel Completely Level';
                 }
             }
         }
 
+        return {
+            context,
+            p1: { base: p1Base, mods: p1Mods, total: p1Total, card: selectedCard },
+            p2: { base: p2Base, mods: p2Mods, total: p2Total, card: aiCard },
+            winner,
+            reason
+        };
+    };
+
+    // Match 1v1 Combat Resolution
+    const resolveRound = () => {
+        const breakdown = calculateClashData();
+        setClashBreakdown(breakdown);
+
+        const { winner, p1, p2, reason } = breakdown;
+        addLog(`⚔️ 1v1 Duel: ${p1.card.name} (${p1.total} Power) vs ${p2.card.name} (${p2.total} Power)`);
+        addLog(`📢 Result: ${reason}`);
+
+        if (winner === 'P1') {
+            setScores(prev => ({ ...prev, p1: prev.p1 + 1 }));
+            sound.playPointWon();
+            addLog(`🏆 Point Won! +1 Duel Point for You!`);
+
+            if (selectedCard?.trait?.id === 'Enforcer' && dieResult === 'DEF') {
+                setEnforcedNextRound(prev => ({ ...prev, p2: true }));
+                addLog(`⚡ Enforcer: ${selectedCard.name} intimidates opponents. Next round stats halved!`);
+            }
+            if (selectedCard?.trait?.id === 'Playmaker' && dieResult === 'MID') {
+                setChosenNextAttribute('CHOOSE');
+                addLog(`⚡ Playmaker: Choose the contest for the next round!`);
+            }
+        } else if (winner === 'P2') {
+            setScores(prev => ({ ...prev, p2: prev.p2 + 1 }));
+            sound.playPointLost();
+            addLog(`❌ Duel Conceded! AI scores +1 Point.`);
+
+            if (aiCard?.trait?.id === 'Enforcer' && dieResult === 'DEF') {
+                setEnforcedNextRound(prev => ({ ...prev, p1: true }));
+                addLog(`⚡ AI Enforcer: Your next round stats will be halved!`);
+            }
+            if (aiCard?.trait?.id === 'Playmaker' && dieResult === 'MID') {
+                const statsList = ['ATT', 'MID', 'DEF'];
+                setChosenNextAttribute(statsList[Math.floor(Math.random() * statsList.length)]);
+                addLog(`⚡ AI Playmaker: AI dictates next round contest.`);
+            }
+        } else {
+            sound.playWhistle();
+            addLog("🤝 Duel Tied. No points awarded.");
+        }
+
+        // Record round peg
+        setRoundPegs(prev => [...prev, { round, winner, context: dieResult }]);
         setRoundWinner(winner);
         setTurnPhase('RESOLVE');
     };
 
     const nextRound = () => {
-        // Remove played cards
         const newP1Hand = p1Hand.filter(c => c.id !== selectedCard.id);
         const newP2Hand = p2Hand.filter(c => c.id !== aiCard.id);
 
-        // Draw new cards from bench/deck
         let updatedP1Hand = [...newP1Hand];
         let updatedP2Hand = [...newP2Hand];
         let updatedP1Deck = [...p1Deck];
@@ -606,8 +581,9 @@ const StandardDuelMatch = () => {
         setAiCard(null);
         setRoundWinner(null);
         setDieResult(null);
+        setClashBreakdown(null);
 
-        if (updatedP1Hand.length === 0 || updatedP2Hand.length === 0) {
+        if (round >= 5 || (updatedP1Hand.length === 0 && updatedP2Hand.length === 0)) {
             setTurnPhase('MATCH_OVER');
         } else {
             setRound(prev => prev + 1);
@@ -617,7 +593,7 @@ const StandardDuelMatch = () => {
 
     const selectPlaymakerContext = (attr) => {
         setChosenNextAttribute(attr);
-        addLog(`⚡ Playmaker: Next context locked: ${attr}!`);
+        addLog(`⚡ Playmaker: Next contest locked to ${attr}!`);
         nextRound();
     };
 
@@ -636,9 +612,9 @@ const StandardDuelMatch = () => {
                 <div className="preview-container glass-panel">
                     <div className="preview-header">
                         <h2 className="text-gradient">SCOUTING REPORT</h2>
-                        <div className="scouting-countdown">DRAFT STARTS IN: {scoutingTimer}S</div>
+                        <div className="scouting-countdown">DRAFT IN: {scoutingTimer}S</div>
                     </div>
-                    <p>Memorize these 10 cards. They will be split into two piles.</p>
+                    <p className="scouting-instruction">Inspect the 10 available cards. They will be split into two 5-card squads.</p>
 
                     <div className="scouting-grid">
                         {scoutingPool.map(card => (
@@ -647,7 +623,7 @@ const StandardDuelMatch = () => {
                     </div>
 
                     <button className="start-match-btn ready" onClick={startDraftPhase}>
-                        PROCEED TO DRAFT
+                        PROCEED TO SQUAD DRAFT
                     </button>
                 </div>
             </div>
@@ -667,8 +643,8 @@ const StandardDuelMatch = () => {
                 }}
             >
                 <div className="draft-split-layout">
-                    <h2 className="text-gradient">WINSTON DRAFT: SPLIT POOL</h2>
-                    <p className="split-desc">Sort cards into two balanced piles. AI will choose their pile first.</p>
+                    <h2 className="text-gradient">WINSTON DRAFT: SPLIT SQUADS</h2>
+                    <p className="split-desc">Distribute cards into two balanced piles. AI picks first.</p>
 
                     <div className="piles-section">
                         <div className="pile-bucket" onClick={() => {}}>
@@ -699,7 +675,7 @@ const StandardDuelMatch = () => {
                         disabled={pileA.length !== 5 || pileB.length !== 5}
                         onClick={confirmSplit}
                     >
-                        CONFIRM SPLIT
+                        CONFIRM SQUAD SPLIT
                     </button>
                 </div>
             </div>
@@ -719,12 +695,12 @@ const StandardDuelMatch = () => {
                 }}
             >
                 <div className="draft-split-layout">
-                    <h2 className="text-gradient">WINSTON DRAFT: CHOOSE SQUAD</h2>
-                    <p className="split-desc">Select which squad pile you want to lead into the match.</p>
+                    <h2 className="text-gradient">CHOOSE YOUR SQUAD</h2>
+                    <p className="split-desc">Select the 5-card squad you want to command.</p>
 
                     <div className="piles-section">
                         <button className="pile-bucket choose-interactive" onClick={() => choosePile('A')}>
-                            <div className="choose-btn-overlay">CHOOSE PILE A</div>
+                            <div className="choose-btn-overlay">COMMAND PILE A</div>
                             <h3>PILE A (5 Cards)</h3>
                             <div className="pile-grid opacity-low">
                                 {pileA.map(card => (
@@ -734,7 +710,7 @@ const StandardDuelMatch = () => {
                         </button>
 
                         <button className="pile-bucket choose-interactive" onClick={() => choosePile('B')}>
-                            <div className="choose-btn-overlay">CHOOSE PILE B</div>
+                            <div className="choose-btn-overlay">COMMAND PILE B</div>
                             <h3>PILE B (5 Cards)</h3>
                             <div className="pile-grid opacity-low">
                                 {pileB.map(card => (
@@ -748,7 +724,7 @@ const StandardDuelMatch = () => {
         );
     }
 
-    // Active Match Render
+    // Active 1v1 Match Render
     return (
         <div 
             className="standard-duel-match full-screen"
@@ -762,20 +738,47 @@ const StandardDuelMatch = () => {
         >
             <div className="match-content-grid">
                 
-                {/* 1. Header Score & Stats */}
+                {/* 1. Header Score & 5-Round Tracker */}
                 <div className="match-header glass-panel">
-                    <div className="player-score you">YOU: {scores.p1}</div>
-                    <div className="match-info">
-                        <div className="round-indicator">ROUND {round} / 5</div>
-                        <div className="ai-tag">OPPONENT: {aiDifficulty} AI</div>
+                    <div className="player-score you">
+                        <span className="score-lbl">YOU</span>
+                        <span className="score-num">{scores.p1}</span>
                     </div>
-                    <div className="player-score cpu">CPU: {scores.p2}</div>
+
+                    <div className="match-info">
+                        <div className="round-indicator">ROUND {round} OF 5</div>
+                        <div className="round-pegs-row">
+                            {[1, 2, 3, 4, 5].map(r => {
+                                const peg = roundPegs.find(p => p.round === r);
+                                let pegClass = 'peg-upcoming';
+                                let pegText = r;
+                                if (peg) {
+                                    if (peg.winner === 'P1') { pegClass = 'peg-won'; pegText = '●'; }
+                                    else if (peg.winner === 'P2') { pegClass = 'peg-lost'; pegText = '○'; }
+                                    else { pegClass = 'peg-tied'; pegText = '⊝'; }
+                                } else if (r === round) {
+                                    pegClass = 'peg-current';
+                                }
+                                return (
+                                    <div key={r} className={`round-peg ${pegClass}`} title={`Round ${r}`}>
+                                        {pegText}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        <div className="ai-tag">OPPONENT: {aiDifficulty}</div>
+                    </div>
+
+                    <div className="player-score cpu">
+                        <span className="score-num">{scores.p2}</span>
+                        <span className="score-lbl">CPU</span>
+                    </div>
                 </div>
 
-                {/* 2. Opponent Bench Card Backs */}
+                {/* 2. Opponent Hand */}
                 <div className="opponent-bench-area">
                     <div className="hand-indicator">
-                        <span>CPU BENCH: {p2Deck.length}</span>
+                        <span>CPU HAND ({p2Hand.length}) • BENCH: {p2Deck.length}</span>
                     </div>
                     <div className="opponent-cards-fan">
                         {p2Hand.map((c, i) => (
@@ -787,12 +790,20 @@ const StandardDuelMatch = () => {
                 {/* 3. Center Pitch Arena */}
                 <div className="pitch-center-stadium">
                     {turnPhase === 'ROLL' && (
-                        <button className="roll-btn glow-pulse" onClick={rollDie}>KICK DIE</button>
+                        <div className="roll-action-box">
+                            <button className="roll-btn glow-pulse" onClick={rollDie}>ROLL CONTEST DIE</button>
+                            <span className="roll-hint">Roll to reveal this round's contested category (ATT / MID / DEF / GK)</span>
+                        </div>
                     )}
 
                     {(turnPhase === 'ROLLING' || turnPhase === 'SELECT' || turnPhase === 'REVEAL' || turnPhase === 'RESOLVE') && (
                         <div className="die-render-arena">
                             <MatchDie rolling={isRolling} face={dieResult} />
+                            {dieResult && !isRolling && (
+                                <div className="contested-badge">
+                                    CONTEST: <span className="contested-attr-highlight">{dieResult}</span>
+                                </div>
+                            )}
                         </div>
                     )}
                 </div>
@@ -803,20 +814,25 @@ const StandardDuelMatch = () => {
                     {p1Tactics.length > 0 && turnPhase === 'SELECT' && (
                         <div className="tactics-selector">
                             <span className="tactic-title">TACTICS:</span>
-                            {p1Tactics.map(t => (
-                                <button 
-                                    key={t.id} 
-                                    className={`tactic-badge ${p1ActiveTactic?.id === t.id ? 'active' : ''}`}
-                                    onClick={() => playTactic(t)}
-                                    title={t.desc}
-                                >
-                                    {t.name}
-                                </button>
-                            ))}
+                            {p1Tactics.map(t => {
+                                const isCounterAttack = t.id === 'COUNTER_ATTACK';
+                                const isDisabled = isCounterAttack && dieResult !== 'DEF';
+                                return (
+                                    <button 
+                                        key={t.id} 
+                                        className={`tactic-badge ${p1ActiveTactic?.id === t.id ? 'active' : ''} ${isDisabled ? 'disabled-tactic' : ''}`}
+                                        onClick={() => playTactic(t)}
+                                        disabled={isDisabled}
+                                        title={isDisabled ? "Only usable on DEF rolls" : t.desc}
+                                    >
+                                        {t.name}
+                                    </button>
+                                );
+                            })}
                         </div>
                     )}
 
-                    {/* Flipped played card position */}
+                    {/* Hand Cards */}
                     <div className="hand-cards-list">
                         {p1Hand.map(card => {
                             const isSelectable = turnPhase === 'SELECT';
@@ -837,14 +853,16 @@ const StandardDuelMatch = () => {
                     <div className="player-action-strip">
                         <span className="bench-count">BENCH: {p1Deck.length}</span>
                         {turnPhase === 'SELECT' && selectedCard && (
-                            <button className="confirm-btn glow-active" onClick={confirmSelection}>PLAY PLAYER</button>
+                            <button className="confirm-btn glow-active" onClick={confirmSelection}>
+                                ⚔️ DEPLOY {selectedCard.name.toUpperCase()}
+                            </button>
                         )}
                     </div>
                 </div>
 
-                {/* 5. Live Match Commentary logs */}
+                {/* 5. Live Match Commentary Feed */}
                 <div className="commentary-ticker glass-panel">
-                    <div className="commentary-header">LIVE COMMENTARY</div>
+                    <div className="commentary-header">LIVE MATCH FEED</div>
                     <div className="logs-feed">
                         {logs.map((log, idx) => (
                             <div key={idx} className="log-line">{log}</div>
@@ -855,42 +873,75 @@ const StandardDuelMatch = () => {
 
             </div>
 
-            {/* Resolve Battle Overlay */}
-            {turnPhase === 'RESOLVE' && createPortal(
+            {/* 1v1 Clash Resolution Overlay */}
+            {turnPhase === 'RESOLVE' && clashBreakdown && createPortal(
                 <div className="round-result">
                     <div className="overlay-header">
-                        <div className="score-display">YOU: {scores.p1}</div>
-                        <div className="round-display">ROUND {round} COMPLETE</div>
-                        <div className="score-display">CPU: {scores.p2}</div>
+                        <div className="score-display">YOU: {scores.p1} PTS</div>
+                        <div className="round-display">ROUND {round} OF 5 • {dieResult} DUEL</div>
+                        <div className="score-display">CPU: {scores.p2} PTS</div>
                     </div>
 
+                    {/* Side-by-side 1v1 Arena with Detailed Calculation */}
                     <div className="battle-cards">
+                        
+                        {/* Player Side */}
                         <div className={`battle-card-wrapper ${roundWinner === 'P1' ? 'winner' : roundWinner === 'P2' ? 'loser' : ''}`}>
                             <div className="battle-label you">YOU</div>
-                            <Card data={selectedCard} isFlipped={true} highlightAttribute={dieResult} />
-                            {p1ActiveTactic && <span className="active-tactic-badge">{p1ActiveTactic.name}</span>}
+                            <Card data={clashBreakdown.p1.card} isFlipped={true} highlightAttribute={dieResult} />
+                            
+                            <div className="clash-calc-box">
+                                <div className="clash-power-total player-power">
+                                    POWER: {clashBreakdown.p1.total}
+                                </div>
+                                <div className="clash-formula-list">
+                                    <span className="formula-item">Base {dieResult}: {clashBreakdown.p1.base}</span>
+                                    {clashBreakdown.p1.mods.map((m, idx) => (
+                                        <span key={idx} className="formula-item formula-mod">{m.label} ({m.val})</span>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="vs-text">VS</div>
+                        {/* VS Center Marker */}
+                        <div className="clash-vs-center">
+                            <div className="vs-text">VS</div>
+                            <div className="clash-category-pill">{dieResult} CLASH</div>
+                        </div>
 
+                        {/* AI Opponent Side */}
                         <div className={`battle-card-wrapper ${roundWinner === 'P2' ? 'winner' : roundWinner === 'P1' ? 'loser' : ''}`}>
                             <div className="battle-label cpu">CPU</div>
-                            <Card data={aiCard} isFlipped={true} highlightAttribute={dieResult} />
-                            {p2ActiveTactic && <span className="active-tactic-badge">{p2ActiveTactic.name}</span>}
+                            <Card data={clashBreakdown.p2.card} isFlipped={true} highlightAttribute={dieResult} />
+                            
+                            <div className="clash-calc-box">
+                                <div className="clash-power-total cpu-power">
+                                    POWER: {clashBreakdown.p2.total}
+                                </div>
+                                <div className="clash-formula-list">
+                                    <span className="formula-item">Base {dieResult}: {clashBreakdown.p2.base}</span>
+                                    {clashBreakdown.p2.mods.map((m, idx) => (
+                                        <span key={idx} className="formula-item formula-mod">{m.label} ({m.val})</span>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
+                    {/* Result Announcement */}
                     <div className="result-text-container">
-                        {roundWinner === 'P1' && <h2 className="win-text">GOAL SCORER!</h2>}
-                        {roundWinner === 'P2' && <h2 className="lose-text">CONCEDED!</h2>}
-                        {roundWinner === 'DRAW' && <h2 className="draw-text">BLOCKED DUEL!</h2>}
+                        {roundWinner === 'P1' && <h2 className="win-text">👑 CLASH WON! (+1 POINT)</h2>}
+                        {roundWinner === 'P2' && <h2 className="lose-text">❌ CLASH LOST</h2>}
+                        {roundWinner === 'DRAW' && <h2 className="draw-text">🤝 TIED CLASH (0 PTS)</h2>}
                     </div>
+                    <p className="clash-reason-tag">{clashBreakdown.reason}</p>
 
                     {chosenNextAttribute === 'CHOOSE' ? (
                         <div className="playmaker-choice-modal glass-panel">
-                            <h3>Choose Next Round context:</h3>
+                            <h3>Choose Next Round's Contested Category:</h3>
                             <div className="choice-buttons">
-                                {['ATT', 'MID', 'DEF'].map(attr => (
+                                {['ATT', 'MID', 'DEF', 'GK'].map(attr => (
                                     <button key={attr} className="choice-btn" onClick={() => selectPlaymakerContext(attr)}>
                                         {attr}
                                     </button>
@@ -898,7 +949,9 @@ const StandardDuelMatch = () => {
                             </div>
                         </div>
                     ) : (
-                        <button className="next-round-btn glow-active" onClick={nextRound}>CONTINUE</button>
+                        <button className="next-round-btn glow-active" onClick={nextRound}>
+                            {round < 5 ? 'NEXT ROUND →' : 'SEE FINAL MATCH RESULT →'}
+                        </button>
                     )}
                 </div>,
                 document.body
@@ -907,13 +960,17 @@ const StandardDuelMatch = () => {
             {/* Match Over Overlay */}
             {turnPhase === 'MATCH_OVER' && createPortal(
                 <div className="round-result match-over-glass">
-                    <h1 className="text-gradient">FULL TIME</h1>
+                    <h1 className="text-gradient">MATCH COMPLETED</h1>
                     <div className="final-score">
                         {scores.p1} - {scores.p2}
                     </div>
+                    <div className="final-points-label">FINAL DUEL POINTS</div>
                     <h2 className="match-outcome-txt">
-                        {scores.p1 > scores.p2 ? '🏆 VICTORY!' : scores.p1 < scores.p2 ? '😭 DEFEAT!' : '🤝 DRAW!'}
+                        {scores.p1 > scores.p2 ? '🏆 MATCH VICTORY!' : scores.p1 < scores.p2 ? '💀 DEFEAT' : '🤝 HONORABLE DRAW'}
                     </h2>
+                    <p className="match-summary-p">
+                        {scores.p1 > scores.p2 ? `You claimed ${scores.p1} out of 5 Duel Points against ${aiDifficulty} AI!` : `AI claimed ${scores.p2} Duel Points.`}
+                    </p>
                     <button className="next-round-btn glow-active" onClick={() => setPhase('MENU')}>
                         RETURN TO MAIN MENU
                     </button>

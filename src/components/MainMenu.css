@@ -186,6 +186,14 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.25);
+}
+
+.menu-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
 .btn-title {
@@ -203,6 +211,39 @@
     color: #d4af37;
     font-family: var(--font-main);
     font-weight: 400;
+}
+
+/* Floating Ember Particles */
+.embers-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.ember-particle {
+    position: absolute;
+    bottom: -10px;
+    background: radial-gradient(circle, #ffd700 0%, #ff4500 70%, transparent 100%);
+    border-radius: 50%;
+    filter: blur(1px);
+    animation: riseEmber linear infinite;
+}
+
+@keyframes riseEmber {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-50vh) translateX(25px) scale(1.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-105vh) translateX(-20px) scale(0.3);
+        opacity: 0;
+    }
 }
 
 @media (max-height: 720px) {
